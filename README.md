@@ -1,5 +1,7 @@
-# Psy-Line
-Proyecto Final de Seminario de Integracion Profesional
+# ProfeLine
+Proyecto de marketplace de profesionales
+
+Para correr en vscode: 
 
 npm install
 npm run dev
