@@ -11,6 +11,7 @@ import DiaryEntryPage from './Pages/DiaryEntryPage'
 import SessionsPage from './Pages/SessionsPage'
 import PaymentsPage from './Pages/PaymentsPage'
 import DiaryPage from './Pages/DiaryPage'
+import HomeApisPage from './Pages/HomeApisPage';
 
 // Context
 import AppointmentState from './context/appointments/appointmentState';
@@ -30,6 +31,11 @@ function App() {
             </Route>
             <Route path="search" element={<SearchPage />}/>
             <Route path="home" element={<HomePage />} />
+
+            {/* homepage para apis */}
+            <Route path="homeapis" element={<HomeApisPage />} />
+
+
             <Route path="main" element={<MainHomePage />} />
             <Route path="profile/:id" element={<ProfessionalProfilePage />} />
             <Route path="diaryentry" element={<DiaryEntryPage />} />
