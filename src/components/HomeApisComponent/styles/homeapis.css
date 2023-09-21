@@ -1,8 +1,9 @@
 .mainContainer_PantallaPrincipal{
-  display: flex;
+  /* display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: column; */
+
 }
 
 .header {
@@ -80,4 +81,364 @@
   text-align: center;
   top: 7px;
   width: 114px;
+}
+
+.frameafuera {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px 90px;
+  height: 948px;
+  justify-content: center;
+  padding: 0px 70px;
+  position: relative;
+}
+
+.frame .img {
+  height: 711px;
+  position: relative;
+  width: 814px;
+}
+
+.frame .img-2 {
+  height: 679px;
+  position: relative;
+  width: 757px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.frame2 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 61px 61px;
+  justify-content: center;
+  padding: 90px;
+  position: relative;
+  width: 806px;
+}
+
+.frame2 .search-bar2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.frame2 .div2 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  height: 52px;
+  justify-content: center;
+  position: relative;
+  width: 806px;
+}
+
+.frame2 .rectngulo-base2 {
+  flex: 1;
+  flex-grow: 1;
+  height: 60px;
+  margin-bottom: -8px;
+  margin-left: -4px;
+  margin-right: -4px;
+  position: relative;
+}
+
+.frame2 .placeholder2 {
+  color: #0000005e;
+  font-family: "Righteous", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 248px;
+}
+
+.frame2 .lupa2 {
+  background-color: #73aef342;
+  border-radius: 16.66px/16px;
+  height: 32px;
+  left: 750px;
+  position: absolute;
+  top: 10px;
+  width: 33px;
+}
+
+.frame2 .cono-lupa2 {
+  height: 24px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 25px;
+}
+
+.frame2 .div-22 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0px 26px;
+  position: relative;
+  width: 799px;
+}
+
+.frame2 .filtro-categora2 {
+  height: 42px;
+  margin-left: -39px;
+  position: relative;
+  width: 204px;
+}
+
+.frame2 .overlap-group2 {
+  height: 42px;
+  position: relative;
+  width: 202px;
+}
+
+.frame2 .img2 {
+  height: 42px;
+  left: 13px;
+  position: absolute;
+  top: 0;
+  width: 172px;
+}
+
+.frame2 .text-wrapper2 {
+  color: #830099;
+  font-family: "Righteous", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 42px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 202px;
+}
+
+.frame2 .overlap-wrapper2 {
+  height: 42px;
+  position: relative;
+  width: 204px;
+}
+
+.frame2 .rectngulo-base-22 {
+  height: 42px;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 179px;
+}
+
+.frame2 .rectngulo-base-32 {
+  height: 42px;
+  left: 32px;
+  position: absolute;
+  top: 0;
+  width: 139px;
+}
+
+.frame2 .overlap-group-wrapper2 {
+  height: 42px;
+  margin-right: -41px;
+  position: relative;
+  width: 221px;
+}
+
+.frame2 .overlap2 {
+  height: 42px;
+  position: relative;
+  width: 219px;
+}
+
+.frame2 .rectngulo-base-42 {
+  height: 42px;
+  left: 14px;
+  position: absolute;
+  top: 0;
+  width: 186px;
+}
+
+.frame2 .placeholder-22 {
+  color: #830099;
+  font-family: "Righteous", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 42px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 219px;
+}
+
+.frame2 .div-32 {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 52px 52px;
+  justify-content: center;
+  position: relative;
+}
+
+.frame2 .la-educacin-que-se2 {
+  position: relative;
+  width: 553.13px;
+}
+
+.frame2 .p2 {
+  color: #060606;
+  font-family: "Andika", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  height: 136px;
+  letter-spacing: 0;
+  line-height: 45px;
+  position: relative;
+  text-align: center;
+  width: 575px;
+}
+
+.frame2 .content2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.frame2 .button2 {
+  all: unset;
+  box-sizing: border-box;
+  height: 85px;
+  margin-right: -2px;
+  position: relative;
+  width: 380.05px;
+}
+
+.frame2 .texto-comprar-wrapper2 {
+  background-color: #ffffff94;
+  border-radius: 22px;
+  height: 85px;
+  position: relative;
+  width: 378px;
+}
+
+.frame2 .texto-comprar2 {
+  color: #3056d3cf;
+  font-family: "Jua", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  height: 85px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 378px;
+}
+
+
+
+
+.frame3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 849px;
+  justify-content: center;
+  position: relative;
+  width: 758px;
+}
+
+.frame3 .image3 {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+  height: 679px;
+  justify-content: center;
+  position: relative;
+}
+
+.frame3 .group3 {
+  height: 670px;
+  position: relative;
+  width: 270px;
+}
+
+.frame3 .rectangle3 {
+  height: 328px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 274px;
+}
+
+.frame3 .img3 {
+  height: 324px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 350px;
+  width: 274px;
+}
+
+.frame3 .overlap-group-wrapper3 {
+  height: 428.67px;
+  position: relative;
+  width: 298.67px;
+}
+
+.frame3 .overlap-group3 {
+  height: 429px;
+  left: -4px;
+  position: relative;
+  width: 303px;
+}
+
+.frame3 .dotted-shape3 {
+  height: 106px;
+  left: 169px;
+  position: absolute;
+  top: 323px;
+  width: 134px;
+}
+
+.frame3 .rectangle-23 {
+  height: 408px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 278px;
 }
