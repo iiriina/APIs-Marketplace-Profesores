@@ -12,11 +12,11 @@ import SessionsPage from './Pages/SessionsPage'
 import PaymentsPage from './Pages/PaymentsPage'
 import DiaryPage from './Pages/DiaryPage'
 import HomeApisPage from './Pages/HomeApisPage';
-
+import ServicioProveedoresPage from './Pages/ServicioProveedoresPage';
 // Context
 import AppointmentState from './context/appointments/appointmentState';
 import ProfessionalState from './context/professional/professionalState';
-
+import ComentariosProveedoresPage from './Pages/ComentariosProveedoresPage'
 
 function App() {
 
@@ -34,6 +34,12 @@ function App() {
 
             {/* homepage para apis */}
             <Route path="homeapis" element={<HomeApisPage />} />
+          
+            {/* serv proveedores para apis */}
+            <Route path="servicios" element={<ServicioProveedoresPage />} />
+
+            {/* comentarios proveedores para apis */}
+            <Route path="comentarios" element={<ComentariosProveedoresPage />} />
 
 
             <Route path="main" element={<MainHomePage />} />

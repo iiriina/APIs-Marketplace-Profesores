@@ -23,6 +23,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @import url('./components/HomeApisComponent/styles/homeapis.css');
 @import url("https://fonts.googleapis.com/css?family=Inter:700,600|JetBrains+Mono:500|Righteous:400|Andika:400|Jua:400");
+@import url('./components/ServicioProveedoresComponent/styles/servicioproveedores.css');
+@import url('./components/TarjetaServicio/styles/tarjetaservicio.css');
+@import url('./components/NavBarApis/styles/navbarapis.css');
+
+@import url('./components/ComentariosProveedores/styles/comentariosproveedores.css');
+@import url('./components/ComentarioUsuario/styles/comentariousuario.css');
+
 
 :root {
   --verde: #0ABBB9;

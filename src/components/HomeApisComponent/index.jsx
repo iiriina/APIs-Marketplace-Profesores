@@ -1,23 +1,16 @@
 import React from "react";
+import AboutUs from '../../components/AboutUs'
+import Footer from '../../components/Footer'
+import Header from "../../components/Header/index"
+import MentalHealthArticles from "../../components/MentalHealthArticles"
+import Services from "../../components/Services"
+import NavBarApis from "../NavBarApis";
 
 export const HomeApisComponent = () => {
     return (
       <div className="mainContainer_PantallaPrincipal">
-        <div className="header">
-        <img className="logo" alt="Logo" src="https://c.animaapp.com/p8N1GDGe/img/logo.svg" />
-        <div className="menu">
-          <div className="text-wrapper">Inicio</div>
-          <div className="text-wrapper">Servicios</div>
-          <div className="text-wrapper">About Us</div>
-        </div>
-        <div className="header-button">
-          <div className="contact-button">
-            <div className="overlap-group">
-              <div className="contact-us">Log In</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <NavBarApis />
 
       <div className="frameafuera">
 
@@ -92,26 +85,32 @@ export const HomeApisComponent = () => {
 
 
         <div className="frame3">
-      <div className="image3">
-        <div className="group3">
-          <img className="rectangle3" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-8.png" />
-          <img className="img3" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-10.png" />
-        </div>
-        <div className="overlap-group-wrapper3">
-          <div className="overlap-group3">
-            <img
-              className="dotted-shape3"
-              alt="Dotted shape"
-              src="https://c.animaapp.com/4099Tdyd/img/dotted-shape@2x.png"
-            />
-            <img className="rectangle-23" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-9.png" />
+          <div className="image3">
+            <div className="group3">
+              <img className="rectangle3" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-8.png" />
+              <img className="img3" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-10.png" />
+            </div>
+            <div className="overlap-group-wrapper3">
+              <div className="overlap-group3">
+                <img
+                  className="dotted-shape3"
+                  alt="Dotted shape"
+                  src="https://c.animaapp.com/4099Tdyd/img/dotted-shape@2x.png"
+                />
+                <img className="rectangle-23" alt="Rectangle" src="https://c.animaapp.com/4099Tdyd/img/rectangle-9.png" />
+              </div>
+            </div>
           </div>
-        </div>
       </div>
-    </div>
 
       </div>
-    
+
+      <MentalHealthArticles />
+      <Services />
+      <Footer />
+
+
+
     </div>
     );
 };

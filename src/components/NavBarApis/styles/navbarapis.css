@@ -1,0 +1,77 @@
+.header {
+    align-items: center;
+    display: flex;
+    height: 122px;
+    justify-content: space-between;
+    mix-blend-mode: darken;
+    position: relative;
+    min-width: 1050px; /*esto se lo puse para que no se overlappeen (superpongan, se ponga uno arriba del otro) las cosas */
+  }
+  
+  .header .logo {
+    width: auto; /* Estaba con width 100 xd */
+    position: relative;
+  }
+  
+  .header .menu {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 50px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .header .text-wrapper {
+    color: #212b36;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .header .header-button {
+    align-items: center;
+    display: flex;
+    gap: 36px;
+    height: 51px;
+    justify-content: space-around;
+    padding: 0px 60px;
+    position: relative;
+    width: 283px;
+  }
+  
+  .header .contact-button {
+    align-self: stretch;
+    position: relative;
+    width: 145.61px;
+  }
+  
+  .header .overlap-group {
+    background-color: #3056d3;
+    border-radius: 6px;
+    height: 40px;
+    left: 5px;
+    position: relative;
+    top: 10px;
+    width: 136px;
+  }
+  
+  .header .contact-us {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    left: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+    width: 114px;
+  }
+  
