@@ -1,0 +1,291 @@
+:root {
+    /* Tamaño de fuente y estilo para fuente 14-medium */
+    --14-medium-font-family: "Inter-Medium", Helvetica;
+    --14-medium-font-size: 14px;
+    --14-medium-font-style: normal;
+    --14-medium-font-weight: 500;
+    --14-medium-letter-spacing: 0px;
+    --14-medium-line-height: 20px;
+  
+    /* Tamaño de fuente y estilo para fuente 14-regular */
+    --14-regular-font-family: "Inter-Regular", Helvetica;
+    --14-regular-font-size: 14px;
+    --14-regular-font-style: normal;
+    --14-regular-font-weight: 400;
+    --14-regular-letter-spacing: 0px;
+    --14-regular-line-height: 20px;
+  
+    /* Tamaño de fuente y estilo para fuente 16-medium */
+    --16-medium-font-family: "Inter-Medium", Helvetica;
+    --16-medium-font-size: 16px;
+    --16-medium-font-style: normal;
+    --16-medium-font-weight: 500;
+    --16-medium-letter-spacing: 0px;
+    --16-medium-line-height: 24px;
+  
+    /* Colores y paleta de colores */
+    --collection-1-white: rgba(255, 255, 255, 1);
+    --palette-text-primary: rgba(0, 0, 0, 0.87);
+    --tailgrids-black-color: rgba(33, 43, 54, 1);
+    --tailgrids-color: rgba(48, 86, 211, 1);
+    --tailgrids-text-color: rgba(99, 115, 129, 1);
+    --white: rgba(255, 255, 255, 1);
+  }
+
+  .frameservicioprofesores .tag-profesorservicioprofesores {
+    align-items: center;
+    background-color: #ffffff99;
+    border: 1px solid;
+    border-color: #cbcbcb;
+    border-radius: 32px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 11px;
+    justify-content: center;
+    max-width: 390px;
+    min-width: 335px;
+    padding: 15px 10px;
+    position: relative;
+  }
+  
+  .frameservicioprofesores .div-2servicioprofesores {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 4px 4px;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameservicioprofesores .nombreservicioprofesores {
+    height: 72.85px;
+    position: relative;
+    width: 212px;
+  }
+  
+  .frameservicioprofesores .imagenservicioprofesores {
+    height: 73px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 55px;
+  }
+  
+  .frameservicioprofesores .nombre-y-tiposervicioprofesores {
+    height: 54px;
+    left: 72px;
+    position: absolute;
+    top: 9px;
+    width: 144px;
+  }
+  
+  .frameservicioprofesores .text-wrapper-3servicioprofesores {
+    color: var(--tailgrids-black-color);
+    font-family: var(--16-medium-font-family);
+    font-size: var(--16-medium-font-size);
+    font-style: var(--16-medium-font-style);
+    font-weight: var(--16-medium-font-weight);
+    left: 0;
+    letter-spacing: var(--16-medium-letter-spacing);
+    line-height: var(--16-medium-line-height);
+    position: absolute;
+    top: 0;
+    width: 107px;
+  }
+  
+  .frameservicioprofesores .text-wrapper-4servicioprofesores {
+    color: var(--tailgrids-text-color);
+    font-family: var(--14-regular-font-family);
+    font-size: var(--14-regular-font-size);
+    font-style: var(--14-regular-font-style);
+    font-weight: var(--14-regular-font-weight);
+    left: 0;
+    letter-spacing: var(--14-regular-letter-spacing);
+    line-height: var(--14-regular-line-height);
+    position: absolute;
+    top: 34px;
+    white-space: nowrap;
+    width: 140px;
+  }
+    
+  .frameservicioprofesores .div-3servicioprofesores {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    width: 97px;
+  }
+  
+  .frameservicioprofesores .calificacinservicioprofesores {
+    height: 39px;
+    margin-right: -2px;
+    position: relative;
+    width: 99px;
+  }
+  
+  .frameservicioprofesores .overlap-groupservicioprofesores {
+    height: 39px;
+    position: relative;
+    width: 97px;
+  }
+
+  .frameservicioprofesores .valueservicioprofesores {
+    color: var(--palette-text-primary);
+    font-family: "Righteous", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 39px;
+    left: 0;
+    letter-spacing: 0.15px;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 82px;
+  }
+  
+  .frameservicioprofesores .starservicioprofesores {
+    height: 22px;
+    left: 75px;
+    position: absolute;
+    top: 8px;
+    width: 22px;
+  }
+  
+  .frameservicioprofesores .botn-contactarservicioprofesores {
+    align-items: flex-start;
+    background-color: var(--tailgrids-color);
+    border-radius: 3px;
+    display: inline-flex;
+    gap: 10px;
+    height: 30.21px;
+    padding: 5px 14px;
+    position: relative;
+  }
+  
+  .frameservicioprofesores .text-wrapper-5servicioprofesores {
+    color: var(--white);
+    font-family: var(--14-medium-font-family);
+    font-size: var(--14-medium-font-size);
+    font-style: var(--14-medium-font-style);
+    font-weight: var(--14-medium-font-weight);
+    letter-spacing: var(--14-medium-letter-spacing);
+    line-height: var(--14-medium-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .frameservicioprofesores .pservicioprofesores {
+    all: unset;
+    align-self: stretch;
+    color: var(--tailgrids-black-color);
+    font-family: var(--16-medium-font-family);
+    font-size: var(--16-medium-font-size);
+    font-style: var(--16-medium-font-style);
+    font-weight: var(--16-medium-font-weight);
+    letter-spacing: var(--16-medium-letter-spacing);
+    line-height: var(--16-medium-line-height);
+    position: relative;
+  }
+  
+  .frameservicioprofesores .text-wrapper-6servicioprofesores {
+    all: unset;
+
+    align-self: stretch;
+    color: var(--tailgrids-text-color);
+    font-family: var(--14-regular-font-family);
+    font-size: var(--14-regular-font-size);
+    font-style: var(--14-regular-font-style);
+    font-weight: var(--14-regular-font-weight);
+    letter-spacing: var(--14-regular-letter-spacing);
+    line-height: var(--14-regular-line-height);
+    position: relative;
+  }
+  
+  .frameservicioprofesores .div-4servicioprofesores {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 8px 8px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameservicioprofesores .precioservicioprofesores {
+    align-items: flex-start;
+    background-color: #7f4ac2f7;
+    border-radius: 14px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    padding: 5px 14px;
+    position: relative;
+    width: 89px;
+  }
+  
+  .frameservicioprofesores .text-wrapper-7servicioprofesores {
+    align-self: stretch;
+    color: var(--white);
+    flex: 1;
+    font-family: var(--14-medium-font-family);
+    font-size: var(--14-medium-font-size);
+    font-style: var(--14-medium-font-style);
+    font-weight: var(--14-medium-font-weight);
+    letter-spacing: var(--14-medium-letter-spacing);
+    line-height: var(--14-medium-line-height);
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .frameservicioprofesores .div-5servicioprofesores {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 5px 5px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .frameservicioprofesores .text-wrapper-8servicioprofesores {
+    color: #2196f3;
+    font-family: "Inter", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 76px;
+  }
+  
+  .frameservicioprofesores .text-wrapper-9servicioprofesores {
+    color: #2196f3;
+    font-family: "Inter", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 121px;
+  }
+
+  

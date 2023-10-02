@@ -1,0 +1,39 @@
+[
+    {
+      "id_curso": "1",
+      "nombre": "Juan Gomez",
+      "modalidad": "Presencial y Online",
+      "categoria": "Clases particulares de Matemática",
+      "tipo_de_clase":"individual",
+      "frecuencia":"mensual",
+      "calificacion":4.0,
+      "precio": 5000,
+      "descripcion": "Brindo apoyo en clases de matemática de 1ro a 3er año del secundario. Tengo 20 años de experiencia en el sector. No dudes en contactarme.",
+      "foto": "img/client-img1-1.jpg"
+    },
+    {
+        "id_curso": "2",
+        "nombre": "Micaela Smith",
+        "modalidad": "Presencial",
+        "categoria": "Clases particulares de Física",
+        "tipo_de_clase":"grupal",
+        "frecuencia":"mensual",
+        "calificacion":4.3,  
+        "precio": 7000,
+        "descripcion": "Recibido en UADE. Brindo apoyo en clases de matemática de 1ro a 3er año del secundario. Tengo muchos años de experiencia en el sector. No dudes en contactarme.",
+        "foto": "img/p2.jpg"
+    },
+    {
+        "id_curso": "3",
+        "nombre": "Matias Caliz",
+        "modalidad": "Online",
+        "categoria": "Clases de Economía",
+        "tipo_de_clase":"individual",
+        "frecuencia":"mensual",
+        "calificacion":5.0,  
+        "precio": 8000,
+        "descripcion": "Analizo el mercado hace 18 años y tengo un post-grado en la facultad de ciencias económicas de la UBA.",
+        "foto": "img/p3.jpg"
+    }
+]
+  

@@ -1,0 +1,10 @@
+.framepagcomentarios {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    height: 944px;
+    padding: 24px 170px 34px 144px;
+    position: relative;
+  }
+
