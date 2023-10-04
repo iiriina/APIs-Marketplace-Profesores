@@ -6,5 +6,12 @@
     height: 944px;
     padding: 24px 170px 34px 144px;
     position: relative;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width:630px) {
+    .framepagcomentarios {
+      padding: 40px;
+    }
   }
 

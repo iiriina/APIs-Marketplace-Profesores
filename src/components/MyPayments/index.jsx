@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import PayCard from "../PayCard";
+
 import AppointmentContext from '../../context/appointments/appointmentContext';
 
 const MyPayments = () => {
@@ -17,11 +17,7 @@ const MyPayments = () => {
               <div className="elementos_pendientes">
                 <h1 className="titulo_pagos_pendientes">Pagos Pendientes</h1>
                 {/* aca van a ir todos los PayCards con la informacion sobre el turno con pago pendiente */}
-                {appointments?.length !== 0 ? 
-                  appointments.map(appointment => (
-                    <PayCard {...appointment} />
-                  )): null
-                }
+
               </div>
 
               {/* todo bien con agregar mil componentes paycard arriba, el Pagos Realizados se muestra a continuacion

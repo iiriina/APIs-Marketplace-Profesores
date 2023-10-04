@@ -33,53 +33,26 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ backgroundColor: "#FFFFFF" }}>
         <Toolbar disableGutters>
-          <SwipeableTemporaryDrawer
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none", color: "inherit"} }}
-          />
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", color: "black" },
+            }}
+          >
+            <SwipeableTemporaryDrawer
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none", color: "inherit" },
+                padding: "30px",
+              }}
+            />
+          </Box>
           <img
             src="src/components/NavBarMarketplace/Picture1.png"
-            style={{ width: "20%" }}
+            style={{ width: "15%" }}
           />
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pagesLogin.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
           <Typography
             variant="h5"
             noWrap
@@ -92,7 +65,7 @@ function ResponsiveAppBar() {
               fontFamily: "quicksand",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "black",
               textDecoration: "none",
             }}
           ></Typography>
@@ -103,7 +76,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 1,
-                  color: "white",
+                  color: "black",
                   display: "block",
                   paddingLeft: "90px",
                   fontSize: "18px",
@@ -119,7 +92,7 @@ function ResponsiveAppBar() {
               onClick={handleCloseNavMenu}
               sx={{
                 my: 1,
-                color: "white",
+                color: "black",
                 display: "blok",
                 padding: "35px",
                 ml: "auto",

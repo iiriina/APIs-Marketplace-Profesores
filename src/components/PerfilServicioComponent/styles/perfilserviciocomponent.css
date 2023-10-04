@@ -439,3 +439,26 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     width: fit-content;
 
 }
+
+@media screen and (max-width:705px) {
+  .div-2perfilservicio {
+    position: relative;
+    right: 20%;
+  }
+
+  .div-3perfilservicio {
+      position: relative;
+    right: 20%;
+  }
+
+  .precioperfilservicio2 {
+      position: relative;
+    right: 20%;
+    }
+    
+    .div-6perfilservicio {
+        position: relative;
+        
+      }
+  
+}

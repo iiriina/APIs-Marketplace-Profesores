@@ -1,11 +1,11 @@
 import React from "react";
-import NavBarApis from "../../components/NavBarApis";
 import ComentariosProveedores from "../../components/ComentariosProveedores";
+import ResponsiveAppBar from "../../components/NavBarMarketplace";
 
 const ComentariosProveedoresPage = () => {
     return (
       <div>
-        <NavBarApis />
+        <ResponsiveAppBar />
         <ComentariosProveedores />
       </div>
     );
