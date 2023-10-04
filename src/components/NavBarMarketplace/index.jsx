@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
           </Box>
           <img
             src="src/components/NavBarMarketplace/Picture1.png"
-            style={{ width: "15%" }}
+            style={{ width: "150px"}}
           />
           <Typography
             variant="h5"

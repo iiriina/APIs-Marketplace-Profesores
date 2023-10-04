@@ -46,12 +46,16 @@
   width: 100%;
 }
 
-.parte-izquierdaizquierda .la-educacin-que-seizquierda {
-  align-self: stretch;
-  flex: 0 0 auto;
-  position: relative;
-  width: 100%;
-}
+@media screen and (min-width: 480px) {
+  
+
+  .parte-izquierdaizquierda .la-educacin-que-seizquierda {
+    align-self: stretch;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+  }
+
 
 .parte-izquierdaizquierda .eleg-entre-miles-deizquierda {
   align-self: stretch;
@@ -97,4 +101,48 @@
   height: 682.5px;
   min-width: 501px;
   position: relative;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  .la-educacin-que-seizquierda {
+    width: 70%;
+  }
+
+  .eleg-entre-miles-deizquierda {
+    font-size: 12px;
+  }
+
+    .parte-izquierdaizquierda .eleg-entre-miles-deizquierda {
+      align-self: stretch;
+      color: #060606;
+      font-family: "Andika", Helvetica;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 45px;
+      position: relative;
+      text-align: center;
+    }
+  
+    .botn-buscarizquierda {
+      background-color: #a577d3cf;
+      border-radius: 22px;
+      height: 60px;
+      position: relative;
+      width: 250px;
+    }
+  
+    .botn-buscarizquierda .texto-comprarizquierda {
+      color: #0b0053;
+      font-family: "Quicksand", Helvetica;
+      font-size: 28px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: relative;
+      text-align: center;
+      text-shadow: 0px 4px 4px #00000040;
+    }
+  
 }
