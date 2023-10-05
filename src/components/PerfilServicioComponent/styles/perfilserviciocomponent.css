@@ -471,5 +471,113 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
         position: relative;
         
       }
+    }
+
+@media screen and (max-width:450px) {
+      
+      .divperfilservicio {
+          position: relative;
+          top: 650px;
+      }
+
+   
+
+      .frame-wrapperperfilservicio {
+        position: relative;
+        bottom: 2000px;
+      }
+
+      .precioperfilservicio2 {
+        position: relative;
+        left: 1%;
+      }
+
+      .precioperfilservicio2 {
+        position: relative;
+        float: left;
+        right: 10%;
+        
+      }
   
+}
+
+@media screen and (max-width:550px) and (min-width: 450px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1950px;
+  }
+
+}
+
+
+@media screen and (max-width:705px) and (min-width: 688px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1400px;
+  }
+
+}
+
+@media screen and (max-width:670px) and (min-width: 605px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1500px;
+  }
+
+}
+
+@media screen and (max-width:605px) and (min-width: 550px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1550px;
+  }
+
+}
+
+@media screen and (max-width:550px) and (min-width: 450px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1650px;
+  }
+
 }
