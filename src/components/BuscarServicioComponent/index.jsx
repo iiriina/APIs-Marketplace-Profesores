@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import data from './data.json';
+import ResponsiveAppBar from "../NavBarMarketplace";
 
 
 
@@ -50,6 +51,10 @@ export const BuscarServicioComponent = () => {
 
 
     return (
+      <div className="framegeneralbuscarservicio">
+
+      <ResponsiveAppBar />
+
       <div className="frameservicioprofesores">
         <div className="text-wrapperservicioprofesores">Buscar Servicios</div>
         <div className="divserviciosprofesoresprim">
@@ -130,6 +135,7 @@ export const BuscarServicioComponent = () => {
           <TarjetaServicioProfesor />
           <TarjetaServicioProfesor />
         </div>
+      </div>
       </div>
     );
 };

@@ -18,9 +18,13 @@ export const TarjetaServicioProfesor = () => {
                 <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
               </div>
             </div>
-            <div className="botn-contactarservicioprofesores">
-              <div className="text-wrapper-5servicioprofesores">Contactar</div>
-            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio';
+                }}
+              >Contactar</div>
+            </button>
           </div>
         </div>
         <p className="pservicioprofesores">Clases de Matemática y Física</p>
@@ -33,8 +37,20 @@ export const TarjetaServicioProfesor = () => {
             <div className="text-wrapper-7servicioprofesores">$5000/h</div>
           </div>
           <div className="div-5servicioprofesores">
-            <div className="text-wrapper-8servicioprofesores">Comentar</div>
-            <div className="text-wrapper-9servicioprofesores">Ver Comentarios</div>
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio';
+                        }}
+            >
+              Ver Comentarios
+              </button>
           </div>
         </div>
       </div>

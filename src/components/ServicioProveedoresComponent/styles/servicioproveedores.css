@@ -20,5 +20,12 @@
     text-align: center;
     white-space: nowrap;
     width: fit-content;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .divbotoncitomisservicios{
+    top: 10px;
   }
   

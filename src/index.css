@@ -38,6 +38,9 @@
 @import url('./components/NavBarMarketplace/styles/navbarmarketplace.css');
 @import url('./components/LogInComponent/styles/logincomponent.css');
 
+@import url('./components/BotonAgregarServicio/styles/botonagregarservicio.css');
+
+@import url('./components/TarjetaContratacion/style/tarjetacontratacion.css');
 
 
 :root {

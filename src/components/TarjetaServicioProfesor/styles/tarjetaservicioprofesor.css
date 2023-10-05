@@ -1,25 +1,25 @@
 :root {
     /* Tamaño de fuente y estilo para fuente 14-medium */
-    --14-medium-font-family: "Inter-Medium", Helvetica;
-    --14-medium-font-size: 14px;
+    --14-medium-font-family: "QuickSand", Helvetica;
+    --14-medium-font-size: 16px;
     --14-medium-font-style: normal;
     --14-medium-font-weight: 500;
     --14-medium-letter-spacing: 0px;
     --14-medium-line-height: 20px;
   
     /* Tamaño de fuente y estilo para fuente 14-regular */
-    --14-regular-font-family: "Inter-Regular", Helvetica;
-    --14-regular-font-size: 14px;
+    --14-regular-font-family: "QuickSand", Helvetica;
+    --14-regular-font-size: 16px;
     --14-regular-font-style: normal;
     --14-regular-font-weight: 400;
     --14-regular-letter-spacing: 0px;
     --14-regular-line-height: 20px;
   
     /* Tamaño de fuente y estilo para fuente 16-medium */
-    --16-medium-font-family: "Inter-Medium", Helvetica;
-    --16-medium-font-size: 16px;
+    --16-medium-font-family: "QuickSand", Helvetica;
+    --16-medium-font-size: 18px;
     --16-medium-font-style: normal;
-    --16-medium-font-weight: 500;
+    --16-medium-font-weight: 600;
     --16-medium-letter-spacing: 0px;
     --16-medium-line-height: 24px;
   
@@ -263,23 +263,24 @@
   }
   
   .frameservicioprofesores .text-wrapper-8servicioprofesores {
-    color: #2196f3;
-    font-family: "Inter", Helvetica;
+    color: #0074d3;
+    font-family: "QuickSand", Helvetica;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
     height: 20px;
     letter-spacing: 0;
     line-height: normal;
     position: relative;
     text-align: center;
     width: 76px;
+    background-color: white;
   }
   
   .frameservicioprofesores .text-wrapper-9servicioprofesores {
-    color: #2196f3;
-    font-family: "Inter", Helvetica;
+    color: #0074d3;
+    font-family: "QuickSand", Helvetica;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
     height: 20px;
     letter-spacing: 0;
     line-height: normal;
@@ -287,6 +288,7 @@
     position: relative;
     text-align: center;
     width: 121px;
+    background-color: white;
   }
 
   

@@ -1,7 +1,7 @@
 :root {
     /* Tamaño de fuente y estilo para fuente 14-medium */
     --14-medium-font-family: "Inter-Medium", Helvetica;
-    --14-medium-font-size: 14px;
+    --14-medium-font-size: 18px;
     --14-medium-font-style: normal;
     --14-medium-font-weight: 500;
     --14-medium-letter-spacing: 0px;
@@ -9,7 +9,7 @@
   
     /* Tamaño de fuente y estilo para fuente 14-regular */
     --14-regular-font-family: "Inter-Regular", Helvetica;
-    --14-regular-font-size: 14px;
+    --14-regular-font-size: 18px;
     --14-regular-font-style: normal;
     --14-regular-font-weight: 400;
     --14-regular-letter-spacing: 0px;
@@ -17,7 +17,7 @@
   
     /* Tamaño de fuente y estilo para fuente 16-medium */
     --16-medium-font-family: "Inter-Medium", Helvetica;
-    --16-medium-font-size: 16px;
+    --16-medium-font-size: 18px;
     --16-medium-font-style: normal;
     --16-medium-font-weight: 500;
     --16-medium-letter-spacing: 0px;
@@ -60,7 +60,8 @@
           border: 1px solid;
           border-color: #cbcbcb;
           border-radius: 26px;
-
+          max-width: 200px;
+          min-width: 100px;
           gap: 10px;
           height: 50px;
           width: 150px;
@@ -105,9 +106,9 @@
   }
   
   .frameservicioprofesores .text-wrapper-2servicioprofesores {
-    color: #000000cc;
+    color: #630087cc;
     flex: 1;
-    font-family: "Roboto", Helvetica;
+    font-family: "QuickSand", Helvetica;
     min-width: 130px;
     font-size: 24px;
     font-weight: 700;
@@ -123,7 +124,7 @@
     flex-grow: 1;
     gap: 10px;
     justify-content: center;
-    max-width: 250px;
+    max-width: 200px;
     min-width: 162px;
     position: relative;
     align-items: center;
@@ -196,6 +197,8 @@
         font-size: 16px;
         font-weight: 600;
         color: #232323;
+        max-width: 200px;
+        min-width: 100px;
 
       }
         }
