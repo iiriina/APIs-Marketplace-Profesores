@@ -13,10 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -39,28 +36,40 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["About Us", "Buscar Profesional", "Iniciar Sesion"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-
+        <ListItem key="about-us" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="#about-us">About Us</a>} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="buscar-profesional" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="/buscar_servicios">Buscar Servicio</a>} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="iniciar-sesion" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="/login">Iniciar Sesión Profesores</a>} />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
-    
     </Box>
   );
 
   return (
     <div>
-      {["Menu"].map((anchor) => (
+      {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button onClick={toggleDrawer(anchor, true)}>Menu</Button>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}

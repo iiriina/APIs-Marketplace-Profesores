@@ -34,6 +34,12 @@
 
 @import url('./components/MisContratacionesComponent/styles/miscontratacionescomponent.css');
 
+
+@import url('./components/NavBarMarketplace/styles/navbarmarketplace.css');
+@import url('./components/LogInComponent/styles/logincomponent.css');
+
+
+
 :root {
   --verde: #0ABBB9;
   --rosa: #C7999D;

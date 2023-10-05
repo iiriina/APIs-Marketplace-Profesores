@@ -23,6 +23,7 @@ import LogInPage from './Pages/LoginPage'
 import SignUpPage from './Pages/SignUpPage'
 import MisContratacionesPage from './Pages/MisContratacionesPage'
 import ResetPwdPage from './Pages/ResetPwdPage'
+import CompletarDatosPage from './Pages/CompletarDatosPage'
 
 function App() {
 
@@ -41,10 +42,10 @@ function App() {
             <Route path="search" element={<SearchPage />}/>
             <Route path="home" element={<HomePage />} />
 
-            {/* homepage para apis */}
+            {/*!!!! FALTA HACER QUE SEA 125% dijo matii. homepage para apis */}
             <Route path="homeapis" element={<HomeApisPage />} />
           
-            {/* serv proveedores para apis */}
+            {/* !!!! AUN FALTA PONER EL BOTON PARA AGREGAR SERVICIO!!! serv proveedores para apis */}
             <Route path="servicios" element={<ServicioProveedoresPage />} />
 
             {/* comentarios proveedores para apis */}
@@ -62,11 +63,14 @@ function App() {
             {/* sign up para apis no tiene css importado*/}
             <Route path="signup" element={<SignUpPage />} />
 
-            {/*AÚN NO ESTÁ HECHO mis contrataciones (aca va la tabla mati) para apis */}
+            {/*!!!!! AÚN NO ESTÁ HECHO RESPONSIVE. falta los margenes */}
             <Route path="miscontrataciones" element={<MisContratacionesPage />} />
 
-            {/*AÚN NO ESTÁ HECHO mis contrataciones (aca va la tabla mati) para apis */}
+            {/*el reset pwd esta listo con enlaces */}
             <Route path="resetpwd" element={<ResetPwdPage />} />
+            
+            {/*completar titulo y experiencia del profesional */}
+            <Route path="completardatos" element={<CompletarDatosPage />} />
 
             <Route path="main" element={<MainHomePage />} />
             <Route path="profile/:id" element={<ProfessionalProfilePage />} />

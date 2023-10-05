@@ -2,34 +2,28 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import SwipeableTemporaryDrawer from "../Swipeable/index.jsx";
 
 
-
-const pages = ["About Us", "Buscar Profesional"];
-
-const pagesLogin = ["About Us", "Buscar Profesional", "Iniciar Sesión como Profesor"];
-
+{/* hay que hacer que ande ese about us section */}
+const pages = [
+  { label: "About Us", href: "#about-us-section" },
+  { label: "Buscar Servicios", href: "/buscar_servicios" },
+];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
+
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
 
-  
+  };
 
   return (
     <AppBar position="static">
@@ -51,7 +45,7 @@ function ResponsiveAppBar() {
           </Box>
           <img
             src="src/components/NavBarMarketplace/Picture1.png"
-            style={{ width: "150px"}}
+            style={{ width: "150px" }}
           />
           <Typography
             variant="h5"
@@ -67,13 +61,16 @@ function ResponsiveAppBar() {
               letterSpacing: ".3rem",
               color: "black",
               textDecoration: "none",
+              width: "fit-content", // Esto ajustará el ancho al contenido
+              textAlign: "center", // Esto centrará el texto dentro del botón
+
             }}
           ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.label}
+                href={page.href}
                 sx={{
                   my: 1,
                   color: "black",
@@ -84,23 +81,25 @@ function ResponsiveAppBar() {
                   textAlign: "left",
                 }}
               >
-                {page}
+                {page.label}
               </Button>
             ))}
             <Button
               key="Iniciar Sesión como Profesor"
-              onClick={handleCloseNavMenu}
+              onClick={() => {
+                window.location.href = 'http://localhost:5173/login';
+              }}
               sx={{
                 my: 1,
                 color: "black",
-                display: "blok",
+                display: "block",
                 padding: "35px",
                 ml: "auto",
                 fontSize: "18px",
                 fontFamily: "quicksand",
               }}
             >
-              Iniciar Sesión <br /> como Profesor
+              LogIn Profesor
             </Button>
           </Box>
         </Toolbar>
@@ -108,6 +107,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-
 
 export default ResponsiveAppBar;

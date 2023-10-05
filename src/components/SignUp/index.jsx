@@ -41,6 +41,8 @@ export default function SignUp() {
   };
 
   return (
+    <div className="container_general_loginn">
+
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -119,6 +121,10 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={() => {
+                window.location.href = '/completardatos';
+            }}
+
             >
               Crear Cuenta
             </Button>
@@ -134,5 +140,6 @@ export default function SignUp() {
         <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 }

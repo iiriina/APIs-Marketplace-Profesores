@@ -41,6 +41,7 @@ export default function LogInComponent() {
   };
 
   return (
+    <div className="container_general_loginn">
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -79,17 +80,26 @@ export default function LogInComponent() {
               id="password"
               autoComplete="current-password"
             />
+
+
+
+            {/* cuando apreta iniciar sesion estoy redirigiendolo a la pagina de sus servicios*/}
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={() => {
+                window.location.href = '/servicios';
+              }}
+
             >
               Iniciar Sesión
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="/resetpwd" variant="body2">
                   Olvidaste tu contraseña?
                 </Link>
               </Grid>
@@ -104,5 +114,6 @@ export default function LogInComponent() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 }
