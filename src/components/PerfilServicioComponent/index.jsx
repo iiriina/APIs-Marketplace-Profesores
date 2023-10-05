@@ -8,6 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Snackbar from '@mui/material/Snackbar';
 import Rating from '@mui/material/Rating';
+import ResponsiveAppBar from '../NavBarMarketplace';
 
 export const PerfilServicioComponent = () => {
 
@@ -60,10 +61,15 @@ export const PerfilServicioComponent = () => {
 
     return (
 
-        
+        <div className="div general_perfil_servicio">
+            <ResponsiveAppBar />
+
+            <div className="titulo_perfil_servicioooo">Clases de Inglés Intensivas</div>
+
             <div className="frameperfilservicio">
             <div className="divperfilservicio">
-            <div className="text-wrapperperfilservicio">Descripción:</div>
+            <div className="text-wrapperperfilservicio"></div>
+
             <div className="div-2perfilservicio">
                 <div className="text-wrapper-2perfilservicio">Biografía:</div>
                 <p className="pperfilservicio">
@@ -167,9 +173,18 @@ export const PerfilServicioComponent = () => {
 
                 <div className="frameperfilservicio2">
                     <div className="divperfilservicio2">
+                        <div className="text-wrapperperfilservicio2">Juan Carlos</div>
+                    </div>
+
+                    <div className="divperfilservicio2">
                         <div className="text-wrapperperfilservicio2">Precio:</div>
                         <div className="text-wrapper-2perfilservicio2">$5000/h</div>
                     </div>
+                    <div className="divperfilservicio2">
+                        <div className="text-wrapperperfilservicio2">Frecuencia:</div>
+                        <div className="text-wrapper-2perfilservicio2">2 clases semanales</div>
+                    </div>
+
                     <div className="divperfilservicio2">
                         <div className="text-wrapperperfilservicio2">Calificación:</div>
                         <div className="text-wrapper-2perfilservicio2">4.5 (23 opiniones)</div>
@@ -258,6 +273,7 @@ export const PerfilServicioComponent = () => {
 
             </div>
             </div>
+        </div>
     );
 };
 

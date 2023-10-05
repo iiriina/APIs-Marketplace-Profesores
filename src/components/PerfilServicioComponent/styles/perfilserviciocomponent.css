@@ -13,8 +13,7 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 46px;
-    padding-top: 39px;
-    padding-left:100px;
+    padding-left: 100px;
     position: relative;
   }
   
@@ -22,7 +21,7 @@
     align-self: stretch;
     color: #000000;
     font-family: "Quicksand", Helvetica;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 35px;
@@ -39,10 +38,10 @@
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 26px;
+    gap: 20px;
     min-width: 345px;
     overflow: hidden;
-    padding: 29px 42px 37px;
+    padding: 29px 31px;
     position: relative;
     width: 100%;
   }
@@ -63,20 +62,19 @@
     align-self: stretch;
     color: #000000;
     font-family: "Quicksand", Helvetica;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 35px;
     position: relative;
     text-align: left !important;
-
   }
   
   .frameperfilservicio .text-wrapper-3perfilservicio {
     align-self: stretch;
     color: #000000;
     font-family: "Quicksand", Helvetica;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 35px;
@@ -175,7 +173,7 @@
     justify-content: center;
     max-width: 564px;
     min-width: 259px;
-    padding: 48px 0px 100px;
+    /* padding: 48px 0px 100px; */
     position: relative;
   }
   
@@ -187,7 +185,7 @@
     flex-grow: 1;
     flex-wrap: wrap;
     gap: 23px 29px;
-    top: 80px;
+    top: 60px;
     justify-content: center;
     padding: 0px 30px;
     position: relative;
@@ -261,7 +259,19 @@
     text-align: center;
   }
 
-
+.titulo_perfil_servicioooo{
+  align-self: stretch;
+  color: #5d378e;
+  font-family: "Quicksand", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-top: -1px;
+  position: relative;
+  padding-left: 100px;
+  padding-top: 40px;
+}
 
   .frameperfilservicio2 {
     align-items: center;
@@ -289,7 +299,7 @@
   .frameperfilservicio2 .text-wrapperperfilservicio2 {
     color: #000000;
     font-family: "Quicksand", Helvetica;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 35px;
@@ -403,16 +413,17 @@
     color: black !important;
     font-family: "Quicksand" !important;
     font-weight: 600 !important;
+    font-size: 18px !important;
 }
 .css-bdhsul-MuiTypography-root-MuiDialogTitle-root{
   font-family: "Quicksand" !important;
   font-weight: 500 !important;
-
+  font-size: 18px !important;
 }
 .css-qfso29-MuiTypography-root-MuiDialogContentText-root{
   font-family: "Quicksand" !important;
   font-weight: 500 !important;
-
+  font-size: 18px !important;
 }
 
 label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-input-MuiInput-input{
@@ -429,7 +440,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
 .text-wrapper-2perfilservicio2{
       color: #000000;
     font-family: "Quicksand", Helvetica;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 35px;
