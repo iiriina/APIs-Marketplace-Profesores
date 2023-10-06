@@ -7,8 +7,14 @@
   padding: 0px 32px;
   position: relative;
   justify-content: center;
-  background-image:radial-gradient(100% 100% at 50% 100%, #feb2b2 0%, rgba(252, 184, 219, 0.75) 25%, rgba(239, 194, 250, 0.5) 50%, rgba(190, 227, 248, 0) 100%), linear-gradient(90deg, #ed64a6 39%, #ed68d1 47.71%, #d77ded 56.43%, #af99ef 65.14%, #84adf1 73.86%, #51bee9 82.57%, #4fd1c5 100%)
-
+  background-color:#ffce99;
+  background-image:
+  radial-gradient(at 70% 58%, hsla(292,67%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 18% 88%, hsla(80,77%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 35% 70%, hsla(177,78%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 10% 1%, hsla(183,65%,74%,1) 0px, transparent 50%),
+  radial-gradient(at 79% 88%, hsla(341,78%,67%,1) 0px, transparent 50%),
+  radial-gradient(at 79% 57%, hsla(28,98%,72%,1) 0px, transparent 50%);
 }
 
 .parte-izquierdaizquierda {
@@ -274,4 +280,23 @@
   line-height: 45px;
   position: relative;
   text-align: center;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 900px){
+  .parte-izquierdaizquierda{
+    padding-bottom: 20px;
+  }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px){
+  .parte-izquierdaizquierda{
+    padding-bottom: 20px;
+  }
+.parte-derecha{
+  width: 410px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
 }

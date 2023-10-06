@@ -152,11 +152,341 @@ export const BuscarServicioLogueadoComponent = () => {
         </div>
 
         <div className="tag-profesor-wrapperservicioprofesores">
+
+      {/* componentes de tarjeta */}
+
+      <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/sytn1YQT/img/image-14@2x.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Luz Rivas</div>
+              <div className="text-wrapper-4servicioprofesores">Grupal</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">4.3 (20)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Matemática y Física</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Recibida en UBA. Brindo apoyo en clases de matemática de 1ro a 3er año del secundario. Tengo muchos años de
+          experiencia en el sector. No dudes en contactarme.
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$7500/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+
+          {/* componentes de tarjeta */}
+
+          <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/jt0Q7JA1/img/imagen.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Juan Carlos</div>
+              <div className="text-wrapper-4servicioprofesores">Individual</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">4.3 (20)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Inglés</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Recibido en UADE. Brindo apoyo en clases de Inglés en todos los niveles. Tengo muchos años de
+          experiencia en el ámbito. No dudes en enviarme un mensaje!
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$5000/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+
+          {/* componentes de tarjeta */}
+
+          <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/ti5XucTd/img/image-15@2x.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Ivana Jaz</div>
+              <div className="text-wrapper-4servicioprofesores">Grupal</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">4.9 (10)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Cocina Vegetariana</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Recibida en UCA. Clases de cocina vegana y vegetariana para todas las edades. 
+          Realicé un curso de esquina de las flores. No dudes en enviarme un mensaje!
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$6000/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+
+                {/* componentes de tarjeta */}
+                
+                <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/naTp685l/img/image-16@2x.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Marcos Go</div>
+              <div className="text-wrapper-4servicioprofesores">Individual</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">4.2 (10)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Economía</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Clases de economía, nivel secundario y universitario. Tengo años de experiencia. 
+          Realicé un Postgrado en Ciencias Económicas en la UNLAM. Estoy a tu disposición.
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$4500/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+
+      
+      {/* componentes de tarjeta */}
+      <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/TyQOJEoI/img/image-17@2x.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Miguel Sanz</div>
+              <div className="text-wrapper-4servicioprofesores">Grupal</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">5.0 (41)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Política</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Clases de política, nivel terciario y para aficionados. Clases pedagógicas y lúdicas, con juegos.
+          Realicé un Postgrado en Ciencias Políticas en la UBA. Estoy a tu disposición.
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$4500/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      {/* componentes de tarjeta */}
+      <div className="tag-profesorservicioprofesores">
+        <div className="div-2servicioprofesores">
+          <div className="nombreservicioprofesores">
+            <img className="imagenservicioprofesores" alt="Imagen" src="https://i.ibb.co/q9n0WF7/image-18.png" />
+            <div className="nombre-y-tiposervicioprofesores">
+              <div className="text-wrapper-3servicioprofesores">Liz Chacon</div>
+              <div className="text-wrapper-4servicioprofesores">Grupal</div>
+            </div>
+          </div>
+          <div className="div-3servicioprofesores">
+            <div className="calificacinservicioprofesores">
+              <div className="overlap-groupservicioprofesores">
+                <div className="valueservicioprofesores">5.0 (21)</div>
+                <img className="starservicioprofesores" alt="Star" src="https://c.animaapp.com/jt0Q7JA1/img/star@2x.png" />
+              </div>
+            </div>
+            <button className="botn-contactarservicioprofesores">
+              <div className="text-wrapper-5servicioprofesores"
+                onClick={() => {
+                  window.location.href = '/perfil_servicio/logged';
+                }}
+              >Contactar</div>
+            </button>
+          </div>
+        </div>
+        <p className="pservicioprofesores">Clases de Stand-Up</p>
+        <p className="text-wrapper-6servicioprofesores">
+          Clases de Standup, 8 clases semanales que harán que puedas hacer shows nacionales. 
+          Realicé varias comedias en el teatro. No dudes en hablarme! Gracias!
+        </p>
+        <div className="div-4servicioprofesores">
+          <div className="precioservicioprofesores">
+            <div className="text-wrapper-7servicioprofesores">$5700/h</div>
+          </div>
+          <div className="div-5servicioprofesores">
+            <button className="text-wrapper-8servicioprofesores"  
+            onClick={() => {
+              window.location.href = '/perfil_servicio/logged';
+            }}
+            >
+              Ver Perfil
+              </button>
+            <button className="text-wrapper-9servicioprofesores"
+                        onClick={() => {
+                          window.location.href = '/perfil_servicio/logged';
+                        }}
+            >
+              Ver Comentarios
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+
           <TarjetaServicioProfesorLogueado />
-          <TarjetaServicioProfesorLogueado />
-          <TarjetaServicioProfesorLogueado />
-          <TarjetaServicioProfesorLogueado />
-          <TarjetaServicioProfesorLogueado />
+
+
 
         </div>
       </div>

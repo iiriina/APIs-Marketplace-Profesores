@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     gap: 1px 1px;
     position: relative;
-    overflow-x: hidden;
    
   }
   
@@ -480,8 +479,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
 }
 @media screen and (min-width: 705px) and (max-width: 850px) {
   .frameperfilservicio {
-    right: 10% !important;
-        overflow-x: hidden;
+    right: 5% !important;
   }
 }
 
@@ -491,10 +489,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     right: 20%;
   }
 
-    .frameperfilservicio {
-
-      overflow-x: hidden;
-    }
 
   .div-3perfilservicio {
       position: relative;
@@ -524,11 +518,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
           top: 750px;
       }
 
-            .frameperfilservicio {
-      
-              overflow-x: hidden;
-            }
-
 
       .precioperfilservicio2 {
         left: 1% !important;
@@ -554,7 +543,10 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
         right: 10%;
         
       }
-  
+      
+      .divperfilservicio{
+            padding-left: 20px;
+      }
 }
 
 @media screen and (max-width:550px) and (min-width: 450px) {
@@ -563,11 +555,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     position: relative;
     top: 650px;
   }
-
-    .frameperfilservicio {
-  
-      overflow-x: hidden;
-    }
 
 
 
@@ -586,12 +573,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
-    .frameperfilservicio {
-  
-      overflow-x: hidden;
-    }
-
-
 
   .frame-wrapperperfilservicio {
     position: relative;
@@ -607,10 +588,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
-    .frameperfilservicio {
-  
-      overflow-x: hidden;
-    }
 
 
 
@@ -628,11 +605,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
-    .frameperfilservicio {
-  
-      overflow-x: hidden;
-    }
-
 
 
   .frame-wrapperperfilservicio {
@@ -649,10 +621,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
-    .frameperfilservicio {
-  
-      overflow-x: hidden;
-    }
 
 
 
