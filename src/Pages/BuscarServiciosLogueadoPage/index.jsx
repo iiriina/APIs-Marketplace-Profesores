@@ -3,16 +3,16 @@ import NavBarApis from "../../components/NavBarApis";
 import BuscarServicioComponent from "../../components/BuscarServicioComponent";
 import ResponsiveAppBarlogeado from "../../components/NavBarMarketplacelogeado";
 import ResponsiveAppBar from "../../components/NavBarMarketplace";
+import BuscarServicioLogueadoComponent from "../../components/BuscarServicioComponent copy";
 
-const BuscarServiciosPage = ({ isLoggedIn }) => {
+const BuscarServiciosLogueadoPage = ({ isLoggedIn }) => {
     return (
       <div>
+          <ResponsiveAppBarlogeado /> 
 
-        <ResponsiveAppBar />
-        <BuscarServicioComponent />
-        
+        <BuscarServicioLogueadoComponent />
       </div>
     );
   };
   
-  export default BuscarServiciosPage;
+  export default BuscarServiciosLogueadoPage;

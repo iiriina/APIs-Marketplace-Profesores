@@ -10,7 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Rating from '@mui/material/Rating';
 import ResponsiveAppBar from '../NavBarMarketplace';
 
-export const PerfilServicioComponent = () => {
+export const PerfilServicioLogueadoComponent = () => {
 
     const [open, setOpen] = React.useState(false);
     const [showSnackbar, setShowSnackbar] = useState(false); // Estado para mostrar el Snackbar
@@ -276,4 +276,4 @@ export const PerfilServicioComponent = () => {
     );
 };
 
-export default PerfilServicioComponent
+export default PerfilServicioLogueadoComponent

@@ -25,6 +25,8 @@ import SignUpPage from './Pages/SignUpPage'
 import MisContratacionesPage from './Pages/MisContratacionesPage'
 import ResetPwdPage from './Pages/ResetPwdPage'
 import CompletarDatosPage from './Pages/CompletarDatosPage'
+import BuscarServiciosLogueadoPage from './Pages/BuscarServiciosLogueadoPage';
+import PerfilServicioLogueado from './Pages/PerfilServicioLogueadoComponent';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -69,11 +71,21 @@ function App() {
             {/* comentarios proveedores para apis */}
             <Route path="comentarios" element={<ComentariosProveedoresPage />} />
 
+
+
             {/* ACA. appbar que varia busqueda de servicios de los usuarios para apis */}
             <Route path="buscar_servicios" element={<BuscarServiciosPage isLoggedIn={isLoggedIn} />} />
+            
+            {/* ACA. buscar servicios cuando está logueado */}
+            <Route path="buscar_servicios/logged" element={<BuscarServiciosLogueadoPage isLoggedIn={isLoggedIn} />} />
 
             {/* perfil de servicio para apis */}
             <Route path="perfil_servicio" element={<PerfilServicioPage />} />
+
+            {/* ACA. perfil servicio cuando está logueado  */}
+            <Route path="perfil_servicio/logged" element={<PerfilServicioLogueado />} />
+
+
 
             {/* log in para apis no tiene css importado*/}
             <Route path="login" element={<LogInPage onLogin={handleLogin}/>} />

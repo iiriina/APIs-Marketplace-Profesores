@@ -9,10 +9,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from './data.json';
 import ResponsiveAppBar from "../NavBarMarketplace";
+import ResponsiveAppBarlogeado from "../NavBarMarketplacelogeado";
+import TarjetaServicioProfesorLogueado from "../TarjetaServicioProfesor copy";
 
 
 
-export const BuscarServicioComponent = () => {
+export const BuscarServicioLogueadoComponent = () => {
 
     const [filtroCategoria, setFiltroCategoria] = useState('');
     const [filtroTipoDeClase, setFiltroTipoDeClase] = useState('');
@@ -150,15 +152,16 @@ export const BuscarServicioComponent = () => {
         </div>
 
         <div className="tag-profesor-wrapperservicioprofesores">
-          <TarjetaServicioProfesor />
-          <TarjetaServicioProfesor />
-          <TarjetaServicioProfesor />
-          <TarjetaServicioProfesor />
-          <TarjetaServicioProfesor />
+          <TarjetaServicioProfesorLogueado />
+          <TarjetaServicioProfesorLogueado />
+          <TarjetaServicioProfesorLogueado />
+          <TarjetaServicioProfesorLogueado />
+          <TarjetaServicioProfesorLogueado />
+
         </div>
       </div>
       </div>
     );
 };
 
-export default BuscarServicioComponent
+export default BuscarServicioLogueadoComponent

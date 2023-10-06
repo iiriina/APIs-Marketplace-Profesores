@@ -12,7 +12,7 @@ const pages = [
   { label: "Servicios", href: "/servicios" },
   { label: "Comentarios", href: "/comentarios" },
   { label: "Contrataciones", href: "/miscontrataciones" },
-  { label: "Buscar Servicios", href: "/buscar_servicios" },
+  { label: "Buscar Servicios", href: "/buscar_servicios/logged" },
 
 ];
 
@@ -46,7 +46,7 @@ function ResponsiveAppBarlogeado() {
             />
           </Box>
           <img
-            src="src/components/NavBarMarketplace/Picture1.png"
+            src="\src\components\NavBarMarketplacelogeado\Picture1.png"
             style={{ width: "150px" }}
           />
           <Typography
