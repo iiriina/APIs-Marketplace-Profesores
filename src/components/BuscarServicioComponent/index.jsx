@@ -52,9 +52,6 @@ export const BuscarServicioComponent = () => {
 
     return (
       <div className="framegeneralbuscarservicio">
-
-      <ResponsiveAppBar />
-
       <div className="frameservicioprofesores">
         <div className="text-wrapperservicioprofesores">Buscar Servicios</div>
         <div className="divserviciosprofesoresprim">

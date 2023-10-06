@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React, { useState } from 'react';
 
 import AuthLayout from './layouts/AuthLayout'
 import LoginPage from './Pages/LoginPageSeminario'
@@ -26,6 +27,23 @@ import ResetPwdPage from './Pages/ResetPwdPage'
 import CompletarDatosPage from './Pages/CompletarDatosPage'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Función para manejar el inicio de sesión
+  const handleLogin = () => {
+    // Lógica de inicio de sesión aquí...
+    setIsLoggedIn(true); // Cambia el estado a "true" cuando inicie sesión
+    console.log('Iniciar Sesión llamado');
+    console.log('esta logeado?');
+    console.log(isLoggedIn);
+
+  };
+
+  // Función para manejar el cierre de sesión
+  const handleLogout = () => {
+    // Lógica de cierre de sesión aquí...
+    setIsLoggedIn(false); // Cambia el estado a "false" cuando cierre sesión
+  };
 
   return (
     <ProfessionalState>
@@ -51,14 +69,14 @@ function App() {
             {/* comentarios proveedores para apis */}
             <Route path="comentarios" element={<ComentariosProveedoresPage />} />
 
-            {/* busqueda de servicios de los usuarios para apis */}
-            <Route path="buscar_servicios" element={<BuscarServiciosPage />} />
+            {/* ACA. appbar que varia busqueda de servicios de los usuarios para apis */}
+            <Route path="buscar_servicios" element={<BuscarServiciosPage isLoggedIn={isLoggedIn} />} />
 
             {/* perfil de servicio para apis */}
             <Route path="perfil_servicio" element={<PerfilServicioPage />} />
 
             {/* log in para apis no tiene css importado*/}
-            <Route path="login" element={<LogInPage />} />
+            <Route path="login" element={<LogInPage onLogin={handleLogin}/>} />
 
             {/* sign up para apis no tiene css importado*/}
             <Route path="signup" element={<SignUpPage />} />

@@ -1,12 +1,11 @@
 import * as React from 'react';
-import ResponsiveAppBar from '../NavBarMarketplace';
 import { useState } from 'react';
 import { onClick } from 'react';
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import TarjetaContratacion from '../TarjetaContratacion';
-
+import ResponsiveAppBarlogeado from '../NavBarMarketplacelogeado';
 export default function MisContratacionesComponent() {
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -28,7 +27,7 @@ export default function MisContratacionesComponent() {
   return (
     <div className="divgeneralcontrataciones">
     
-    <ResponsiveAppBar />
+    <ResponsiveAppBarlogeado />
 
     <div className="framecontrataciones">
     <div className="text-wrappercontrataciones">Mis Contrataciones</div>
