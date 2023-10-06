@@ -1,36 +1,8 @@
-
-@media screen and (max-width: 900px) {
-  .divgeneralcontrataciones {
-    overflow-x: hidden;
+  
+  .framecontrataciones{
+    height:auto !important;
   }
 
-    .framecontrataciones {
-          overflow-x: hidden;
-        }
-  
-}
-
-@media screen and (min-width: 600px) {
-  
-
-.framecontrataciones {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 37px;
-    height: 944px;
-    padding: 24px 144px 34px 144px;
-    position: relative;
-    text-align: center;
-    overflow-x: hidden;
-    left:10%;
-  }
-}
-
-  body {
-    overflow-x: hidden;
-  }
-  
   .framecontrataciones .text-wrappercontrataciones {
     color: #353535;
     font-family: "Quicksand", Helvetica;
@@ -51,12 +23,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 31px 42px;    
-    height: 823px;
     margin-bottom: -22px;
     padding: 6px 0px;
     position: relative;
     width: 100%;
-    
+    height: auto !important;
   }
   
   .framecontrataciones .divcontrataciones {
@@ -239,48 +210,123 @@
     white-space: nowrap;
   }
 
-  @media screen and (max-width: 600px) and (min-width: 550px) {
+  @media screen and (min-width: 350px) and (max-width: 520px) {
     .divgeneralcontrataciones {
       overflow-x: hidden;
     }
 
     .framecontrataciones {
-      right: 10%;
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+
     }
+
+
   }
 
-  @media screen and (max-width: 550px) and (min-width: 400px) {
+  @media screen and (min-width: 521px) and (max-width: 741px) {
     .divgeneralcontrataciones {
       overflow-x: hidden;
     }
 
     .framecontrataciones {
-      right: 20%;
+      position: relative;
       overflow-x: hidden;
-    }
+      padding-left: 20px !important;
+      padding-right: 20px !important;
 
-    body {
-      overflow-x: hidden;
     }
 
 
   }
 
+  @media screen and (min-width: 521px) and (max-width: 741px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
 
-        @media screen and (min-width: 350px) and (max-width: 400px) {
-          .divgeneralcontrataciones {
-            overflow-x: hidden;
-          }
-    
-          .framecontrataciones {
-            position: relative;
-            right: 35%;
-            overflow-x: hidden;
-          }
-    
-          body {
-            overflow-x: hidden;
-          }
-    
-    
-        }
+    .framecontrataciones {
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+
+    }
+
+
+  }
+  @media screen and (min-width: 742px) and (max-width: 800px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+
+    }
+
+    .divcontrataciones{
+      max-width: 287px !important;
+    }
+  }
+  @media screen and (min-width: 819px) and (max-width: 1000px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 50px !important;
+      padding-right: 50px !important;
+
+    }
+
+    .divcontrataciones{
+      max-width: 307px !important; 
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 50px !important;
+      padding-right: 50px !important;
+
+    }
+
+
+  }
+
+  @media screen and (min-width: 1300px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      position: relative;
+      overflow-x: hidden;
+      padding-left: 170px !important;
+      padding-right: 170px !important;
+
+    }
+
+    .divcontrataciones{
+      max-width: 508px !important;
+      min-width: 400px !important;
+
+    }
+
+
+
+  }

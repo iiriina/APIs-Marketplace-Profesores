@@ -52,6 +52,15 @@ export default function SwipeableTemporaryDrawerLogeado() {
             <ListItemText primary={<a href="/comentarios">Mis comentarios</a>} />
           </ListItemButton>
         </ListItem>
+        <ListItem key="mis-contrataciones" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="/miscontrataciones">Mis Contrataciones</a>} />
+          </ListItemButton>
+        </ListItem>
+
         <ListItem key="buscar-servicios" disablePadding>
           <ListItemButton>
             <ListItemIcon>

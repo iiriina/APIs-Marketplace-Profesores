@@ -36,12 +36,12 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem key="about-us" disablePadding>
+        <ListItem key="home" disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="#about-us">About Us</a>} />
+            <ListItemText primary={<a href="/homeapis">Home</a>} />
           </ListItemButton>
         </ListItem>
         <ListItem key="buscar-profesional" disablePadding>

@@ -8,7 +8,7 @@ export const TarjetaServicioProfesor = () => {
             <img className="imagenservicioprofesores" alt="Imagen" src="https://c.animaapp.com/jt0Q7JA1/img/imagen.png" />
             <div className="nombre-y-tiposervicioprofesores">
               <div className="text-wrapper-3servicioprofesores">Juan Gomez</div>
-              <div className="text-wrapper-4servicioprofesores">Presencial y Online</div>
+              <div className="text-wrapper-4servicioprofesores">Individual</div>
             </div>
           </div>
           <div className="div-3servicioprofesores">

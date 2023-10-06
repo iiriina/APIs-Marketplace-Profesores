@@ -10,7 +10,7 @@ import SwipeableTemporaryDrawer from "../Swipeable/index.jsx";
 
 {/* hay que hacer que ande ese about us section */}
 const pages = [
-  { label: "About Us", href: "#about-us-section" },
+  { label: "Home", href: "/homeapis" },
   { label: "Buscar Servicios", href: "/buscar_servicios" },
 ];
 

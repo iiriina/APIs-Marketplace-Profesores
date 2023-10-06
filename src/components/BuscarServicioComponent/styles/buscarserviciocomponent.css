@@ -265,3 +265,28 @@
 }
 
 
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  border-radius: 34px !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  -webkit-box-align: center !important;
+  height: 50px !important;
+
+}
+
+
+.css-10hburv-MuiTypography-root{
+font-family: 'Quicksand' !important;
+font-weight: 600;  
+color: violet !important;
+
+}
+
+.css-h4y409-MuiList-root{
+padding-top: 8px;
+padding-bottom: 8px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
