@@ -30,7 +30,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function LogInComponent() {
+export default function LogInComponent({ onLogin }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -92,6 +92,9 @@ export default function LogInComponent() {
               sx={{ mt: 3, mb: 2 }}
               onClick={() => {
                 window.location.href = '/servicios';
+                    // Llama a la función onLogin cuando se hace clic en el botón "Iniciar Sesión"
+                onLogin();
+
               }}
 
             >

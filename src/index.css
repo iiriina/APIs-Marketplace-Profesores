@@ -42,6 +42,8 @@
 
 @import url('./components/TarjetaContratacion/style/tarjetacontratacion.css');
 
+@import url('./components/NavBarMarketplacelogeado/styles/navbarmarketplacelogeado.css');
+
 
 :root {
   --verde: #0ABBB9;

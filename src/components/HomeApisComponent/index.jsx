@@ -25,7 +25,13 @@ export const HomeApisComponent = () => {
                   Elegí entre miles de profesionales que <br />
                   te brindarán el conocimiento que estás buscando.
                 </p>
-                <button className="botn-buscarizquierda">
+                <button className="botn-buscarizquierda"              
+                onClick={() => {
+                window.location.href = '/buscar_servicios';
+                    // Llama a la función onLogin cuando se hace clic en el botón "Iniciar Sesión"
+
+                }}
+                >
                   <div className="texto-comprarizquierda">Buscar</div>
                 </button>
               </div>
