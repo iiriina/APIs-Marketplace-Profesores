@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 1px 1px;
     position: relative;
+    overflow-x: hidden;
   }
   
   .frameperfilservicio .divperfilservicio {
@@ -464,7 +465,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
 
   .precioperfilservicio2 {
       position: relative;
-    right: 20%;
+    right: 30%;
     }
     
     .div-6perfilservicio {
@@ -477,7 +478,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
       
       .divperfilservicio {
           position: relative;
-          top: 650px;
+          top: 750px;
+      }
+
+      .precioperfilservicio2 {
+        right: 18% !important;
       }
 
    
@@ -487,10 +492,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
         bottom: 2000px;
       }
 
-      .precioperfilservicio2 {
-        position: relative;
-        left: 1%;
-      }
+
 
       .precioperfilservicio2 {
         position: relative;

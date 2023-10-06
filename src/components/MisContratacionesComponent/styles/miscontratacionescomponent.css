@@ -1,11 +1,23 @@
+
+@media screen and (min-width: 600px) {
+  
+
 .framecontrataciones {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 37px;
     height: 944px;
-    padding: 24px 324px 34px 144px;
+    padding: 24px 144px 34px 144px;
     position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    left:10%;
+  }
+}
+
+  body {
+    overflow-x: hidden;
   }
   
   .framecontrataciones .text-wrappercontrataciones {
@@ -215,4 +227,49 @@
     text-align: center;
     white-space: nowrap;
   }
-  
+
+  @media screen and (max-width: 600px) and (min-width: 550px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      right: 10%;
+    }
+  }
+
+  @media screen and (max-width: 550px) and (min-width: 400px) {
+    .divgeneralcontrataciones {
+      overflow-x: hidden;
+    }
+
+    .framecontrataciones {
+      right: 20%;
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+
+  }
+
+
+        @media screen and (min-width: 350px) and (max-width: 400px) {
+          .divgeneralcontrataciones {
+            overflow-x: hidden;
+          }
+    
+          .framecontrataciones {
+            position: relative;
+            right: 35%;
+            overflow-x: hidden;
+          }
+    
+          body {
+            overflow-x: hidden;
+          }
+    
+    
+        }

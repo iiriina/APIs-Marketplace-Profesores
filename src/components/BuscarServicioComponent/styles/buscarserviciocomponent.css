@@ -52,6 +52,38 @@
           padding-left: 1.5rem;
           padding-right: 1.5rem;
         }
+        
+ 
+
+        .frameservicioprofesores {
+          overflow-x: hidden;
+        }
+
+
+      .frameservicioprofesores .text-wrapperservicioprofesores {
+        align-self: center;
+        color: #353535;
+        font-family: "Quicksand", Helvetica;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 48px;
+        margin-top: -1px;
+        right: 5%;
+        position: relative;
+        white-space: nowrap;
+      }
+
+      .frameservicioprofesores {
+        right: 1%;
+      }
+
+      .divserviciosprofesoresprim {
+        position: relative;
+        right: 7%;
+      }
+
+        
 
 
         .div-wrapperservicioprofesores {

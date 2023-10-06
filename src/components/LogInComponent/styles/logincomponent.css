@@ -12,7 +12,7 @@
 }
 
 
-@media (min-width: 0px){
+@media (min-width: 450px){
     .css-nzinn5-MuiContainer-root {
         max-width: 444px;
         background-color: rgba(255, 255, 255, 0.79); /* Fondo blanco con 50% de transparencia */
@@ -21,3 +21,18 @@
     
     }
 }
+
+@media screen and (max-width: 450px) {
+    .css-nzinn5-MuiContainer-root {
+            max-width: 330px !important;
+            background-color: rgba(255, 255, 255, 0.79);
+            /* Fondo blanco con 50% de transparencia */
+            padding: 0px 30px 10px 10px;
+            position:relative;
+            margin-right: 50px;
+            border-radius: 30px;
+    
+        }
+    
+}
+

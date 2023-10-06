@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  overflow-x: hidden;
   gap: 40px 90px;
   padding: 0px 32px;
   position: relative;

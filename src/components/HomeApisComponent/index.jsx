@@ -38,6 +38,7 @@ export const HomeApisComponent = () => {
             src="https://c.animaapp.com/efZQeSOj/img/parte-derecha.svg"
           />
         </div>
+        <AboutUs />
         <Footer />
       </div>
     );
