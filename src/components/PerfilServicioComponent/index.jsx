@@ -109,7 +109,7 @@ export const PerfilServicioComponent = () => {
             </div>
 
             {/* este es el boton de comentar, tiene todos los hooks y funciones con un 2 en la terminacion */}
-            <button className= "precioperfilservicio2" onClick={handleClickOpen2}>
+            <button className= "precioperfilservicio21" onClick={handleClickOpen2}>
             Hacer Comentario
                     </button>
                     <Dialog open={open2} onClose={handleClose2}>

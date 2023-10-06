@@ -1,4 +1,15 @@
 
+@media screen and (max-width: 900px) {
+  .divgeneralcontrataciones {
+    overflow-x: hidden;
+  }
+
+    .framecontrataciones {
+          overflow-x: hidden;
+        }
+  
+}
+
 @media screen and (min-width: 600px) {
   
 

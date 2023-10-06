@@ -5,6 +5,7 @@
     gap: 1px 1px;
     position: relative;
     overflow-x: hidden;
+   
   }
   
   .frameperfilservicio .divperfilservicio {
@@ -57,6 +58,7 @@
     line-height: 35px;
     margin-top: -1px;
     position: relative;
+
   }
   
   .frameperfilservicio .pperfilservicio {
@@ -372,6 +374,31 @@
 
   }
 
+        .precioperfilservicio21 {
+          align-items: flex-start;
+          background-color: #7f4ac2f7;
+          border-radius: 17px;
+          display: flex;
+          flex: 0 0 auto;
+          gap: 10px;
+          margin-bottom: -8px;
+          overflow: hidden;
+          padding: 17px 14px;
+          position: relative;
+          width: 188px;
+          color: #000000;
+          font-family: "Quicksand", Helvetica;
+          font-size: 26px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 35px;
+          margin-top: -1px;
+          position: relative;
+          white-space: nowrap;
+          width: fit-content;
+    
+        }
+
 .div_precio_perfil_2_rating{
   margin-top: 18px;
   margin-bottom: 4px;
@@ -451,12 +478,23 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     width: fit-content;
 
 }
+@media screen and (min-width: 705px) and (max-width: 850px) {
+  .frameperfilservicio {
+    right: 10% !important;
+        overflow-x: hidden;
+  }
+}
 
 @media screen and (max-width:705px) {
   .div-2perfilservicio {
     position: relative;
     right: 20%;
   }
+
+    .frameperfilservicio {
+
+      overflow-x: hidden;
+    }
 
   .div-3perfilservicio {
       position: relative;
@@ -467,6 +505,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
       position: relative;
     right: 30%;
     }
+
+            .precioperfilservicio21 {
+              position: relative;
+              right: 30%;
+            }
     
     .div-6perfilservicio {
         position: relative;
@@ -481,9 +524,20 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
           top: 750px;
       }
 
+            .frameperfilservicio {
+      
+              overflow-x: hidden;
+            }
+
+
       .precioperfilservicio2 {
-        right: 18% !important;
+        left: 1% !important;
       }
+      
+      .precioperfilservicio21 {
+        right: 7% !important;
+      }
+      
 
    
 
@@ -510,6 +564,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
+    .frameperfilservicio {
+  
+      overflow-x: hidden;
+    }
+
 
 
   .frame-wrapperperfilservicio {
@@ -527,6 +586,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
+    .frameperfilservicio {
+  
+      overflow-x: hidden;
+    }
+
 
 
   .frame-wrapperperfilservicio {
@@ -542,6 +606,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     position: relative;
     top: 650px;
   }
+
+    .frameperfilservicio {
+  
+      overflow-x: hidden;
+    }
 
 
 
@@ -559,6 +628,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     top: 650px;
   }
 
+    .frameperfilservicio {
+  
+      overflow-x: hidden;
+    }
+
 
 
   .frame-wrapperperfilservicio {
@@ -574,6 +648,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     position: relative;
     top: 650px;
   }
+
+    .frameperfilservicio {
+  
+      overflow-x: hidden;
+    }
 
 
 
