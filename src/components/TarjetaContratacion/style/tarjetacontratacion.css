@@ -1,0 +1,218 @@
+.framecontrataciones {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    height: 944px;
+    padding: 24px 324px 34px 144px;
+    position: relative;
+  }
+  
+  .framecontrataciones .text-wrappercontrataciones {
+    color: #353535;
+    font-family: "Quicksand", Helvetica;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .framecontrataciones .tagcontrataciones {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 31px 42px;    
+    height: 823px;
+    margin-bottom: -22px;
+    padding: 6px 0px;
+    position: relative;
+    width: 100%;
+    
+  }
+  
+  .framecontrataciones .divcontrataciones {
+    align-items: flex-start;
+    background-color: #ffffff78;
+    border: 1px solid;
+    border-color: #cbcbcb;
+    border-radius: 35px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    max-width: 490px;
+    min-width: 330px;
+    padding: 26px 25px 32px;
+    position: relative;
+  }
+  
+  .framecontrataciones .frame-wrappercontrataciones {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+    justify-content: center;
+    padding: 0px 0px 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .framecontrataciones .div-wrappercontrataciones {
+    align-items: center;
+    background: linear-gradient(180deg, rgb(227.96, 180.67, 235.66) 0%, rgb(255, 220.75, 189.13) 90.14%);
+    border-radius: 10px;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4px 10px;
+    position: relative;
+  }
+  
+  .framecontrataciones .text-wrapper-2contrataciones {
+    color: #000000cc;
+    font-family: "Quicksand", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .framecontrataciones .div-2contrataciones {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .framecontrataciones .text-wrapper-3contrataciones {
+    color: #5a3489;
+    font-family: "Quicksand", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+    
+  }
+  
+  .framecontrataciones .text-wrapper-4contrataciones {
+    color: #000000cc;
+    font-family: "Quicksand", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  .framecontrataciones .div-3contrataciones {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .framecontrataciones .text-wrapper-5contrataciones {
+    color: #5a3589cc;
+    font-family: "Quicksand", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .framecontrataciones .pcontrataciones {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding-bottom: 10px;
+    align-self: stretch;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: left !important;
+  }
+  
+  .framecontrataciones .tag-preciocontrataciones {
+    align-items: center;
+    background-color: #7f4ac2f7;
+    border-radius: 14px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    overflow: hidden;
+    padding: 5px 14px;
+    position: relative;
+    /* width: 112px; */
+    max-width: 110px;
+    align-self: stretch;
+    color: var(--white);
+    flex: 1;
+    font-family: "Quicksand", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    justify-content: center;
+
+  }
+  
+  .framecontrataciones .text-wrapper-6contrataciones {
+    align-self: stretch;
+    color: var(--white);
+    flex: 1;
+    font-family: "Quicksand", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+  

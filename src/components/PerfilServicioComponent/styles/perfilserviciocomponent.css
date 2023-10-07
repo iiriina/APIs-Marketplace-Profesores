@@ -1,0 +1,632 @@
+.frameperfilservicio {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px 1px;
+    position: relative;
+   
+  }
+  
+  .frameperfilservicio .divperfilservicio {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 46px;
+    padding-left: 100px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .text-wrapperperfilservicio {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .div-2perfilservicio {
+
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: #fff2f2;
+    border-radius: 40px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 345px;
+    overflow: hidden;
+    padding: 29px 31px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameperfilservicio .text-wrapper-2perfilservicio {
+    align-self: stretch;
+    color: #5b0072;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+
+  }
+  
+  .frameperfilservicio .pperfilservicio {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    position: relative;
+    text-align: left !important;
+  }
+  
+  .frameperfilservicio .text-wrapper-3perfilservicio {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .div-3perfilservicio {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: #d9ccffab;
+    border-radius: 40px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 26px;
+    min-width: 345px;
+    overflow: hidden;
+    padding: 39px 26px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameperfilservicio .div-4perfilservicio {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 34px 34px;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameperfilservicio .div-wrapperperfilservicio {
+    height: 35px;
+    position: relative;
+    width: 134px;
+  }
+  
+  .frameperfilservicio .text-wrapper-4perfilservicio {
+    color: #500048;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 35px;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+  }
+  
+  .frameperfilservicio .div-5perfilservicio {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .text-wrapper-5perfilservicio {
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .frameperfilservicio .text-wrapper-6perfilservicio {
+    align-self: stretch;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 35px;
+    position: relative;
+    text-align: left !important;
+
+  }
+  
+  .frameperfilservicio .frame-wrapperperfilservicio {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    height: 1416px;
+    justify-content: center;
+    max-width: 564px;
+    min-width: 259px;
+    /* padding: 48px 0px 100px; */
+    position: relative;
+  }
+  
+  .frameperfilservicio .div-6perfilservicio {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 23px 29px;
+    top: 60px;
+    justify-content: center;
+    padding: 0px 30px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .imagenperfilservicio {
+    height: 275px;
+    object-fit: cover;
+    position: relative;
+    width: 273px;
+  }
+  
+  .frameperfilservicio .div-7perfilservicio {
+    align-items: center;
+    border-radius: 40px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 23px;
+    height: 254px;
+    padding: 0px 0px 12px;
+    position: relative;
+  }
+  
+  .frameperfilservicio .div-8perfilservicio {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 11px 11px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameperfilservicio .text-wrapper-7perfilservicio {
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .precioperfilservicio {
+    align-items: flex-start;
+    background-color: #7f4ac2f7;
+    display: flex;
+    gap: 10px;
+    padding: 5px 14px;
+    position: relative;
+  }
+  
+  .precioperfilservicio .text-wrapperperfilservicio {
+    align-self: stretch;
+    color: white;
+    flex: 1;
+    font-family: "Quicksand-Bold", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+  }
+
+.titulo_perfil_servicioooo{
+  align-self: stretch;
+  color: #5d378e;
+  font-family: "Quicksand", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-top: -1px;
+  position: relative;
+  padding-left: 100px;
+  padding-top: 40px;
+}
+
+  .frameperfilservicio2 {
+    align-items: center;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    height: 190px;
+    padding: 0px 0px 12px;
+    position: relative;
+  }
+  
+  .frameperfilservicio2 .divperfilservicio2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 11px 11px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .frameperfilservicio2 .text-wrapperperfilservicio2 {
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  
+  .frameperfilservicio2 .text-wrapper-3perfilservicio2 {
+    align-self: stretch;
+    color: var(--white);
+    flex: 1;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .labeltituloserviciosperfil {
+    height: 117px;
+    width: 1920px;
+  }
+  
+  .labeltituloserviciosperfil .text-wrappertituloserviciosperfil {
+    color: #353535;
+    font-family: "Quicksand", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    height: 117px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 1920px;
+  }
+  
+  
+  .precioperfilservicio2 {
+    align-items: flex-start;
+    background-color: #7f4ac2f7;
+    border-radius: 17px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    margin-bottom: -8px;
+    overflow: hidden;
+    padding: 17px 14px;
+    position: relative;
+    width: 188px;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+
+  }
+
+        .precioperfilservicio21 {
+          align-items: flex-start;
+          background-color: #7f4ac2f7;
+          border-radius: 17px;
+          display: flex;
+          flex: 0 0 auto;
+          gap: 10px;
+          margin-bottom: -8px;
+          overflow: hidden;
+          padding: 17px 14px;
+          position: relative;
+          width: 188px;
+          color: #000000;
+          font-family: "Quicksand", Helvetica;
+          font-size: 26px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 35px;
+          margin-top: -1px;
+          position: relative;
+          white-space: nowrap;
+          width: fit-content;
+    
+        }
+
+.div_precio_perfil_2_rating{
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+.span_precio_perfil_2_rating{
+  font-family: "Quicksand" !important;
+  font-weight: 500 !important;
+}
+
+  .precioperfilservicio2comentario {
+    align-items: flex-start;
+    background-color: #7f4ac2f7;
+    border-radius: 17px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    margin-bottom: -8px;
+    overflow: hidden;
+    padding: 17px 14px;
+    position: relative;
+    width: 188px;
+    color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    height: fit-content;
+
+  }
+
+
+  .css-1eqdgzv-MuiPaper-root-MuiSnackbarContent-root{
+    background-color: rgb(174, 255, 173) !important;
+    color: black !important;
+    font-family: "Quicksand" !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root{
+  font-family: "Quicksand" !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root{
+  font-family: "Quicksand" !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-input-MuiInput-input{
+  font-family: "Quicksand" !important;
+  font-weight: 500 !important;
+
+}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root{
+  font-family: "Quicksand" !important;
+  font-weight: 500 !important;
+
+}
+.text-wrapper-2perfilservicio2{
+      color: #000000;
+    font-family: "Quicksand", Helvetica;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+
+}
+@media screen and (min-width: 705px) and (max-width: 850px) {
+  .frameperfilservicio {
+    right: 5% !important;
+  }
+}
+
+@media screen and (max-width:705px) {
+  .div-2perfilservicio {
+    position: relative;
+    right: 20%;
+  }
+
+
+  .div-3perfilservicio {
+      position: relative;
+    right: 20%;
+  }
+
+  .precioperfilservicio2 {
+      position: relative;
+    right: 30%;
+    }
+
+            .precioperfilservicio21 {
+              position: relative;
+              right: 30%;
+            }
+    
+    .div-6perfilservicio {
+        position: relative;
+        
+      }
+    }
+
+@media screen and (max-width:450px) {
+      
+      .divperfilservicio {
+          position: relative;
+          top: 750px;
+      }
+
+
+      .precioperfilservicio2 {
+        left: 1% !important;
+      }
+      
+      .precioperfilservicio21 {
+        right: 7% !important;
+      }
+      
+
+   
+
+      .frame-wrapperperfilservicio {
+        position: relative;
+        bottom: 2000px;
+      }
+
+
+
+      .precioperfilservicio2 {
+        position: relative;
+        float: left;
+        right: 10%;
+        
+      }
+      
+      .divperfilservicio{
+            padding-left: 20px;
+      }
+}
+
+@media screen and (max-width:550px) and (min-width: 450px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1950px;
+  }
+
+}
+
+
+@media screen and (max-width:705px) and (min-width: 688px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1400px;
+  }
+
+}
+
+@media screen and (max-width:670px) and (min-width: 605px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1500px;
+  }
+
+}
+
+@media screen and (max-width:605px) and (min-width: 550px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1550px;
+  }
+
+}
+
+@media screen and (max-width:550px) and (min-width: 450px) {
+
+  .divperfilservicio {
+    position: relative;
+    top: 650px;
+  }
+
+
+
+
+  .frame-wrapperperfilservicio {
+    position: relative;
+    bottom: 1650px;
+  }
+
+}

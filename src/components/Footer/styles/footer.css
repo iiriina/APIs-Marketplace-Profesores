@@ -1,0 +1,56 @@
+/*
+======================
+Footer
+======================
+*/
+
+.footer {
+  margin-top: 70px;
+  padding: 60px 10px;
+  border-top:1px solid #aaa;
+  background-image:radial-gradient(100% 100% at 50% 100%, #feb2b2 0%, rgba(252, 184, 219, 0.75) 25%, rgba(239, 194, 250, 0.5) 50%, rgba(190, 227, 248, 0) 100%), linear-gradient(360deg, #d53f8c 7%, #d23fa0 18.63%, #ce3fb3 30.25%, #c93fc7 41.88%, #c23fde 53.5%, #aa52e9 65.13%, #8766eb 76.75%, #3182ce 100%)
+}
+  
+.footer .footer-box .menu h3{
+  font-size: 18px;
+  color: #000000;
+  margin: 0 0 30px 0!important;
+}
+  
+.footer-box {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+}
+  
+@media (max-width: 760px ) {
+  .footer-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  }
+}
+  
+.footer .footer-box .menu li {
+  margin-bottom: 10px;
+}
+  
+.footer .footer-box .menu a{
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+  transition: all .3s ease;
+}
+  
+.footer .footer-box .menu i {
+  margin-right: 10px;
+  font-size: 17px;
+}
+  
+.not-active { 
+  pointer-events: none; 
+  cursor: default; 
+} 
+  
+.footer .footer-box .menu a:hover{
+  color:var(--red);
+}
