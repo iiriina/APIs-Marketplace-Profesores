@@ -1,13 +1,8 @@
 import React from "react";
-import AboutUs from '../../components/AboutUs'
 import Footer from '../../components/Footer'
-import Header from "../../components/Header/index"
-
-import Services from "../../components/Services"
-import NavBarApis from "../NavBarApis";
 import ResponsiveAppBar from "../../components/NavBarMarketplace/index.jsx";
 
-export const HomeApisComponent = () => {
+export const HomeComponent = () => {
     return (
       <div className="mainContainer_PantallaPrincipal">
         <ResponsiveAppBar />
@@ -28,8 +23,6 @@ export const HomeApisComponent = () => {
                 <button className="botn-buscarizquierda"              
                 onClick={() => {
                 window.location.href = '/buscar_servicios';
-                    // Llama a la función onLogin cuando se hace clic en el botón "Iniciar Sesión"
-
                 }}
                 >
                   <div className="texto-comprarizquierda">Buscar</div>
@@ -113,4 +106,4 @@ export const HomeApisComponent = () => {
     );
 };
 
-export default HomeApisComponent
+export default HomeComponent;

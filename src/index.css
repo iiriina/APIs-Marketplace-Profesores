@@ -5,7 +5,7 @@
 @import url('./components/Menu/style/menu.css');
 @import url('./components/ButtonGroup/styles/buttonGroup.css');
 @import url('./components/Profile/styles/profile.css');
-@import url('./components/HomeApisComponent/styles/homeapis.css');
+@import url('./components/HomeComponent/style.css');
 @import url('./components/ServicioProveedoresComponent/styles/servicioproveedores.css');
 @import url('./components/TarjetaServicio/styles/tarjetaservicio.css');
 @import url('./components/ComentariosProveedores/styles/comentariosproveedores.css');

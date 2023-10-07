@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react';
-import HomeApisPage from './Pages/HomeApisPage';
+import Home from './Pages/Home';
 import ServicioProveedoresPage from './Pages/ServicioProveedoresPage';
 import ComentariosProveedoresPage from './Pages/ComentariosProveedoresPage'
 import BuscarServiciosPage from './Pages/BuscarServiciosPage'
@@ -16,7 +16,7 @@ function App() {
     <>
         <BrowserRouter>
           <Routes>
-            <Route path="homeapis" element={<HomeApisPage />} />
+            <Route path="home" element={<Home />} />
             <Route path="ver_servicios_profesor" element={<ServicioProveedoresPage />} />
             <Route path="ver_comentarios_profesor" element={<ComentariosProveedoresPage />} />
             <Route path="buscar_servicios" element={<BuscarServiciosPage />} />
