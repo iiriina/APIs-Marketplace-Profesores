@@ -30,7 +30,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function LogInComponent({ onLogin }) {
+export default function LogInComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -80,21 +80,13 @@ export default function LogInComponent({ onLogin }) {
               id="password"
               autoComplete="current-password"
             />
-
-
-
-            {/* cuando apreta iniciar sesion estoy redirigiendolo a la pagina de sus servicios*/}
-
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
               onClick={() => {
-                window.location.href = '/servicios';
-                    // Llama a la función onLogin cuando se hace clic en el botón "Iniciar Sesión"
-                onLogin();
-
+                window.location.href = "/ver_servicios_profesor";
               }}
 
             >
