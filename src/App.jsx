@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React, { useState } from 'react';
-import HomeApisPage from './Pages/HomeApisPage';
-import ServicioProveedoresPage from './Pages/ServicioProveedoresPage';
-import ComentariosProveedoresPage from './Pages/ComentariosProveedoresPage'
-import BuscarServiciosPage from './Pages/BuscarServiciosPage'
-import PerfilServicioPage from './Pages/PerfilServicioPage'
-import LogInPage from './Pages/LoginPage'
-import SignUpPage from './Pages/SignUpPage'
-import MisContratacionesPage from './Pages/MisContratacionesPage'
-import ResetPwdPage from './Pages/ResetPwdPage'
-import CompletarDatosPage from './Pages/CompletarDatosPage'
-import BuscarServiciosLogueadoPage from './Pages/BuscarServiciosLogueadoPage';
-import PerfilServicioLogueado from './Pages/PerfilServicioLogueadoComponent';
+import Home from './Pages/Home';
+import ServiciosProveedores from './Pages/ServiciosProveedor';
+import ComentariosProveedores from './Pages/ComentariosDeProveedor';
+import BuscarServicios from './Pages/BuscarServicios';
+import PerfilServicio from './Pages/PerfilServicio';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import VerContrataciones from './Pages/VerContrataciones';
+import CambiarPassword from './Pages/CambiarPassword';
+import CompletarDatos from './Pages/CompletarDatos';
+import BuscarServiciosLogueado from './Pages/BuscarServiciosLogueado';
+import PerfilServicioLogueado from './Pages/PerfilServicioLogueado';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,18 +31,18 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="homeapis" element={<HomeApisPage />} />
-          <Route path="servicios" element={<ServicioProveedoresPage />} />
-          <Route path="comentarios" element={<ComentariosProveedoresPage />} />
-          <Route path="buscar_servicios" element={<BuscarServiciosPage isLoggedIn={isLoggedIn} />} />
-          <Route path="buscar_servicios/logged" element={<BuscarServiciosLogueadoPage isLoggedIn={isLoggedIn} />} />
-          <Route path="perfil_servicio" element={<PerfilServicioPage />} />
+          <Route path="homeapis" element={<Home />} />
+          <Route path="servicios" element={<ServiciosProveedores />} />
+          <Route path="comentarios" element={<ComentariosProveedores />} />
+          <Route path="buscar_servicios" element={<BuscarServicios isLoggedIn={isLoggedIn} />} />
+          <Route path="buscar_servicios/logged" element={<BuscarServiciosLogueado isLoggedIn={isLoggedIn} />} />
+          <Route path="perfil_servicio" element={<PerfilServicio />} />
           <Route path="perfil_servicio/logged" element={<PerfilServicioLogueado />} />
-          <Route path="login" element={<LogInPage onLogin={handleLogin}/>} />
-          <Route path="signup" element={<SignUpPage />} />
-          <Route path="miscontrataciones" element={<MisContratacionesPage />} />
-          <Route path="resetpwd" element={<ResetPwdPage />} />
-          <Route path="completardatos" element={<CompletarDatosPage />} />
+          <Route path="login" element={<Login onLogin={handleLogin}/>} />
+          <Route path="signup" element={<Register />} />
+          <Route path="miscontrataciones" element={<VerContrataciones />} />
+          <Route path="resetpwd" element={<CambiarPassword />} />
+          <Route path="completardatos" element={<CompletarDatos />} />
         </Routes>
       </BrowserRouter>
     </>
