@@ -1,5 +1,3 @@
-import AboutUs from '../../components/AboutUs'
-import HomeApisComponent from "../../components/HomeApisComponent"
 import LogInComponent from '../../components/LogInComponent'
 
 const LogInPage = ({ onLogin }) => {
@@ -10,4 +8,4 @@ const LogInPage = ({ onLogin }) => {
   )
 }
 
-export default LogInPage
+export default LogInPage;
