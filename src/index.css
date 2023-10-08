@@ -1,13 +1,11 @@
 /* IMPORTS COMPONENTES */
 @import url('./components/Footer/style.css');
 @import url('./components/Services/style.css');
-@import url('./components/Login/style.css');
 @import url('./components/NavigationBar/style.css');
 @import url('./components/Menu/style.css');
 @import url('./components/HomeApisComponent/style.css');
 @import url('./components/ServicioProveedoresComponent/style.css');
 @import url('./components/TarjetaServicio/style.css');
-@import url('./components/NavBarApis/style.css');
 @import url('./components/ComentariosProveedores/style.css');
 @import url('./components/ComentarioUsuario/style.css');
 @import url('./components/BuscarServicioComponent/style.css');

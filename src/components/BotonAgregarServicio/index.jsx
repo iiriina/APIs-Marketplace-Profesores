@@ -23,10 +23,7 @@ export default function BotonAgregarServicio() {
     };
   
     const handleSend3 = () => {
-      // Aquí puedes realizar alguna acción antes de mostrar el Snackbar
       setShowSnackbar3(true);
-  
-      // Configura un temporizador para ocultar el Snackbar después de 4 segundos
       setTimeout(() => {
         setShowSnackbar3(false);
       }, 4000);
@@ -105,13 +102,12 @@ export default function BotonAgregarServicio() {
             </DialogActions>
         </Dialog>
 
-        {/* Snackbar para mostrar el mensaje de éxito */}
         <Snackbar
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} // Posición en la pantalla
-            open={showSnackbar3} // Mostrar el Snackbar cuando showSnackbar sea true
-            autoHideDuration={4000} // Duración en milisegundos
-            onClose={() => setShowSnackbar3(false)} // Función al cerrar el Snackbar
-            message="El servicio ha sido agregado." // Mensaje de éxito que deseas mostrar
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} 
+            open={showSnackbar3} 
+            autoHideDuration={4000} 
+            onClose={() => setShowSnackbar3(false)} 
+            message="El servicio ha sido agregado."
         />
 
 
