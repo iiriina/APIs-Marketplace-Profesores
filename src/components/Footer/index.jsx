@@ -34,13 +34,9 @@ const Footer = () => {
                             <li><a href="!#" className="not-active"><i className="far fa-paper-plane"></i>Ciudad Autonoma de Buenos Aires, Argentina</a></li>
                             <li><a href="https://www.flaticon.es/autores/flat-icons">Flat Icons</a></li>
                         </ul>
-
-
-                        
                     </div>
                 </div>
             </footer>
-
     );
 }
  

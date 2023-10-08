@@ -7,7 +7,6 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import SwipeableTemporaryDrawerLogeado from "../SwipeableLogeado";
 
-{/* hay que hacer que ande ese about us section */}
 const pages = [
   { label: "Servicios", href: "/servicios" },
   { label: "Comentarios", href: "/comentarios" },
@@ -63,8 +62,8 @@ function ResponsiveAppBarlogeado() {
               letterSpacing: ".3rem",
               color: "black",
               textDecoration: "none",
-              width: "fit-content", // Esto ajustará el ancho al contenido
-              textAlign: "center", // Esto centrará el texto dentro del botón
+              width: "fit-content", 
+              textAlign: "center", 
 
             }}
           ></Typography>

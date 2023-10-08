@@ -39,10 +39,7 @@ const Profile = () => {
     useEffect(() => {
         getProfessional(id);
         getProfessionalAppointments(id);
-    // eslint-disable-next-line
     }, [appointments])
-
-    // Revisar si existe el proyecto
     if(!professional) return <p>Cargando...</p>;
 
     return (
@@ -51,7 +48,6 @@ const Profile = () => {
             <div className="div_titulo_e_icono_pagina">
                 <Button className="boton_atras">
                     <FiChevronLeft fontSize={36}/>
-                    {/* falta agregarle el comportamiento de que vuelva para atras */}
                 </Button>
                 <div className="div_titulo">
                     <h1 className="titulo">Información del profesional</h1>
@@ -65,7 +61,6 @@ const Profile = () => {
 
                     <ProfessionalCard professional={professional[0]} />
                     <div className="div_biografia">
-                        {/* la bio tambien se extrae del profesional X */}
                         <h1 className="texto_biografia">Licenciada en psicología de la UBA. 
                         Realicé la Especialización en Terapia Cognitiva-conductual abordando desde este marco teórico crisis... 
                         (Biografía)</h1>
@@ -76,7 +71,6 @@ const Profile = () => {
                     <div className="div_terapia_online">
                         <div className="div_calendario_y_cita">
                             <div className="div_calendario">
-                            {/* aca dentro va a ir el calendario */}
                                 <Calendar date={date} setDate={setDate} time={time} setTime={setTime}/>
                             </div>
                             <div className="div_cita_y_contactar">
@@ -85,7 +79,6 @@ const Profile = () => {
                                         <div className="div_cita">
                                             <div className="encuadre_cita">
                                                 <h1 className="texto_cita_programada_para">Cita programada para</h1>
-                                                {/* la hora y el dia de la cita surgen de que la persona apreta X dia y hora en el calendario */}
                                                 <h1 className="texto_fecha_que_se_eligio_en_calendario">{appointment.date}</h1>
                                             </div>
                                         </div>
@@ -93,7 +86,6 @@ const Profile = () => {
                                     :
                                     null
                                 }
-                           
                                 <div className="div_botones">
                                     <Button className="boton_contratar_profesional">
                                         <h1 className="texto_boton_contratar_profesional">Contactar profesional</h1>
@@ -111,4 +103,4 @@ const Profile = () => {
   );
 }
 
-export default Profile
+export default Profile;

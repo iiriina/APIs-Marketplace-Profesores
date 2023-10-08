@@ -1,25 +1,25 @@
 /* IMPORTS COMPONENTES */
-@import url('./components/Footer/styles/footer.css');
-@import url('./components/Services/styles/services.css');
-@import url('./components/Login/styles/login.css');
-@import url('./components/NavigationBar/styles/navigationbar.css');
-@import url('./components/Menu/style/menu.css');
-@import url('./components/HomeApisComponent/styles/homeapis.css');
-@import url('./components/ServicioProveedoresComponent/styles/servicioproveedores.css');
-@import url('./components/TarjetaServicio/styles/tarjetaservicio.css');
-@import url('./components/NavBarApis/styles/navbarapis.css');
-@import url('./components/ComentariosProveedores/styles/comentariosproveedores.css');
-@import url('./components/ComentarioUsuario/styles/comentariousuario.css');
-@import url('./components/BuscarServicioComponent/styles/buscarserviciocomponent.css');
-@import url('./components/TarjetaServicioProfesor/styles/tarjetaservicioprofesor.css');
-@import url('./components/PerfilServicioComponent/styles/perfilserviciocomponent.css');
-@import url('./components/ResetPwdComponent/styles/resetpwdcomponent.css');
-@import url('./components/MisContratacionesComponent/styles/miscontratacionescomponent.css');
-@import url('./components/NavBarMarketplace/styles/navbarmarketplace.css');
-@import url('./components/LogInComponent/styles/logincomponent.css');
-@import url('./components/BotonAgregarServicio/styles/botonagregarservicio.css');
-@import url('./components/TarjetaContratacion/style/tarjetacontratacion.css');
-@import url('./components/NavBarMarketplacelogeado/styles/navbarmarketplacelogeado.css');
+@import url('./components/Footer/style.css');
+@import url('./components/Services/style.css');
+@import url('./components/Login/style.css');
+@import url('./components/NavigationBar/style.css');
+@import url('./components/Menu/style.css');
+@import url('./components/HomeApisComponent/style.css');
+@import url('./components/ServicioProveedoresComponent/style.css');
+@import url('./components/TarjetaServicio/style.css');
+@import url('./components/NavBarApis/style.css');
+@import url('./components/ComentariosProveedores/style.css');
+@import url('./components/ComentarioUsuario/style.css');
+@import url('./components/BuscarServicioComponent/style.css');
+@import url('./components/TarjetaServicioProfesor/style.css');
+@import url('./components/PerfilServicioComponent/style.css');
+@import url('./components/CambiarPasswordComponent/style.css');
+@import url('./components/MisContratacionesComponent/style.css');
+@import url('./components/NavBarMarketplace/style.css');
+@import url('./components/LogInComponent/style.css');
+@import url('./components/BotonAgregarServicio/style.css');
+@import url('./components/TarjetaContratacion/style.css');
+@import url('./components/NavBarMarketplacelogeado/style.css');
 
 /* FUENTES */
 @import url("https://fonts.googleapis.com/css?family=Quicksand:500,700|Inter:700");

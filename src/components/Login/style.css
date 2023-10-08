@@ -8,8 +8,6 @@
 
 .body_container {
     height:100vh;
-    /* background-image: linear-gradient(to bottom, #7cafff, #32c0ff, #00cefc, #00d9e6, #1ee1c9, #47e5c2, #61e9bb, #78edb4, #6ef1c4, #66f5d4, #61f8e3, #5ffbf1); */
-    /* background-image: url('img/slide2.jpg'); */
     background-color: #ECF6F6;
     background-position: center;
     background-size: cover;

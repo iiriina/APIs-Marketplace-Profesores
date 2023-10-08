@@ -10,15 +10,12 @@ export const ServicioProveedoresComponent = () => {
             <div>Mis Servicios</div>             
             <BotonAgregarServicio />
         </div>
-        
             <TarjetaServicio />
             <TarjetaServicio />
             <TarjetaServicio />
             <TarjetaServicio />
-
         </div>
-  
     );
 };
 
-export default ServicioProveedoresComponent
+export default ServicioProveedoresComponent;

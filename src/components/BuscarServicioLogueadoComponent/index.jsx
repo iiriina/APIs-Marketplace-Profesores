@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import data from './data.json';
 import ResponsiveAppBar from "../NavBarMarketplace";
 import ResponsiveAppBarlogeado from "../NavBarMarketplacelogeado";
-import TarjetaServicioProfesorLogueado from "../TarjetaServicioProfesor copy";
+import TarjetaServicioProfesorLogueado from "../TarjetaServicioProfesorLogueado";
 
 
 

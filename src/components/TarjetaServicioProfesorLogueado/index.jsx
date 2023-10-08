@@ -58,4 +58,4 @@ export const TarjetaServicioProfesorLogueado = () => {
     );
 };
 
-export default TarjetaServicioProfesorLogueado
+export default TarjetaServicioProfesorLogueado;

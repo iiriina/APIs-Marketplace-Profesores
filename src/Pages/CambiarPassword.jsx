@@ -1,10 +1,10 @@
 import React from "react";
-import ResetPwdComponent from "../components/ResetPwdComponent";
+import CambiarPasswordComponent from "../components/CambiarPasswordComponent";
 
 const CambiarPassword = () => {
     return (
       <>
-        <ResetPwdComponent />
+        <CambiarPasswordComponent />
       </>
     );
   };

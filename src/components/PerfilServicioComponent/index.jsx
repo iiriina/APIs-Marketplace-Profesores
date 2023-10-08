@@ -13,7 +13,7 @@ import ResponsiveAppBar from '../NavBarMarketplace';
 export const PerfilServicioComponent = () => {
 
     const [open, setOpen] = React.useState(false);
-    const [showSnackbar, setShowSnackbar] = useState(false); // Estado para mostrar el Snackbar
+    const [showSnackbar, setShowSnackbar] = useState(false); 
   
     const handleClickOpen = () => {
       setOpen(true);
@@ -24,10 +24,7 @@ export const PerfilServicioComponent = () => {
     };
   
     const handleSend = () => {
-      // Aquí puedes realizar alguna acción antes de mostrar el Snackbar
       setShowSnackbar(true);
-  
-      // Configura un temporizador para ocultar el Snackbar después de 4 segundos
       setTimeout(() => {
         setShowSnackbar(false);
       }, 4000);
@@ -36,7 +33,7 @@ export const PerfilServicioComponent = () => {
     };
 
     const [open2, setOpen2] = React.useState(false);
-    const [showSnackbar2, setShowSnackbar2] = useState(false); // Estado para mostrar el Snackbar
+    const [showSnackbar2, setShowSnackbar2] = useState(false); 
   
     const handleClickOpen2 = () => {
       setOpen2(true);
@@ -47,10 +44,7 @@ export const PerfilServicioComponent = () => {
     };
   
     const handleSend2 = () => {
-      // Aquí puedes realizar alguna acción antes de mostrar el Snackbar
       setShowSnackbar2(true);
-  
-      // Configura un temporizador para ocultar el Snackbar después de 4 segundos
       setTimeout(() => {
         setShowSnackbar2(false);
       }, 4000);
@@ -58,17 +52,12 @@ export const PerfilServicioComponent = () => {
   
     };
 
-
     return (
-
         <div className="div general_perfil_servicio">
-
             <div className="titulo_perfil_servicioooo">Clases de Inglés Intensivas</div>
-
             <div className="frameperfilservicio">
             <div className="divperfilservicio">
             <div className="text-wrapperperfilservicio"></div>
-
             <div className="div-2perfilservicio">
                 <div className="text-wrapper-2perfilservicio">Biografía:</div>
                 <p className="pperfilservicio">
@@ -100,15 +89,9 @@ export const PerfilServicioComponent = () => {
                     <div className="text-wrapper-5perfilservicio">⭐</div>
                 </div>
                 </div>
-                <p className="text-wrapper-6perfilservicio">La verdad me encanta el profe! Es un lujo como explica. Lo súper recomiendo!</p>
-            
-            
-            
-            
-            
+                <p className="text-wrapper-6perfilservicio">La verdad me encanta el profe! Es un lujo como explica. Lo súper recomiendo!</p>           
             </div>
 
-            {/* este es el boton de comentar, tiene todos los hooks y funciones con un 2 en la terminacion */}
             <button className= "precioperfilservicio21" onClick={handleClickOpen2}>
             Hacer Comentario
                     </button>
@@ -123,9 +106,9 @@ export const PerfilServicioComponent = () => {
                             <span className="span_precio_perfil_2_rating" style={{ marginRight: '8px' }}>Calificación:</span>
                             <Rating
                             name="calificacion"
-                            defaultValue={0} // Valor inicial (0 estrellas)
-                            max={5} // Valor máximo (5 estrellas)
-                            precision={1} // Precisión para permitir calificaciones en incrementos de 1
+                            defaultValue={0} 
+                            max={5} 
+                            precision={1} 
                             />
                         </div>
 
@@ -156,13 +139,12 @@ export const PerfilServicioComponent = () => {
                         </DialogActions>
                     </Dialog>
 
-                    {/* Snackbar para mostrar el mensaje de éxito */}
                     <Snackbar
-                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} // Posición en la pantalla
-                        open={showSnackbar2} // Mostrar el Snackbar cuando showSnackbar sea true
-                        autoHideDuration={4000} // Duración en milisegundos
-                        onClose={() => setShowSnackbar2(false)} // Función al cerrar el Snackbar
-                        message="Se ha enviado tu comentario." // Mensaje de éxito que deseas mostrar
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                        open={showSnackbar2} 
+                        autoHideDuration={4000} 
+                        onClose={() => setShowSnackbar2(false)}
+                        message="Se ha enviado tu comentario." 
                     />
 
             </div>
@@ -188,10 +170,6 @@ export const PerfilServicioComponent = () => {
                         <div className="text-wrapperperfilservicio2">Calificación:</div>
                         <div className="text-wrapper-2perfilservicio2">4.5 (23 opiniones)</div>
                     </div>
-
-
-
-                {/* este es el boton de contactar, tiene todos los hooks y funciones SIN terminar en un 2 */}
 
                     <button className= "precioperfilservicio2" onClick={handleClickOpen}>
                         Contactar
@@ -255,25 +233,19 @@ export const PerfilServicioComponent = () => {
                         </DialogActions>
                     </Dialog>
 
-                    {/* Snackbar para mostrar el mensaje de éxito */}
                     <Snackbar
-                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} // Posición en la pantalla
-                        open={showSnackbar} // Mostrar el Snackbar cuando showSnackbar sea true
-                        autoHideDuration={4000} // Duración en milisegundos
-                        onClose={() => setShowSnackbar(false)} // Función al cerrar el Snackbar
-                        message="Se ha enviado tu solicitud para el servicio." // Mensaje de éxito que deseas mostrar
-                    />
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} 
+                        open={showSnackbar} 
+                        autoHideDuration={4000} 
+                        onClose={() => setShowSnackbar(false)} 
+                        message="Se ha enviado tu solicitud para el servicio."
+                        />
                     </div>
-
-
-
-
                 </div>
-
             </div>
             </div>
         </div>
     );
 };
 
-export default PerfilServicioComponent
+export default PerfilServicioComponent;

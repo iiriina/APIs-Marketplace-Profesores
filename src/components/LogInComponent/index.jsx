@@ -3,8 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -25,8 +23,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -81,10 +77,6 @@ export default function LogInComponent({ onLogin }) {
               autoComplete="current-password"
             />
 
-
-
-            {/* cuando apreta iniciar sesion estoy redirigiendolo a la pagina de sus servicios*/}
-
             <Button
               type="submit"
               fullWidth
@@ -92,9 +84,7 @@ export default function LogInComponent({ onLogin }) {
               sx={{ mt: 3, mb: 2 }}
               onClick={() => {
                 window.location.href = '/servicios';
-                    // Llama a la función onLogin cuando se hace clic en el botón "Iniciar Sesión"
                 onLogin();
-
               }}
 
             >

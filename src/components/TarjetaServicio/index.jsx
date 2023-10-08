@@ -38,4 +38,4 @@ export const TarjetaServicio = () => {
     );
 };
 
-export default TarjetaServicio
+export default TarjetaServicio;

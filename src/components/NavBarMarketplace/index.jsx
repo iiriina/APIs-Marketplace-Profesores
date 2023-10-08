@@ -7,8 +7,6 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import SwipeableTemporaryDrawer from "../Swipeable/index.jsx";
 
-
-{/* hay que hacer que ande ese about us section */}
 const pages = [
   { label: "Home", href: "/homeapis" },
   { label: "Buscar Servicios", href: "/buscar_servicios" },
@@ -17,12 +15,10 @@ const pages = [
 function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-
   };
 
   return (
@@ -61,8 +57,8 @@ function ResponsiveAppBar() {
               letterSpacing: ".3rem",
               color: "black",
               textDecoration: "none",
-              width: "fit-content", // Esto ajustará el ancho al contenido
-              textAlign: "center", // Esto centrará el texto dentro del botón
+              width: "fit-content", 
+              textAlign: "center",
 
             }}
           ></Typography>

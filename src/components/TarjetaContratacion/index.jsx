@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 export const TarjetaContratacion = () => {
 
     const [anchorEl, setAnchorEl] = useState(null);
-    const [selectedOption, setSelectedOption] = useState(''); // Estado para almacenar la opción seleccionada
+    const [selectedOption, setSelectedOption] = useState(''); 
   
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -57,7 +57,7 @@ export const TarjetaContratacion = () => {
         aria-haspopup="true"
         onClick={handleClick}
         >
-        {selectedOption || 'Pendiente'} {/* Muestra la opción seleccionada o 'Seleccionar' si no hay ninguna */}
+        {selectedOption || 'Pendiente'} 
         </button>
         
         <Menu
@@ -71,12 +71,7 @@ export const TarjetaContratacion = () => {
         <MenuItem onClick={() => handleOptionSelect('Finalizado')}>Finalizado</MenuItem>
         <MenuItem onClick={() => handleOptionSelect('Cancelado')}>Cancelado</MenuItem>
         </Menu>
-
-
-
     </div>
-
-
     );
 };
 

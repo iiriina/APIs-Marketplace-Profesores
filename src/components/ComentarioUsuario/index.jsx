@@ -23,4 +23,4 @@ export const ComentarioUsuario = () => {
     );
 };
 
-export default ComentarioUsuario
+export default ComentarioUsuario;
