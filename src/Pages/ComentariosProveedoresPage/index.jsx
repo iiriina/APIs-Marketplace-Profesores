@@ -5,7 +5,7 @@ import ResponsiveAppBarlogeado from "../../components/NavBarMarketplacelogeado";
 const ComentariosProveedoresPage = () => {
     return (
       <div>
-        <ResponsiveAppBar />
+        <ResponsiveAppBarlogeado />
         <ComentariosProveedores />
       </div>
     );

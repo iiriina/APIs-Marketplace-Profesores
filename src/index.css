@@ -1,13 +1,13 @@
-/* CSS IMPORTS */
+/* IMPORTS COMPONENTES */
 @import url('./components/Footer/styles/footer.css');
 @import url('./components/Services/styles/services.css');
 @import url('./components/Login/styles/login.css');
+@import url('./components/NavigationBar/styles/navigationbar.css');
 @import url('./components/Menu/style/menu.css');
-@import url('./components/ButtonGroup/styles/buttonGroup.css');
-@import url('./components/Profile/styles/profile.css');
-@import url('./components/HomeComponent/style.css');
+@import url('./components/HomeApisComponent/styles/homeapis.css');
 @import url('./components/ServicioProveedoresComponent/styles/servicioproveedores.css');
 @import url('./components/TarjetaServicio/styles/tarjetaservicio.css');
+@import url('./components/NavBarApis/styles/navbarapis.css');
 @import url('./components/ComentariosProveedores/styles/comentariosproveedores.css');
 @import url('./components/ComentarioUsuario/styles/comentariousuario.css');
 @import url('./components/BuscarServicioComponent/styles/buscarserviciocomponent.css');
@@ -19,23 +19,19 @@
 @import url('./components/LogInComponent/styles/logincomponent.css');
 @import url('./components/BotonAgregarServicio/styles/botonagregarservicio.css');
 @import url('./components/TarjetaContratacion/style/tarjetacontratacion.css');
-/* CSS IMPORTS */
-
+@import url('./components/NavBarMarketplacelogeado/styles/navbarmarketplacelogeado.css');
 
 /* FUENTES */
-@import url("https://fonts.googleapis.com/css?family=Quicksand:700,600|Roboto:700,400");
 @import url("https://fonts.googleapis.com/css?family=Quicksand:500,700|Inter:700");
 @import url("https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:700|Righteous:400|Inter:400");
-@import url("https://fonts.googleapis.com/css?family=Inter:700,600|JetBrains+Mono:500|Righteous:400|Andika:400|Jua:400");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:700,600|Roboto:700,400");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
-/* FUENTES */
+@import url("https://fonts.googleapis.com/css?family=Inter:700,600|JetBrains+Mono:500|Righteous:400|Andika:400|Jua:400");
 
-
-
-/* CÓDIGO MAIN */
+/* CSS GLOBAL */
 :root {
   --verde: #0ABBB9;
   --rosa: #C7999D;
@@ -57,7 +53,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+  
 h2 {
   color: #1a202d;
   text-align: center;
@@ -95,7 +91,6 @@ button {
   margin: 30px 0;
   font-size: 40px;
   padding: 20px;
-  /* border-bottom: 1px solid black; */
   background-color: var(--primaryColor);
 }
 
@@ -278,5 +273,3 @@ color: white!important;
     color: #BBB2B2;
     }
 }
-
-
