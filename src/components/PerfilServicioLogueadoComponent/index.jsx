@@ -8,7 +8,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Snackbar from '@mui/material/Snackbar';
 import Rating from '@mui/material/Rating';
-import ResponsiveAppBar from '../NavBarMarketplace';
 
 export const PerfilServicioLogueadoComponent = () => {
 

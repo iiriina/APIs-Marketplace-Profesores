@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import SwipeableTemporaryDrawerLogeado from "../SwipeableLogeado";
+import SwipeableTemporaryDrawerLogeado from "../SwipeableLogueado";
 
 const pages = [
   { label: "Servicios", href: "/servicios" },
@@ -88,7 +88,7 @@ function ResponsiveAppBarlogeado() {
             <Button
               key="Cerrar Sesión"
               onClick={() => {
-                window.location.href = 'http://localhost:5173/homeapis';
+                window.location.href = 'http://localhost:5173/home';
               }}
               sx={{
                 my: 1,

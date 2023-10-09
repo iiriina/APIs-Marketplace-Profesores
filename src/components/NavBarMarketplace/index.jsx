@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import SwipeableTemporaryDrawer from "../Swipeable/index.jsx";
 
 const pages = [
-  { label: "Home", href: "/homeapis" },
+  { label: "Home", href: "/home" },
   { label: "Buscar Servicios", href: "/buscar_servicios" },
 ];
 

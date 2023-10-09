@@ -1,5 +1,5 @@
 import React from "react";
-import ResponsiveAppBarlogeado from "../components/NavBarMarketplacelogeado";
+import ResponsiveAppBarlogeado from "../components/NavBarMarketplaceLogeado";
 import BuscarServicioLogueadoComponent from "../components/BuscarServicioLogueadoComponent";
 
 const BuscarServiciosLogueado = ({ isLoggedIn }) => {

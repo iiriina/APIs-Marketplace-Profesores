@@ -41,7 +41,7 @@ export default function SwipeableTemporaryDrawer() {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="/homeapis">Home</a>} />
+            <ListItemText primary={<a href="/home">Home</a>} />
           </ListItemButton>
         </ListItem>
         <ListItem key="buscar-profesional" disablePadding>

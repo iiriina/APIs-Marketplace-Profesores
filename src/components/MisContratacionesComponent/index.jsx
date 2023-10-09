@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import TarjetaContratacion from '../TarjetaContratacion';
-import ResponsiveAppBarlogeado from '../NavBarMarketplacelogeado';
+import ResponsiveAppBarlogeado from '../NavBarMarketplaceLogeado';
 
 
 export default function MisContratacionesComponent() {

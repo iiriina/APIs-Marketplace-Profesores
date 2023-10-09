@@ -7,8 +7,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Snackbar from '@mui/material/Snackbar';
-import Rating from '@mui/material/Rating';
-import ResponsiveAppBar from '../NavBarMarketplace';
 export default function BotonAgregarServicio() {
 
     const [open3, setOpen3] = React.useState(false);

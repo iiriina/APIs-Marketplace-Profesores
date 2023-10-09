@@ -74,7 +74,7 @@ export default function SwipeableTemporaryDrawerLogeado() {
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="/homeapis">Cerrar Sesión</a>} />
+            <ListItemText primary={<a href="/home">Cerrar Sesión</a>} />
           </ListItemButton>
         </ListItem>
       </List>

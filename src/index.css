@@ -1,7 +1,6 @@
 /* IMPORTS COMPONENTES */
 @import url('./components/Footer/style.css');
 @import url('./components/Services/style.css');
-@import url('./components/NavigationBar/style.css');
 @import url('./components/Menu/style.css');
 @import url('./components/HomeApisComponent/style.css');
 @import url('./components/ServicioProveedoresComponent/style.css');
@@ -11,6 +10,7 @@
 @import url('./components/BuscarServicioComponent/style.css');
 @import url('./components/TarjetaServicioProfesor/style.css');
 @import url('./components/PerfilServicioComponent/style.css');
+@import url('./components/PerfilServicioLogueadoComponent/style.css');
 @import url('./components/CambiarPasswordComponent/style.css');
 @import url('./components/MisContratacionesComponent/style.css');
 @import url('./components/NavBarMarketplace/style.css');

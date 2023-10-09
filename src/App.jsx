@@ -31,7 +31,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="homeapis" element={<Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="servicios" element={<ServiciosProveedores />} />
           <Route path="comentarios" element={<ComentariosProveedores />} />
           <Route path="buscar_servicios" element={<BuscarServicios isLoggedIn={isLoggedIn} />} />

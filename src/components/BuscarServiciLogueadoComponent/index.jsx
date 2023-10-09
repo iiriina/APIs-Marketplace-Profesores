@@ -1,15 +1,5 @@
-
-import TarjetaServicioProfesor from "../TarjetaServicioProfesor";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import ListSubheader from '@mui/material/ListSubheader';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import React, { useState } from 'react'; 
-import { Link } from 'react-router-dom';
 import data from './data.json';
-import ResponsiveAppBar from "../NavBarMarketplace";
-import ResponsiveAppBarlogeado from "../NavBarMarketplacelogeado";
 import TarjetaServicioProfesorLogueado from "../TarjetaServicioProfesorLogueado";
 
 

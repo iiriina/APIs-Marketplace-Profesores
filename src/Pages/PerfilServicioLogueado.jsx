@@ -1,6 +1,6 @@
 import React from "react";
-import ResponsiveAppBarlogeado from "../components/NavBarMarketplacelogeado";
-import PerfilServicioLogueadoComponent from "../components/PerfilServicioComponent copy";
+import ResponsiveAppBarlogeado from "../components/NavBarMarketplaceLogeado";
+import PerfilServicioLogueadoComponent from "../components/PerfilServicioLogueadoComponent";
 
 const PerfilServicioLogueado = () => {
     return (
