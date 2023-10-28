@@ -290,3 +290,23 @@ flex-direction: column;
 gap: 10px;
 }
 
+
+
+@media screen and (min-width: 500px) and (max-width: 790px) {
+  .divserviciosprofesoresprim {
+    width: 50%;
+    background-color: rgb(222, 221, 221);
+    border: 1px solid;
+    border-color: #cbcbcb;
+    border-radius: 26px;
+  }
+
+  .text-wrapperservicioprofesores {
+    left: 25%;
+  }
+
+  .text-wrapper-2servicioprofesores {
+    left: 25%;
+  }
+
+}
