@@ -52,7 +52,7 @@ export const PerfilServicioComponent = () => {
     };
 
     return (
-        <div className="div general_perfil_servicio">
+        <div className="div-general_perfil_servicio">
             <div className="titulo_perfil_servicioooo">Clases de Inglés Intensivas</div>
             <div className="frameperfilservicio">
             <div className="divperfilservicio">

@@ -299,6 +299,8 @@ gap: 10px;
     border: 1px solid;
     border-color: #cbcbcb;
     border-radius: 26px;
+    border-top: 15%;
+    padding: 15px;
   }
 
   .text-wrapperservicioprofesores {
@@ -306,7 +308,7 @@ gap: 10px;
   }
 
   .text-wrapper-2servicioprofesores {
-    left: 25%;
+    left: 20%;
   }
 
 }
