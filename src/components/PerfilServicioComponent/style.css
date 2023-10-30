@@ -396,6 +396,7 @@
           position: relative;
           white-space: nowrap;
           width: fit-content;
+          right: 20%;
     
         }
 
@@ -477,6 +478,54 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
     white-space: nowrap;
     width: fit-content;
 
+}
+
+@media screen and (min-width: 370px) and (max-width: 380px) {
+    .titulo_perfil_servicioooo {
+        right: 15%;
+      }
+  
+  .frameperfilservicio{
+    right: 4%;
+  }
+
+
+  .divperfilservicio {
+    position: relative;
+    top: 45rem !important;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 390px) {
+    .titulo_perfil_servicioooo {
+        right: 15%;
+      }
+  
+  .frameperfilservicio {
+    right: 2%;
+  }
+
+
+  .divperfilservicio {
+    position: relative;
+    top: 43rem !important;
+  }
+}
+
+@media screen and (min-width: 355px) and (max-width: 365px) {
+  .titulo_perfil_servicioooo {
+    right: 15%;
+  }
+  
+  .frameperfilservicio {
+    right: 4%;
+  }
+
+
+  .divperfilservicio {
+    position: relative;
+    top: 45rem !important;
+  }
 }
 
 
