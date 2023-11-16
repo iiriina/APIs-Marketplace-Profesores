@@ -9,7 +9,6 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import VerContrataciones from './Pages/VerContrataciones';
 import CambiarPassword from './Pages/CambiarPassword';
-import CompletarDatos from './Pages/CompletarDatos';
 import BuscarServiciosLogueado from './Pages/BuscarServiciosLogueado';
 import PerfilServicioLogueado from './Pages/PerfilServicioLogueado';
 
@@ -42,7 +41,6 @@ function App() {
           <Route path="signup" element={<Register />} />
           <Route path="miscontrataciones" element={<VerContrataciones />} />
           <Route path="resetpwd" element={<CambiarPassword />} />
-          <Route path="completardatos" element={<CompletarDatos />} />
         </Routes>
       </BrowserRouter>
     </>

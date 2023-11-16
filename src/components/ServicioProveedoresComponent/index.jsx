@@ -4,12 +4,11 @@ import BotonAgregarServicio from "../BotonAgregarServicio";
 
 export const ServicioProveedoresComponent = () => {
     return (
-
         <div className="frameservicios">
         <div className="text-wrapperservicios">
             <div>Mis Servicios</div>             
-            <BotonAgregarServicio />
-        </div>
+                <BotonAgregarServicio />
+            </div>
             <TarjetaServicio />
             <TarjetaServicio />
             <TarjetaServicio />
