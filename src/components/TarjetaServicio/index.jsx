@@ -6,9 +6,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { InputAdornment } from "@mui/material";
 
-export const TarjetaServicio = () => {
+export const TarjetaServicio = ({ clase, tipo_clase, duracion, precio, biografia }) => {
   const [open3, setOpen3] = React.useState(false);
   const [showSnackbar3, setShowSnackbar3] = useState(false); // Estado para mostrar el Snackbar
 
@@ -31,21 +30,22 @@ export const TarjetaServicio = () => {
     <div className="tagservicios">
       <div className="divservicios">
         <div className="div-2servicios">
-          <div className="text-wrapper-2servicios">Inglés</div>
+          <div className="text-wrapper-2servicios">{clase}</div>
           <div className="div-wrapperservicios">
-            <div className="text-wrapper-3servicios">Grupal</div>
+            <div className="text-wrapper-3servicios">{tipo_clase}</div>
           </div>
           <div className="div-wrapperservicios">
-            <div className="text-wrapper-3servicios">Mensual</div>
+            <div className="text-wrapper-3servicios">{duracion}</div>
           </div>
           <div className="tag-precioservicios">
-            <div className="text-wrapper-3servicios">$5000/h</div>
+            <div className="text-wrapper-3servicios">${precio}/h</div>
+          </div>
+          <div className="div-wrapperboton">
+            <div className="text-wrapper-3servicios"><Button>PUBLICAR</Button></div>
           </div>
         </div>
         <p className="pservicios">
-          Estudiante de traductorado público, apasionada por los idiomas desde
-          pequeña. Me encuentro dando clases de inglés hace 2 años. No dudes en
-          contactarme!
+          {biografia}
         </p>
       </div>
       <div className="div-3servicios">
@@ -110,23 +110,8 @@ export const TarjetaServicio = () => {
               fullWidth
               variant="standard"
             />
-
-            <TextField
-              autoFocus
-              margin="Imagen"
-              id="Imagen"
-              label="Imagen"
-              type="Imagen"
-              fullWidth
-              variant="standard"
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <Button variant="text">Insertar Imagen</Button>
-                  </InputAdornment>
-                ),
-              }}
-            />
+            <p></p>
+            <Button variant="text" onSubmit={{/*Agregar funcionalidad */}}>Insertar Imagen</Button>
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose3}>Cancelar</Button>

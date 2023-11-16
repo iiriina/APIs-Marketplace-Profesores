@@ -1,6 +1,8 @@
 
 const ProfessionalCard = ({imagen, nombre, tipo_clase, calificacion, clase, biografia, precio}) => {
-    return (
+    
+  
+  return (
       <div className="tag-profesorservicioprofesores">
         <div className="div-2servicioprofesores">
           <div className="nombreservicioprofesores">
