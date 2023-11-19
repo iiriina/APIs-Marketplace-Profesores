@@ -10,11 +10,15 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/store'; // Asegúrate de tener la ruta correcta
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
     left: false,
   });
+  
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -36,30 +40,85 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem key="home" disablePadding>
+
+      {isLoggedIn ? (
+        <>
+                <ListItem key="mis-servicios" disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="/home">Home</a>} />
+            <ListItemText primary={<a href="/servicios">Mis Servicios</a>} />
           </ListItemButton>
         </ListItem>
-        <ListItem key="buscar-profesional" disablePadding>
+        <ListItem key="mis-comentarios" disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="/buscar_servicios">Buscar Servicio</a>} />
+            <ListItemText primary={<a href="/comentarios">Mis comentarios</a>} />
           </ListItemButton>
         </ListItem>
-        <ListItem key="iniciar-sesion" disablePadding>
+        <ListItem key="mis-contrataciones" disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary={<a href="/login">Iniciar Sesión Profesores</a>} />
+            <ListItemText primary={<a href="/miscontrataciones">Mis Contrataciones</a>} />
           </ListItemButton>
         </ListItem>
+
+        <ListItem key="buscar-servicios" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="/buscar_servicios/logged">Buscar Servicios</a>} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="cerrar-sesion" disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary={<a href="/home">Cerrar Sesión</a>} />
+          </ListItemButton>
+        </ListItem>
+
+        
+        </>
+
+
+      ) : (
+            <>
+              <ListItem key="home" disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={<a href="/home">Home</a>} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key="buscar-profesional" disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={<a href="/buscar_servicios">Buscar Servicio</a>} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key="iniciar-sesion" disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={<a href="/login">Iniciar Sesión Profesores</a>} />
+                </ListItemButton>
+              </ListItem>
+            </>
+          )}
+
+
       </List>
       <Divider />
     </Box>

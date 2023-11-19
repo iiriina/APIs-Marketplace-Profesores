@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import TarjetaContratacion from '../TarjetaContratacion';
-import ResponsiveAppBarlogeado from '../NavBarMarketplaceLogeado';
+import ResponsiveAppBar from '../NavBarMarketplace';
 
 
 export default function MisContratacionesComponent() {
@@ -19,7 +19,7 @@ export default function MisContratacionesComponent() {
   };
   return (
     <div className="divgeneralcontrataciones">
-      <ResponsiveAppBarlogeado />
+      <ResponsiveAppBar />
       <div className="framecontrataciones">
         <div className="text-wrappercontrataciones">Mis Contrataciones</div>
         <div className="tagcontrataciones">

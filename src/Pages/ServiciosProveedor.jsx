@@ -1,10 +1,10 @@
-import ResponsiveAppBarlogeado from "../components/NavBarMarketplaceLogeado";
+import ResponsiveAppBar from "../components/NavBarMarketplace";
 import ServicioProveedoresComponent from "../components/ServicioProveedoresComponent"
 
 const ServiciosProveedores = () => {
     return (
       <>
-        <ResponsiveAppBarlogeado />
+        <ResponsiveAppBar />
         <ServicioProveedoresComponent />
       </>
     );

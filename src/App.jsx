@@ -9,42 +9,30 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import VerContrataciones from './Pages/VerContrataciones';
 import CambiarPassword from './Pages/CambiarPassword';
-import BuscarServiciosLogueado from './Pages/BuscarServiciosLogueado';
-import PerfilServicioLogueado from './Pages/PerfilServicioLogueado';
+import { Provider } from 'react-redux';
+import store from './redux/store'; // Asegúrate de tener la ruta correcta
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true); 
-    console.log('Iniciar Sesión llamado');
-    console.log('esta logeado?');
-    console.log(isLoggedIn);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false); 
-  };
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="home" element={<Home />} />
-          <Route path="servicios" element={<ServiciosProveedores />} />
-          <Route path="comentarios" element={<ComentariosProveedores />} />
-          <Route path="buscar_servicios" element={<BuscarServicios isLoggedIn={isLoggedIn} />} />
-          <Route path="buscar_servicios/logged" element={<BuscarServiciosLogueado isLoggedIn={isLoggedIn} />} />
-          <Route path="perfil_servicio" element={<PerfilServicio />} />
-          <Route path="perfil_servicio/logged" element={<PerfilServicioLogueado />} />
-          <Route path="login" element={<Login onLogin={handleLogin}/>} />
-          <Route path="signup" element={<Register />} />
-          <Route path="miscontrataciones" element={<VerContrataciones />} />
-          <Route path="resetpwd" element={<CambiarPassword />} />
-        </Routes>
-      </BrowserRouter>
+  <Provider store={store}>
+  <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="home" element={<Home />} />
+        <Route path="servicios" element={<ServiciosProveedores />} />
+        <Route path="comentarios" element={<ComentariosProveedores />} />
+        <Route path="buscar_servicios" element={<BuscarServicios />} />
+        <Route path="perfil_servicio" element={<PerfilServicio />} />
+        <Route path="login" element={<Login/>} />
+        <Route path="signup" element={<Register />} />
+        <Route path="miscontrataciones" element={<VerContrataciones />} />
+        <Route path="resetpwd" element={<CambiarPassword />} />
+      </Routes>
+    </BrowserRouter>
     </>
-  )
+  </Provider>
+
+  );
 }
 
 export default App;

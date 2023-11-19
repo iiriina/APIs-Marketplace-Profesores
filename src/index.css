@@ -10,14 +10,12 @@
 @import url('./components/BuscarServicioComponent/style.css');
 @import url('./components/TarjetaServicioProfesor/style.css');
 @import url('./components/PerfilServicioComponent/style.css');
-@import url('./components/PerfilServicioLogueadoComponent/style.css');
 @import url('./components/CambiarPasswordComponent/style.css');
 @import url('./components/MisContratacionesComponent/style.css');
 @import url('./components/NavBarMarketplace/style.css');
 @import url('./components/LogInComponent/style.css');
 @import url('./components/BotonAgregarServicio/style.css');
 @import url('./components/TarjetaContratacion/style.css');
-@import url('./components/NavBarMarketplacelogeado/style.css');
 
 /* FUENTES */
 @import url("https://fonts.googleapis.com/css?family=Quicksand:500,700|Inter:700");
