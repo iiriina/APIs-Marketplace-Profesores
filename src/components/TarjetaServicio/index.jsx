@@ -10,6 +10,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 export const TarjetaServicio = ({ clase, tipo_clase, duracion, precio, biografia }) => {
   const [open3, setOpen3] = React.useState(false);
   const [showSnackbar3, setShowSnackbar3] = useState(false); // Estado para mostrar el Snackbar
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleClickOpen3 = () => {
     setOpen3(true);
@@ -111,7 +112,18 @@ export const TarjetaServicio = ({ clase, tipo_clase, duracion, precio, biografia
               variant="standard"
             />
             <p></p>
-            <Button variant="text" onSubmit={{/*Agregar funcionalidad */}}>Insertar Imagen</Button>
+
+            <DialogContentText>
+              Elegí una imágen para el servicio:
+            </DialogContentText>
+            <input
+              className="input_insertarimg"
+              type="file"
+              accept="image/*"
+              onChange={(e) => setSelectedImage(e.target.files[0])}
+            />
+
+
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose3}>Cancelar</Button>
