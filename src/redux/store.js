@@ -13,10 +13,13 @@ const authSlice = createSlice({
     logout: state => {
       state.isLoggedIn = false;
     },
+    loginSuccess: state => {
+      state.isLoggedIn = true;
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, loginSuccess } = authSlice.actions;
 
 export const selectIsLoggedIn = state => state.auth.isLoggedIn;
 

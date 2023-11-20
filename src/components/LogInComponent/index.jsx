@@ -1,4 +1,5 @@
-import * as React from 'react';
+// LogInComponent.jsx
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,53 +11,53 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom'; // Cambiamos useHistory por useNavigate
-import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/store';
+import { login as loginController } from '../controller/loginController';
+import { loginSuccess } from '../../redux/store';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="#">
-        Educapp
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-const defaultTheme = createTheme();
-
-export default function LogInComponent({ onLogin }) {
-  const navigate = useNavigate(); // Cambiamos useHistory por useNavigate
+function LogInComponent(props) {
   const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Obtén la función de navegación desde el hook useNavigate
 
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
 
-  const handleLogin = async () => {
-    try {
-      // Aquí deberías realizar la lógica de inicio de sesión
-      // ...
-      dispatch(login());
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
-      // Redirige a la página deseada
-      navigate('/servicios');
-    } catch (error) {
-      // Maneja errores de inicio de sesión si es necesario
-      console.error('Error en el inicio de sesión:', error);
+  const loginUser = async () => {
+    if (email !== '' && password !== '') {
+      try {
+        let getLogin = await loginController({ email, password });
+        if (getLogin.rdo === 0) {
+          dispatch(loginSuccess()); // Despacha la acción de inicio de sesión exitoso
+          navigate('/servicios'); // Navega a la ruta deseada
+        } else if (getLogin.rdo === 1) {
+          alert('El usuario no es válido');
+        }
+      } catch (error) {
+        console.error('Error al validar el inicio de sesión:', error);
+      }
+    } else {
+      alert('Debe completar usuario y contraseña');
+    }
+  };
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (email !== '' && password !== '') {
+      loginUser();
+    } else {
+      alert('Debe completar usuario y contraseña');
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Tu lógica de inicio de sesión aquí...
-    dispatch(login());
-
-    // Redirige a la página deseada
-    navigate('/servicios');
-  };
+  const defaultTheme = createTheme();
 
   return (
     <div className="container_general_loginn">
@@ -77,35 +78,36 @@ export default function LogInComponent({ onLogin }) {
             <Typography component="h1" variant="h5">
               Iniciar Sesión
             </Typography>
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <Box component="form" onSubmit={handleSubmit}>
               <TextField
                 margin="normal"
                 required
                 fullWidth
                 id="email"
+                type="email"
                 label="Email"
                 name="email"
                 autoComplete="email"
+                onChange={handleEmail}
                 autoFocus
               />
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                name="password"
-                label="Contraseña"
-                type="password"
                 id="password"
-                autoComplete="current-password"
+                type="password"
+                label="Contraseña"
+                name="password"
+                autoComplete="password"
+                onChange={handlePassword}
+                autoFocus
               />
-
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={handleLogin}  // Llama a la función handleLogin en lugar de usar onSubmit
-
               >
                 Iniciar Sesión
               </Button>
@@ -123,9 +125,10 @@ export default function LogInComponent({ onLogin }) {
               </Grid>
             </Box>
           </Box>
-          <Copyright sx={{ mt: 8, mb: 4 }} />
         </Container>
       </ThemeProvider>
     </div>
   );
 }
+
+export default LogInComponent;
