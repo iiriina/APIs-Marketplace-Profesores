@@ -11,6 +11,7 @@ import VerContrataciones from './Pages/VerContrataciones';
 import CambiarPassword from './Pages/CambiarPassword';
 import { Provider } from 'react-redux';
 import store from './redux/store'; // Asegúrate de tener la ruta correcta
+import CambiarContrasenia from './Pages/CambiarContrasenia';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Route path="signup" element={<Register />} />
         <Route path="miscontrataciones" element={<VerContrataciones />} />
         <Route path="resetpwd" element={<CambiarPassword />} />
+
+        <Route path="cambiarContrasenia" element={<CambiarContrasenia />} />
+
       </Routes>
     </BrowserRouter>
     </>

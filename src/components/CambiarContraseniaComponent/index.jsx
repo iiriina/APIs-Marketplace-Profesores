@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,25 +9,37 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { guardarContraseniaNueva } from '../controller/guardarContraseniaNueva';
 
-import { solicitoCambioContrasenia } from '../controller/cambioContraseniaController';
+function Copyright(props) {
+  return (
+    <Typography className="typograp" variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="#">
+        Educapp
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const defaultTheme = createTheme();
 
-export default function CambiarPasswordComponent() {
+export default function CambiarContraseniaComponent() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const email = data.get('email');
+    const cambio = {
+      contrasenia: data.get('newPassword'),
+    };
 
-    // Llamar al servicio de cambio de contraseña
-    const response = await solicitoCambioContrasenia({ email });
-
-    // Mostrar alerta según la respuesta del servicio
-    if (response.rdo === 0) {
-      alert(response.mensaje); 
-    } else {
-      alert('Error: ' + response.mensaje); 
+    try {
+      const resultado = await guardarContraseniaNueva(cambio);
+      console.log(resultado); // Puedes manejar la respuesta según tus necesidades
+    } catch (error) {
+      console.error('Error al intentar cambiar la contraseña:', error);
+      // Puedes manejar el error según tus necesidades
     }
   };
 
@@ -55,21 +67,24 @@ export default function CambiarPasswordComponent() {
                 margin="normal"
                 required
                 fullWidth
-                id="email"
-                label="Email de Usuario"
-                name="email"
-                autoComplete="email"
-                autoFocus
+                name="newPassword"
+                label="Nueva Contraseña"
+                type="password"
+                id="newPassword"
+                autoComplete="newPassword"
               />
-
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={() => {
+                  window.location.href = '/login';
+                }}  
               >
-                Enviar Mail
+                Cambiar contraseña
               </Button>
+              <Copyright sx={{ mt: 5 }} />          
             </Box>
           </Box>
         </Container>

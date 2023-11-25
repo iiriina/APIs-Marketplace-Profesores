@@ -1,17 +1,18 @@
 import urlWebServices from '../controller/webServices.js';
 
-export const login = async function (login) {
+//la persona ingresa la nueva contrasenia para el mail al que se le envió el mail
+export const guardarContraseniaNueva = async function (cambio) {
   // URL de los servicios web
-  let url = urlWebServices.login;
+  let url = urlWebServices.guardarContraseniaNueva;
   
   // Crear un objeto URLSearchParams para los datos del formulario
   const formData = new URLSearchParams();
-  formData.append('email', login.email);
-  formData.append('contrasenia', login.password);
+  formData.append('email', localStorage.resetPasswordEmail); //le mando el email al que le quiero cambiar la contrasenia
+  formData.append('contrasenia', cambio.contrasenia); //la contrasenia nueva
 
   try {
     let response = await fetch(url, {
-      method: 'POST',
+      method: 'PUT',
       mode: 'cors',
       headers: {
         'Accept': 'application/x-www-form-urlencoded',
@@ -28,23 +29,16 @@ export const login = async function (login) {
     // Manejo de respuestas
     switch (rdo) {
       case 201:
-        let user = data.loginUser.user;
-        localStorage.setItem("id", user._id);
-        localStorage.setItem("email", user.email);
-        localStorage.setItem("token", data.loginUser.token);
-        return { rdo: 0, mensaje: "Ok" }; // correcto
+        return { rdo: 0, mensaje: "Se actualizó correctamente la contraseña" }; // correcto
 
-      case 202:
-        return { rdo: 1, mensaje: "El mail ingresado no existe en nuestra base." };
-
-      case 203:
-        return { rdo: 1, mensaje: "La contraseña no es correcta." };
-
+    case 400:
+        return { rdo: 1, mensaje: "No se pudo cambiar la contraseña." };
+    
       default:
         return { rdo: 1, mensaje: "Ha ocurrido un error" };
     }
   } catch (error) {
-    console.error('Error en la solicitud de inicio de sesión:', error);
+    console.error('Error en la solicitud de cambio de contraseña:', error);
     // Puedes lanzar una excepción o devolver un objeto de error
     return { rdo: 1, mensaje: "Ha ocurrido un error" };
   }
