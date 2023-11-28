@@ -6,6 +6,7 @@ const urlWebServices = {
     solicitoCambioContrasenia:urlApi +"api/users/solicitarCambioContrasenia",
     guardarContraseniaNueva:urlApi + "api/users/cambiarContrasenia",
     crearNuevoServicio:urlApi + "api/servicios/crearServicio",
+    mostrarServiciosDeProfe:urlApi + "api/servicios/serviciosDeUsuario"
 }
 
 export default urlWebServices;
