@@ -1,15 +1,25 @@
 import React, { useState } from 'react'; 
 import data from './data.json';
 import ProfessionalCard from '../ProfessionalCard'
+import { getServiciosFiltrados } from '../controller/getServiciosFiltrados';
+import { useEffect, useRef } from 'react';
 
 export const BuscarServicioComponent = () => {
 
-    const [filtroCategoria, setFiltroCategoria] = useState('');
-    const [filtroTipoDeClase, setFiltroTipoDeClase] = useState('');
-    const [filtroFrecuencia, setFiltroFrecuencia] = useState('');
-    const [filtroCalificacion, setFiltroCalificacion] = useState('');
+    const [categoria, setFiltroCategoria] = useState('');
+    const [tipo_de_clase, setFiltroTipoDeClase] = useState('');
+    const [frecuencia, setFiltroFrecuencia] = useState('');
+    const [calificacion, setFiltroCalificacion] = useState('');
   
-    const [resultados, setResultados] = useState(data);
+    const [resultados, setResultados] = useState([]);
+
+    //Esto es para guardar los ultimos filtros ingresados por el usuario
+    const filtrosRef = useRef({
+      categoria: '',
+      tipo_de_clase: '',
+      frecuencia: '',
+      calificacion: '',
+    });
   
     const handleFiltroCategoriaChange = (event) => {
       setFiltroCategoria(event.target.value);
@@ -27,80 +37,52 @@ export const BuscarServicioComponent = () => {
       setFiltroCalificacion(event.target.value);
     };
   
-    function buscarPersonas() {
-      const resultadosFiltrados = data.filter(({ categoria, tipo_de_clase, frecuencia, calificacion}) => {
-        const cumpleCategoria = (filtroCategoria === '') ? true : categoria === filtroCategoria;
-        const cumpleTipo_De_Clase = (filtroTipoDeClase === '') ? true : tipo_de_clase === filtroTipoDeClase;
-        const cumpleFrecuencia = (filtroFrecuencia === '') ? true : frecuencia === filtroFrecuencia;
-        const cumpleCalificacion =  ((filtroCalificacion === '') ? true : calificacion >= filtroCalificacion);
-        
-        return cumpleCategoria && cumpleTipo_De_Clase && cumpleFrecuencia && cumpleCalificacion;
-      });
-      setResultados(resultadosFiltrados);
-    }
-            const [profesor, setProfesor] = useState([
-              {
-                imagen: "https://c.animaapp.com/sytn1YQT/img/image-14@2x.png",
-                nombre: "Luz Rivas",
-                calificacion: 4.6,
-                tipo_clase: "Grupal",
-                clase: "geografía",
-                biografia:
-                  "Recibida en UBA. Brindo apoyo en clases de matemática de 1ro a 3er año del secundario. Tengo muchos años de experiencia en el sector. No dudes en contactarme.",
-                precio: 7500,
-              },
-              {
-                imagen: "https://c.animaapp.com/jt0Q7JA1/img/imagen.png",
-                nombre: "Juan Carlos",
-                calificacion: 4.3,
-                tipo_clase: "Individual",
-                clase: "inglés",
-                biografia:
-                  "Recibido en UADE. Brindo apoyo en clases de Inglés en todos los niveles. Tengo muchos años de experiencia en el ámbito. No dudes en enviarme un mensaje!",
-                precio: 5000,
-              },
-              {
-                imagen: "https://c.animaapp.com/ti5XucTd/img/image-15@2x.png",
-                nombre: "Ivana Jaz",
-                calificacion: 4.9,
-                tipo_clase: "Grupal",
-                clase: "cocina vegetariana",
-                biografia:
-                  "Recibida en UCA. Clases de cocina vegana y vegetariana para todas las edades. Realicé un curso de esquina de las flores. No dudes en enviarme un mensaje!",
-                precio: 6000,
-              },
-              {
-                imagen: "https://c.animaapp.com/naTp685l/img/image-16@2x.png",
-                nombre: "Marcos Go",
-                calificacion: 4.2,
-                tipo_clase: "Individual",
-                clase: "economía",
-                biografia:
-                  "Clases de economía, nivel secundario y universitario. Tengo años de experiencia. Realicé un Postgrado en Ciencias Económicas en la UNLAM. Estoy a tu disposición.",
-                precio: 4500,
-              },
-              {
-                imagen: "https://c.animaapp.com/TyQOJEoI/img/image-17@2x.png",
-                nombre: "Miguel Sanz",
-                calificacion: 5.0,
-                tipo_clase: "Grupal",
-                clase: "política",
-                biografia:
-                  "Clases de política, nivel terciario y para aficionados. Clases pedagógicas y lúdicas, con juegos. Realicé un Postgrado en Ciencias Políticas en la UBA. Estoy a tu disposición.",
-                precio: 4500,
-              },
-              {
-                imagen: "https://i.ibb.co/q9n0WF7/image-18.png",
-                nombre: "Liz Chacon",
-                calificacion: 5.0,
-                tipo_clase: "Grupal",
-                clase: "stand-up",
-                biografia:
-                  "Clases de Standup, 8 clases semanales que harán que puedas hacer shows nacionales. Realicé varias comedias en el teatro. No dudes en hablarme! Gracias!",
-                precio: 7500,
-              },
-            ]);
-
+    const buscarPersonas = async (filtros) => {
+      try {
+        const resultadosFiltrados = await getServiciosFiltrados(filtros);
+        setResultados(resultadosFiltrados.data);
+      } catch (error) {
+        console.error('Error al obtener servicios filtrados:', error);
+      }
+    };
+  
+    const handleBuscarClick = () => {
+      const filtros = {
+        ...(categoria !== '' && { categoria }),
+        ...(tipo_de_clase !== '' && { tipo_de_clase }),
+        ...(frecuencia !== '' && { frecuencia }),
+        ...(calificacion !== '' && { calificacion }),
+      };
+      console.log("se le manda esto a la bdd", filtros)
+      // Actualizar los filtros en el ref
+      filtrosRef.current = filtros;
+  
+      buscarPersonas(filtros);
+    };
+  
+    useEffect(() => {
+      // Llama a buscarPersonas al cargar la página con los filtros actuales
+      const filtros = {
+        ...(categoria !== '' && { categoria }),
+        ...(tipo_de_clase !== '' && { tipo_de_clase }),
+        ...(frecuencia !== '' && { frecuencia }),
+        ...(calificacion !== '' && { calificacion }),
+      };
+  
+      // Actualizar los filtros en el ref
+      filtrosRef.current = filtros;
+  
+      buscarPersonas(filtros);
+  
+      // Llama a buscarPersonas cada 10 segundos con los últimos filtros seleccionados por el usuario
+      const intervalId = setInterval(() => {
+        // Obtener los filtros del ref
+        buscarPersonas(filtrosRef.current);
+      }, 10000);
+  
+      return () => clearInterval(intervalId); // Limpia el intervalo al desmontar el componente
+    }, []); // El segundo argumento [] indica que este efecto se ejecutará solo al montar/desmontar el componente
+  
     return (
       <div className="framegeneralbuscarservicio">
         <div className="frameservicioprofesores">
@@ -115,25 +97,27 @@ export const BuscarServicioComponent = () => {
               <div className="filtro_prof">
                 <select
                   className="filtro-frecuenciaservicioprofesores"
-                  value={filtroCategoria}
+                  value={categoria}
                   onChange={handleFiltroCategoriaChange}
                 >
                   <option value="">Categoria</option>
-                  <option value="clasesIngles">Clases de Guitarra</option>
-                  <option value="clasesPortugues">Clases de Piano</option>
-                  <option value="clasesIngles">Clases de Inglés</option>
-                  <option value="clasesPortugues">Clases de Cálculo</option>
-                  <option value="clasesIngles">Clases de Física</option>
-                  <option value="clasesIngles">Clases de Química</option>
-                  <option value="clasesFrances">Clases de Python</option>
-                  <option value="clasesPortugues">Clases de React</option>
+                  <option value="ingles">Clases de Inglés</option>
+                  <option value="matematica">Clases de Matemática</option>
+                  <option value="literatura">Clases de Literatura</option>
+                  <option value="fisica">Clases de Física</option>
+                  <option value="quimica">Clases de Química</option>
+                  <option value="programacion">Clases de Programación</option>
+                  <option value="cocina">Clases de Cocina</option>
+                  <option value="baile">Clases de Baile</option>
+                  <option value="piano">Clases de Música</option>
+
                 </select>
               </div>
 
               <div className="filtro_prof">
                 <select
                   className="filtro-frecuenciaservicioprofesores"
-                  value={filtroTipoDeClase}
+                  value={tipo_de_clase}
                   onChange={handleFiltroTipoDeClaseChange}
                 >
                   <option value="">Tipo de Clase</option>
@@ -145,35 +129,38 @@ export const BuscarServicioComponent = () => {
               <div className="filtro_prof">
                 <select
                   className="filtro-frecuenciaservicioprofesores"
-                  value={filtroFrecuencia}
+                  value={frecuencia}
                   onChange={handleFiltroFrecuenciaChange}
                 >
                   <option value="">Frecuencia</option>
-                  <option value="unahora">1 hora</option>
-                  <option value="unahoraymedia">1 hora y media</option>
-                  <option value="doshoras">2 horas</option>
-                  <option value="doshoras">3 horas</option>
-                  <option value="semanal">semanal</option>
-                  <option value="mensual">mensual</option>
-                  <option value="trimestral">trimestral</option>
-                  <option value="seismeses">seis meses</option>
-                  <option value="ochomeses">ocho meses</option>
-                  <option value="anual">anual</option>
+                  <option value="unica">Unica clase</option>
+                  <option value="semanal">1 clase por semana</option>
+                  <option value="dosclasessemana">2 clases por semana</option>
+                  <option value="tresclasessemana">3 clases por semana</option>
+                  <option value="cuatroclasessemana">4 clases por semana</option>
+                  <option value="cincoclasessemana">5 clases por semana</option>
                 </select>
               </div>
 
-              <input
-                className="filtro-frecuenciaservicioprofesores"
-                type="number"
-                id="calificacion"
-                placeholder="Calificacion"
-                value={filtroCalificacion}
-                onChange={(e) => setFiltroCalificacion(e.target.value)}
-              />
+              <div className="filtro_prof">
+                <select
+                  className="filtro-frecuenciaservicioprofesores"
+                  value={calificacion}
+                  onChange={handleFiltroCalificacionChange}
+                >
+                  <option value="">Calificacion</option>
+                  <option value="0">Sin calificar (0)</option>
+                  <option value="1">1 estrella</option>
+                  <option value="2">2 estrellas</option>
+                  <option value="3">3 estrellas</option>
+                  <option value="4">4 estrellas</option>
+                  <option value="5">5 estrellas</option>
+                </select>
+              </div>
 
               <button
                 className="div-wrapperservicioprofesores"
-                onClick={buscarPersonas}
+                onClick={handleBuscarClick}
               >
                 Buscar
               </button>
@@ -181,82 +168,22 @@ export const BuscarServicioComponent = () => {
           </div>
 
           <div className="tag-profesor-wrapperservicioprofesores">
-            {profesor.map((profesor) => {
+          {resultados.map((servicio) => {
               return (
                 <ProfessionalCard
-                  imagen={profesor.imagen}
-                  nombre={profesor.nombre}
-                  calificacion={profesor.calificacion}
-                  tipo_clase={profesor.tipo_clase}
-                  clase={profesor.clase}
-                  biografia={profesor.biografia}
-                  precio={profesor.precio}
+                  key={servicio._id}
+                  id_servicio={servicio._id}
+                  imagen={servicio.imagenUrl}
+                  nombre={servicio.nombre_usuario}
+                  calificacion={servicio.calificacion}
+                  tipo_clase={servicio.tipo_de_clase}
+                  clase={servicio.nombre_servicio}
+                  biografia={servicio.descripcion}
+                  precio={servicio.precio}
                 />
               );
             })}
 
-{/*
-            <ProfessionalCard
-              imagen="https://c.animaapp.com/sytn1YQT/img/image-14@2x.png"
-              nombre="Luz Rivas"
-              calificacion={4.6}
-              tipo_clase="Grupal"
-              clase="matemática y física"
-              biografia="Recibida en UBA. Brindo apoyo en clases de matemática de 1ro a 3er año del secundario. Tengo muchos años de
-          experiencia en el sector. No dudes en contactarme."
-              precio={7500}
-            />
-            <ProfessionalCard
-              imagen="https://c.animaapp.com/jt0Q7JA1/img/imagen.png"
-              nombre="Juan Carlos"
-              calificacion={4.3}
-              tipo_clase="Individual"
-              clase="inglés"
-              biografia="Recibido en UADE. Brindo apoyo en clases de Inglés en todos los niveles. Tengo muchos años de
-          experiencia en el ámbito. No dudes en enviarme un mensaje!"
-              precio={5000}
-            />
-            <ProfessionalCard
-              imagen="https://c.animaapp.com/ti5XucTd/img/image-15@2x.png"
-              nombre="Ivana Jaz"
-              calificacion={4.9}
-              tipo_clase="Grupal"
-              clase="cocina vegetariana"
-              biografia="Recibida en UCA. Clases de cocina vegana y vegetariana para todas las edades. 
-          Realicé un curso de esquina de las flores. No dudes en enviarme un mensaje!"
-              precio={6000}
-            />
-            <ProfessionalCard
-              imagen="https://c.animaapp.com/naTp685l/img/image-16@2x.png"
-              nombre="Marcos Go"
-              calificacion={4.2}
-              tipo_clase="Individual"
-              clase="economía"
-              biografia="Clases de economía, nivel secundario y universitario. Tengo años de experiencia. 
-          Realicé un Postgrado en Ciencias Económicas en la UNLAM. Estoy a tu disposición."
-              precio={4500}
-            />
-            <ProfessionalCard
-              imagen="https://c.animaapp.com/TyQOJEoI/img/image-17@2x.png"
-              nombre="Miguel Sanz"
-              calificacion={5.0}
-              tipo_clase="Grupal"
-              clase="política"
-              biografia="Clases de política, nivel terciario y para aficionados. Clases pedagógicas y lúdicas, con juegos.
-          Realicé un Postgrado en Ciencias Políticas en la UBA. Estoy a tu disposición."
-              precio={4500}
-            />
-            <ProfessionalCard
-              imagen="https://i.ibb.co/q9n0WF7/image-18.png"
-              nombre="Liz Chacon"
-              calificacion={5.0}
-              tipo_clase="Grupal"
-              clase="stand-up"
-              biografia="Clases de Standup, 8 clases semanales que harán que puedas hacer shows nacionales. 
-          Realicé varias comedias en el teatro. No dudes en hablarme! Gracias!"
-              precio={7500}
-            />
-          */}
           </div>
         </div>
       </div>

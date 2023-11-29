@@ -10,6 +10,8 @@ const urlWebServices = {
     getServicioPorIdServicio:urlApi + "api/servicios/servicioPorIdServicio",
     guardarCambiosServicio:urlApi + "api/servicios/modificarServicio",
     eliminarServicioPorIdServicio:urlApi + "api/servicios/eliminarServicio",
+    getServiciosFiltrados:urlApi + "api/servicios/servicios",
+    hacerComentarioEnServicio:urlApi + "api/comentarios/crearComentario",
 }
 
 export default urlWebServices;

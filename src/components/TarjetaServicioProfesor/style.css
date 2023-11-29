@@ -51,22 +51,22 @@
     position: relative;
   }
   
-  .frameservicioprofesores .div-2servicioprofesores {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    gap: 4px 4px;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
+    .frameservicioprofesores .div-2servicioprofesores {
+      /*align-items: center;*/
+      align-self: stretch;
+      display: flex;
+      flex: 0 0 auto;
+      flex-wrap: wrap;
+      gap: 4px 4px;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
   }
   
   .frameservicioprofesores .nombreservicioprofesores {
-    height: 72.85px;
     position: relative;
     width: 212px;
+    display: flex;
   }
   
   .frameservicioprofesores .imagenservicioprofesores {
@@ -76,14 +76,15 @@
     position: absolute;
     top: 0;
     width: 55px;
+    border-radius: 5px;
   }
   
   .frameservicioprofesores .nombre-y-tiposervicioprofesores {
-    height: 54px;
     left: 72px;
-    position: absolute;
-    top: 9px;
+    position: relative;
     width: 144px;
+    display: flex;
+    flex-direction: column;
   }
   
   .frameservicioprofesores .text-wrapper-3servicioprofesores {
@@ -95,7 +96,8 @@
     left: 0;
     letter-spacing: var(--16-medium-letter-spacing);
     line-height: var(--16-medium-line-height);
-    position: absolute;
+    position: relative;
+    display: flex;
     top: 0;
     width: 107px;
   }
@@ -109,8 +111,7 @@
     left: 0;
     letter-spacing: var(--14-regular-letter-spacing);
     line-height: var(--14-regular-line-height);
-    position: absolute;
-    top: 34px;
+    position: relative;
     white-space: nowrap;
     width: 140px;
   }

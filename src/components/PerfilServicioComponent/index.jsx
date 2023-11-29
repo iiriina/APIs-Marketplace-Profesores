@@ -8,12 +8,32 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Snackbar from '@mui/material/Snackbar';
 import Rating from '@mui/material/Rating';
+import {useEffect } from 'react';
 
-export const PerfilServicioComponent = () => {
+import { getServicioPorIdServicio } from '../controller/getServicioPorIdServicio';
+import { hacerComentario } from '../controller/hacerComentarioController';
 
-    const [open, setOpen] = React.useState(false);
-    const [showSnackbar, setShowSnackbar] = useState(false); 
-  
+export const PerfilServicioComponent = ({ id_servicio }) => {
+  const [servicioData, setServicioData] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [showSnackbar, setShowSnackbar] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getServicioPorIdServicio(id_servicio);
+        console.log(data);
+        setServicioData(data.data);
+        console.log("los comentarios que hay son:", setServicioData.comentarios);
+      } catch (error) {
+        console.error('Error fetching servicio data:', error);
+        // Handle error as needed
+      }
+    };
+
+    fetchData();
+  }, [id_servicio]);
+
     const handleClickOpen = () => {
       setOpen(true);
     };
@@ -33,141 +53,169 @@ export const PerfilServicioComponent = () => {
 
     const [open2, setOpen2] = React.useState(false);
     const [showSnackbar2, setShowSnackbar2] = useState(false); 
-  
-    const handleClickOpen2 = () => {
-      setOpen2(true);
+    const [nombreEstudianteValue, setNombreEstudianteValue] = useState('');
+    const [comentarioValue, setComentarioValue] = useState('');
+    const [calificacionValue, setCalificacionValue] = useState('');
+
+  const handleClickOpen2 = () => {
+    setOpen2(true);
+  };
+
+  const handleClose2 = () => {
+    setOpen2(false);
+  };
+
+  const handleSend2 = async () => {
+    const comentarioData = {
+      id_servicio: id_servicio,
+      id_usuario: servicioData.id_usuario,
+      nombre_estudiante: nombreEstudianteValue,
+      comentario: comentarioValue,
+      calificacion: calificacionValue,
     };
-  
-    const handleClose2 = () => {
-      setOpen2(false);
-    };
-  
-    const handleSend2 = () => {
+
+    const resultado = await hacerComentario(comentarioData);
+
+    if (resultado.rdo === 0) {
       setShowSnackbar2(true);
       setTimeout(() => {
         setShowSnackbar2(false);
       }, 4000);
       setOpen2(false);
-  
-    };
+    } else {
+      console.error('Error haciendo el comentario:', resultado.mensaje);
+    }
+  };
+
 
     return (
+
         <div className="div-general_perfil_servicio">
-            <div className="titulo_perfil_servicioooo">Clases de Inglés Intensivas</div>
+            {servicioData ? (
+            <div style={{ width: '100%' }}>
+            <div className="titulo_perfil_servicioooo">Clases de {servicioData.nombre_servicio}</div>
             <div className="frameperfilservicio">
             <div className="divperfilservicio">
             <div className="text-wrapperperfilservicio"></div>
             <div className="div-2perfilservicio">
-                <div className="text-wrapper-2perfilservicio">Biografía:</div>
-                <p className="pperfilservicio">
-                Soy un hombre que se dedica activamente a dar clases de inglés, ya que es mi pasión, estudié en la UADE y me
-                recibí tras 4 años de carrera de Traductor Público. <br />A mis 20 años me fui a vivir a Inglaterra y
-                perfeccioné mi idioma realizando un curso en la universidad de Oxford, allí trabajé como interprete de
-                diferentes turistas en una asociación de viajes. Luego me desempeñé en Google como traductor y corrector.
-                </p>
+                <div className="text-wrapper-2perfilservicio">Descripción del servicio:</div>
+                <p className="pperfilservicio">{servicioData.descripcion}</p>
             </div>
             <div className="div-2perfilservicio">
-                <div className="text-wrapper-2perfilservicio">Descripción del servicio:</div>
-                <p className="pperfilservicio">
-                Estas clases van a durar 3 meses y son 2 clases semanales, en las cuales te dejarán listo para rendir un
-                examen de inglés según tu nivel adecuado. Doy clases para todos los niveles y edades. <br />
-                Ya sea para niveles iniciales o si estás buscando ir al exterior y necesitas un exámen que avale tu nivel de
-                inglés, podés contar conmigo.
-                <br />
-                No dudes en contactarme!
-                </p>
+                <div className="text-wrapper-2perfilservicio">Biografía Docente:</div>
+            
+                <p className="pperfilservicio">Hola! Soy {servicioData.titulo}. {servicioData.experiencia}</p>
             </div>
+
             <div className="text-wrapper-3perfilservicio">Comentarios:</div>
-            <div className="div-3perfilservicio">
-                <div className="div-4perfilservicio">
-                <div className="div-wrapperperfilservicio">
-                    <div className="text-wrapper-4perfilservicio">Ana Paula:</div>
-                </div>
-                <div className="div-5perfilservicio">
-                    <div className="text-wrapper-5perfilservicio">4.6</div>
-                    <div className="text-wrapper-5perfilservicio">⭐</div>
-                </div>
-                </div>
-                <p className="text-wrapper-6perfilservicio">La verdad me encanta el profe! Es un lujo como explica. Lo súper recomiendo!</p>           
-            </div>
-
-            <button className= "precioperfilservicio21" onClick={handleClickOpen2}>
-            Hacer Comentario
-                    </button>
-                    <Dialog open={open2} onClose={handleClose2}>
-                        <DialogTitle>Comentario</DialogTitle>
-                        <DialogContent>
-                        <DialogContentText>
-                            Deja un comentario. <br /> Recuerda ser amable ❤️!
-                        </DialogContentText>
-
-                        <div className="div_precio_perfil_2_rating" style={{ display: 'flex', alignItems: 'center' }}>
-                            <span className="span_precio_perfil_2_rating" style={{ marginRight: '8px' }}>Calificación:</span>
-                            <Rating
-                            name="calificacion"
-                            defaultValue={0} 
-                            max={5} 
-                            precision={1} 
-                            />
+        
+            {servicioData.comentarios.length > 0 ? (
+                servicioData.comentarios.map((comentario, index) => (
+                    <div key={index} className="div-3perfilservicio">
+                    <div className="div-4perfilservicio">
+                        <div className="div-wrapperperfilservicio">
+                        <div className="text-wrapper-4perfilservicio">{comentario.nombre_estudiante}:</div>
                         </div>
+                        <div className="div-5perfilservicio">
+                        <div className="text-wrapper-5perfilservicio">{comentario.calificacion}</div>
+                        <div className="text-wrapper-5perfilservicio">⭐</div>
+                        </div>
+                        <p className="text-wrapper-6perfilservicio">{comentario.comentario}</p>
+                    </div>
+                    </div>
+                ))
+            ) : (
+                <div className="div_nuevoo">
+                    <p className="pperfilservicio">Aún no hay comentarios 😇.</p>
+                </div>
+            )}
 
-                            <TextField
-                            autoFocus
-                            margin="dense"
-                            id="nombreyapellidocomentario"
-                            label="Nombre y Apellido"
-                            type="nombreyapellidocomentario"
-                            fullWidth
-                            variant="standard"
-                        />
+            <button className="precioperfilservicio2" onClick={handleClickOpen2}>
+            Hacer Comentario
+            </button>
+            <Dialog open={open2} onClose={handleClose2}>
+            <DialogTitle>Comentario</DialogTitle>
+            <DialogContent>
+                <DialogContentText>
+                Deja un comentario. <br /> Recuerda ser amable ❤️!
+                </DialogContentText>
 
-                            <TextField
-                            autoFocus
-                            margin="dense"
-                            id="comentario"
-                            label="Comentario"
-                            type="comentario"
-                            fullWidth
-                            variant="standard"
-                        />
+                <div className="div_precio_perfil_2_rating" style={{ display: 'flex', alignItems: 'center' }}>
+                <span className="span_precio_perfil_2_rating" style={{ marginRight: '8px' }}>Calificación:</span>
+                <Rating
+                    name="calificacion"
+                    defaultValue={0}
+                    max={5}
+                    precision={1}
+                    onChange={(event, value) => setCalificacionValue(value)}
+                />
+                </div>
 
-                        </DialogContent>
-                        <DialogActions>
-                        <Button onClick={handleClose2}>Cancelar</Button>
-                        <Button onClick={handleSend2}>Enviar</Button>
-                        </DialogActions>
-                    </Dialog>
+                <TextField
+                autoFocus
+                margin="dense"
+                id="nombre"
+                label="Nombre y Apellido"
+                type="nombre"
+                fullWidth
+                variant="standard"
+                onChange={(event) => setNombreEstudianteValue(event.target.value)}
+                />
 
-                    <Snackbar
-                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-                        open={showSnackbar2} 
-                        autoHideDuration={4000} 
-                        onClose={() => setShowSnackbar2(false)}
-                        message="Se ha enviado tu comentario." 
-                    />
+                <TextField
+                autoFocus
+                margin="dense"
+                id="comentario"
+                label="Comentario"
+                type="comentario"
+                fullWidth
+                variant="standard"
+                onChange={(event) => setComentarioValue(event.target.value)}
+                />
+
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose2}>Cancelar</Button>
+                <Button onClick={handleSend2}>Enviar</Button>
+            </DialogActions>
+            </Dialog>
+
+            <Snackbar
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            open={showSnackbar2}
+            autoHideDuration={4000}
+            onClose={() => setShowSnackbar2(false)}
+            message="Se ha enviado tu comentario."
+            />
+
 
             </div>
             <div className="frame-wrapperperfilservicio">
             <div className="div-6perfilservicio">
-                <img className="imagenperfilservicio" alt="Imagen" src="https://c.animaapp.com/vihGK44O/img/imagen.png" />
+            <img className="imagenperfilservicio" alt="Imagen" src={servicioData.imagenUrl} />
 
                 <div className="frameperfilservicio2">
                     <div className="divperfilservicio2">
-                        <div className="text-wrapperperfilservicio2">Juan Carlos</div>
+                        <div className="text-wrapperperfilservicio2">{servicioData.nombre_usuario}</div>
                     </div>
 
                     <div className="divperfilservicio2">
                         <div className="text-wrapperperfilservicio2">Precio:</div>
-                        <div className="text-wrapper-2perfilservicio2">$5000/h</div>
+                        <div className="text-wrapper-2perfilservicio2">{servicioData.precio}$</div>
                     </div>
                     <div className="divperfilservicio2">
                         <div className="text-wrapperperfilservicio2">Frecuencia:</div>
-                        <div className="text-wrapper-2perfilservicio2">2 clases semanales</div>
+                        <div className="text-wrapper-2perfilservicio2">{servicioData.frecuencia}</div>
+                    </div>
+
+                    <div className="divperfilservicio2">
+                        <div className="text-wrapperperfilservicio2">Duración:</div>
+                        <div className="text-wrapper-2perfilservicio2">{servicioData.duracion}</div>
                     </div>
 
                     <div className="divperfilservicio2">
                         <div className="text-wrapperperfilservicio2">Calificación:</div>
-                        <div className="text-wrapper-2perfilservicio2">4.5 (23 opiniones)</div>
+                        <div className="text-wrapper-2perfilservicio2">{servicioData.calificacion}</div>
                     </div>
 
                     <button className= "precioperfilservicio2" onClick={handleClickOpen}>
@@ -243,6 +291,11 @@ export const PerfilServicioComponent = () => {
                 </div>
             </div>
             </div>
+            </div>
+              ) : (
+                <p>Cargando...</p>
+              )}
+        
         </div>
     );
 };

@@ -1,5 +1,5 @@
 
-const ProfessionalCard = ({imagen, nombre, tipo_clase, calificacion, clase, biografia, precio}) => {
+const ProfessionalCard = ({id_servicio, imagen, nombre, tipo_clase, calificacion, clase, biografia, precio}) => {
     
   
   return (
@@ -22,13 +22,13 @@ const ProfessionalCard = ({imagen, nombre, tipo_clase, calificacion, clase, biog
             <button className="botn-contactarservicioprofesores">
               <div className="text-wrapper-5servicioprofesores"
                 onClick={() => {
-                  window.location.href = '/perfil_servicio';
+                  window.location.href = `/perfil_servicio?id_servicio=${id_servicio}`;
                 }}
               >Contactar</div>
             </button>
           </div>
         </div>
-        <p className="pservicioprofesores">Clases de {clase}</p>
+        <p className="pservicioprofesores">{clase}</p>
         <p className="text-wrapper-6servicioprofesores">
           {biografia}
         </p>
@@ -39,14 +39,14 @@ const ProfessionalCard = ({imagen, nombre, tipo_clase, calificacion, clase, biog
           <div className="div-5servicioprofesores">
             <button className="text-wrapper-8servicioprofesores"
               onClick={() => {
-                window.location.href = '/perfil_servicio';
+                window.location.href = `/perfil_servicio?id_servicio=${id_servicio}`;
               }}
             >
               Ver Perfil
             </button>
             <button className="text-wrapper-9servicioprofesores"
               onClick={() => {
-                window.location.href = '/perfil_servicio';
+                window.location.href = `/perfil_servicio?id_servicio=${id_servicio}`;
               }}
             >
               Ver Comentarios
