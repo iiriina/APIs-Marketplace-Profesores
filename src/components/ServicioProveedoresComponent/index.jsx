@@ -100,7 +100,8 @@ export const ServicioProveedoresComponent = () => {
       {Array.isArray(servicios) && servicios.map((servicio) => (
         <TarjetaServicio
           key={servicio._id} 
-          clase={servicio.nombre_servicio}
+          id_servicio = {servicio._id}
+          nombre_servicio={servicio.nombre_servicio}
           tipo_clase={servicio.tipo_de_clase}
           duracion={servicio.duracion}
           precio={servicio.precio}

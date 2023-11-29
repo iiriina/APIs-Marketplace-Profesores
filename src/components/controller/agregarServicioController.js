@@ -45,7 +45,7 @@ export const crearNuevoServicio = async function (cambio) {
     case 400:
         return { rdo: 1, mensaje: "Error al crear el servicio." };
 
-      default:
+    default:
         return { rdo: 1, mensaje: "Ha ocurrido un error" };
     }
   } catch (error) {

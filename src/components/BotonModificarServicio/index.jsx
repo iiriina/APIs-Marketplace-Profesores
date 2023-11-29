@@ -43,55 +43,89 @@ export default function BotonModificarServicio() {
                 Completa la información de tu nuevo servicio.
             </DialogContentText>
 
-                <TextField
-                autoFocus
-                margin="dense"
-                id="experiencia_servicio"
-                label="Experiencia en relación con el Servicio"
-                type="experiencia_servicio"
-                fullWidth
-                variant="standard"
-            />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="nombre_servicio"
+            label="Nombre del Servicio"
+            type="nombre_servicio"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setNombreServicio(e.target.value)}
+          />
 
-                <TextField
-                autoFocus
-                margin="dense"
-                id="descripcion_servicio"
-                label="Descripción del Servicio"
-                type="descripcion_servicio"
-                fullWidth
-                variant="standard"
-            />
-            
-            <TextField
-                autoFocus
-                margin="dense"
-                id="duracion"
-                label="Duración"
-                type="duracion"
-                fullWidth
-                variant="standard"
-            />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="descripcion_servicio"
+            label="Descripción del Servicio"
+            type="descripcion_servicio"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setDescripcionServicio(e.target.value)}
+          />
 
-            <TextField
-                autoFocus
-                margin="dense"
-                id="frecuencia"
-                label="Frecuencia"
-                type="frecuencia"
-                fullWidth
-                variant="standard"
-            />
-            <TextField
-                autoFocus
-                margin="dense"
-                id="costo"
-                label="Costo"
-                type="costo"
-                fullWidth
-                variant="standard"
-            />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="duracion"
+            label="Duración"
+            type="duracion"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setDuracion(e.target.value)}
+          />
 
+          <TextField
+            autoFocus
+            margin="dense"
+            id="frecuencia"
+            label="Frecuencia"
+            type="frecuencia"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setFrecuencia(e.target.value)}
+          />
+
+          <TextField
+            autoFocus
+            margin="dense"
+            id="costo"
+            label="Costo"
+            type="costo"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setCosto(e.target.value)}
+          />
+
+          <TextField
+            autoFocus
+            margin="dense"
+            id="categoria"
+            label="Categoria"
+            type="categoria"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => setCategoria(e.target.value)}
+          />
+
+          <TextField
+            autoFocus
+            margin="dense"
+            id="tipo_de_clase"
+            label="Tipo de Clase"
+            type="tipo_de_clase"
+            fullWidth
+            variant="standard"
+            required
+            onChange={(e) => set_tipo_de_clase(e.target.value)}
+          />
 
             </DialogContent>
             <DialogActions>

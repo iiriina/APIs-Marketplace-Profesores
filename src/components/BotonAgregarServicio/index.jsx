@@ -11,8 +11,10 @@ import Snackbar from '@mui/material/Snackbar';
 import { crearNuevoServicio } from '../controller/agregarServicioController';
 
 export default function BotonAgregarServicio() {
-  const [open3, setOpen3] = React.useState(false);
-  const [showSnackbar3, setShowSnackbar3] = useState(false);
+  const [open3, setOpen3] = useState(false);
+  const [showSuccessSnackbar, setShowSuccessSnackbar] = useState(false);
+  const [showErrorSnackbar, setShowErrorSnackbar] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [nombreServicio, setNombreServicio] = useState('');
   const [descripcionServicio, setDescripcionServicio] = useState('');
@@ -28,11 +30,17 @@ export default function BotonAgregarServicio() {
 
   const handleClose3 = () => {
     setOpen3(false);
+    // Resetear el estado del Snackbar al cerrar el diálogo
+    setShowSnackbar(false);
   };
 
   const handleSend3 = async () => {
     try {
-
+      if (!nombreServicio || !descripcionServicio || !duracion || !frecuencia || !costo || !categoria || !tipo_de_clase || !selectedImage) {
+        window.alert('Completa todos los campos obligatorios.');
+        return;
+      }
+  
       const cambio = {
         nombre_servicio: nombreServicio,
         descripcion: descripcionServicio,
@@ -40,23 +48,27 @@ export default function BotonAgregarServicio() {
         frecuencia: frecuencia,
         calificacion: 0,
         precio: costo,
-        categoria: categoria, //lo agregue recien
-        tipo_de_clase: tipo_de_clase,//lo agregue recien
+        categoria: categoria,
+        tipo_de_clase: tipo_de_clase,
         imagen: selectedImage,
       };
 
       const resultado = await crearNuevoServicio(cambio);
 
       if (resultado.rdo === 0) {
-        setShowSnackbar3(true);
+        setShowSuccessSnackbar(true);
         setTimeout(() => {
-          setShowSnackbar3(false);
+          setShowSuccessSnackbar(false);
         }, 4000);
         setOpen3(false);
       } else {
+        setShowErrorSnackbar(true);
+        setOpen3(false);
         console.error('Error al crear el servicio:', resultado.mensaje);
       }
     } catch (error) {
+      setShowErrorSnackbar(true);
+      setOpen3(false);
       console.error('Error en el manejo de la solicitud:', error);
     }
   };
@@ -81,6 +93,7 @@ export default function BotonAgregarServicio() {
             type="nombre_servicio"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setNombreServicio(e.target.value)}
           />
 
@@ -92,6 +105,7 @@ export default function BotonAgregarServicio() {
             type="descripcion_servicio"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setDescripcionServicio(e.target.value)}
           />
 
@@ -103,6 +117,7 @@ export default function BotonAgregarServicio() {
             type="duracion"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setDuracion(e.target.value)}
           />
 
@@ -114,6 +129,7 @@ export default function BotonAgregarServicio() {
             type="frecuencia"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setFrecuencia(e.target.value)}
           />
 
@@ -125,6 +141,7 @@ export default function BotonAgregarServicio() {
             type="costo"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setCosto(e.target.value)}
           />
 
@@ -136,6 +153,7 @@ export default function BotonAgregarServicio() {
             type="categoria"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => setCategoria(e.target.value)}
           />
 
@@ -147,8 +165,10 @@ export default function BotonAgregarServicio() {
             type="tipo_de_clase"
             fullWidth
             variant="standard"
+            required
             onChange={(e) => set_tipo_de_clase(e.target.value)}
           />
+
 
           <DialogContentText>Elegí una imágen para el servicio:</DialogContentText>
           <input
@@ -166,10 +186,18 @@ export default function BotonAgregarServicio() {
 
       <Snackbar
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        open={showSnackbar3}
+        open={showSuccessSnackbar}
         autoHideDuration={4000}
-        onClose={() => setShowSnackbar3(false)}
-        message="El servicio ha sido agregado."
+        onClose={() => setShowSuccessSnackbar(false)}
+        message="El servicio ha sido agregado con éxito."
+      />
+
+      <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        open={showErrorSnackbar}
+        autoHideDuration={4000}
+        onClose={() => setShowErrorSnackbar(false)}
+        message="No se pudo agregar el servicio."
       />
     </div>
   );
