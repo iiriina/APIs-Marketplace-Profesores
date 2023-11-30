@@ -19,7 +19,7 @@ export const hacerComentario = async function (datosComentario) {
   if (datosComentario.nombre_estudiante){  
     formData.append('nombre_estudiante', datosComentario.nombre_estudiante);
   } else {
-    formData.append('nombre_estudiante', 'Anónimo:');
+    formData.append('nombre_estudiante', 'Anónimo');
   }
 
   if (datosComentario.comentario){

@@ -1,14 +1,16 @@
 import React from "react";
 
-export const ComentarioUsuario = () => {
-    return (
+export const ComentarioUsuario = ({ id_servicio, id_usuario, nombre, calificacion, comentario }) => {
+  return (
     <div className="tagpagcomentarios">
-        <div className="divpagcomentarios">
-          <div className="div-wrapperpagcomentarios">
-            <div className="text-wrapper-2pagcomentarios">María Ríos</div>
-          </div>
-          <p className="ppagcomentarios">Hola! Me encantó la clase, la verdad excelente profe, no tuve inconvenientes.</p>
+      <div className="divpagcomentarios">
+        <div className="div-wrapperpagcomentarios">
+          {nombre && <div className="text-wrapper-2pagcomentarios">{nombre}.</div>}
+          {calificacion && <div className="text-wrapper-2pagcomentarios"> ⭐ {calificacion} ⭐</div>}
         </div>
+        {comentario && <p className="ppagcomentarios">{comentario}</p>}
+      </div>
+      {nombre || calificacion || comentario ? (
         <div className="div-2pagcomentarios">
           <div className="botn-modificarpagcomentarios">
             <button className="placeholder-wrapperpagcomentarios">
@@ -19,8 +21,9 @@ export const ComentarioUsuario = () => {
             <div className="placeholder-2pagcomentarios">Eliminar Comentario</div>
           </button>
         </div>
+      ) : null}
     </div>
-    );
+  );
 };
 
 export default ComentarioUsuario;

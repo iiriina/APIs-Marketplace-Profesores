@@ -29,3 +29,10 @@
     top: 10px;
   }
   
+  .titulo_inicio{
+    font-family: "Quicksand", Helvetica;
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+  
+  }

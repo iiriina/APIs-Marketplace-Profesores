@@ -1,23 +1,24 @@
-
 import React, { useState, useEffect } from "react";
 import TarjetaServicio from "../TarjetaServicio";
 import BotonAgregarServicio from "../BotonAgregarServicio";
-import { mostrarServiciosDeProfe } from "../controller/mostrarServiciosDeProfe"; // Reemplaza con la ruta correcta
+import { mostrarServiciosDeProfe } from "../controller/mostrarServiciosDeProfe";
 
-export const ServicioProveedoresComponent = () => {
-  const [servicios, setServicios] = useState([]);
+const ServicioProveedoresComponent = () => {
+  const [servicios, setServicios] = useState(null);
 
   useEffect(() => {
-    // Llama a la función que obtiene los servicios desde la base de datos
-    mostrarServiciosDeProfe()
-      .then((response) => response.data) // Accede a la propiedad 'data'
-      .then((serviciosDesdeBD) => {
-        setServicios(serviciosDesdeBD);
-      })
-      .catch((error) => {
+    const fetchServicios = async () => {
+      try {
+        const response = await mostrarServiciosDeProfe();
+        setServicios(response.data);
+      } catch (error) {
         console.error("Error al obtener servicios desde la base de datos:", error);
-      });
-  }, []); 
+        setServicios([]); // En caso de error, establece servicios en una matriz vacía
+      }
+    };
+
+    fetchServicios();
+  }, []);
 
   return (
     <div className="frameservicios">
@@ -25,17 +26,27 @@ export const ServicioProveedoresComponent = () => {
         <div>Mis Servicios</div>
         <BotonAgregarServicio />
       </div>
-      {Array.isArray(servicios) && servicios.map((servicio) => (
-        <TarjetaServicio
-          key={servicio._id} 
-          id_servicio = {servicio._id}
-          nombre_servicio={servicio.nombre_servicio}
-          tipo_clase={servicio.tipo_de_clase}
-          duracion={servicio.duracion}
-          precio={servicio.precio}
-          biografia={servicio.descripcion}
-        />
-      ))}
+      {servicios === null ? (
+        <p className="cargandoo">Cargando...</p>
+      ) : servicios.length === 0 ? (
+        <div>
+        <p className="titulo_inicio">🌺 Bienvenido Profe! 🥇</p>
+
+        <p className="no_hay">Publica un nuevo servicio 👆💜!</p>
+        </div>
+      ) : (
+        servicios.map((servicio) => (
+          <TarjetaServicio
+            key={servicio._id}
+            id_servicio={servicio._id}
+            nombre_servicio={servicio.nombre_servicio}
+            tipo_clase={servicio.tipo_de_clase}
+            duracion={servicio.duracion}
+            precio={servicio.precio}
+            biografia={servicio.descripcion}
+          />
+        ))
+      )}
     </div>
   );
 };
