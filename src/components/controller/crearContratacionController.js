@@ -10,7 +10,7 @@ export const crearContratacion = async function (datosContratacion) {
 
     // Crear un objeto URLSearchParams para los datos del formulario
     const formData = new URLSearchParams();
-    formData.append('id_usuario', datosContratacion.id_usuario); //no se si es asi
+    formData.append('id_usuario', datosContratacion.id_usuario); 
     formData.append('nombre_estudiante', datosContratacion.nombre_estudiante);
     formData.append('telefono', datosContratacion.telefono);
     formData.append('email', datosContratacion.email);

@@ -23,7 +23,6 @@ export const PerfilServicioComponent = ({ id_servicio }) => {
       const data = await getServicioPorIdServicio(id_servicio);
       console.log(data);
       setServicioData(data.data);
-      console.log("El id de usuario que se manda desde perfil servicio es:", servicioData.id_usuario);
       console.log("los comentarios que hay son:", setServicioData.comentarios);
     } catch (error) {
       console.error('Error fetching servicio data:', error);

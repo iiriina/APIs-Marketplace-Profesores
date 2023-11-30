@@ -48,8 +48,8 @@
     flex-grow: 1;
     gap: 10px;
     justify-content: center;
-    max-width: 490px;
-    min-width: 330px;
+    max-width: 420px !important;
+    min-width: 330px !important;
     padding: 26px 25px 32px;
     position: relative;
   }

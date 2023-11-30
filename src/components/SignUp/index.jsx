@@ -10,17 +10,64 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { registrarUsuario } from '../controller/registrarUsuarioController';
+import { useDispatch } from 'react-redux';
+import { loginSuccess } from '../../redux/store';
+import { useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [userData, setUserData] = React.useState({
+    nombre: '',
+    telefono: '',
+    email: '',
+    contrasenia: '',
+    titulo: '',
+    experiencia: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const registerUser = async () => {
+    try {
+      const response = await registrarUsuario(userData);
+
+      if (response.rdo === 0) {
+        window.alert('Usuario registrado correctamente, inicie sesión.');
+        dispatch(loginSuccess());
+        navigate('/login');
+      } else {
+        window.alert('Error al registrar usuario:', response.mensaje);
+      }
+    } catch (error) {
+      window.alert('Error inesperado al registrar usuario.');
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    // Validación básica del formulario
+    const requiredFields = ['nombre', 'telefono', 'email', 'contrasenia', 'titulo', 'experiencia'];
+    const isValid = requiredFields.every((field) => userData[field]);
+
+    if (!isValid) {
+      console.error('Por favor, complete todos los campos obligatorios.');
+      return;
+    }
+
+    // Llama a la función para registrar al usuario
+    registerUser();
   };
 
   return (
@@ -31,12 +78,12 @@ export default function SignUp() {
           <Box
             sx={{
               marginTop: 3,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -49,25 +96,16 @@ export default function SignUp() {
               sx={{ mt: 3 }}
             >
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12}>
                   <TextField
-                    autoComplete="given-name"
-                    name="firstName"
+                    autoComplete="nombre"
+                    name="nombre"
                     required
                     fullWidth
-                    id="firstName"
+                    id="nombre"
                     label="Nombre"
                     autoFocus
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="lastName"
-                    label="Apellido"
-                    name="lastName"
-                    autoComplete="family-name"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -78,9 +116,9 @@ export default function SignUp() {
                     label="Telefono"
                     name="telefono"
                     autoComplete="telefono"
+                    onChange={handleChange}
                   />
                 </Grid>
-
                 <Grid item xs={12}>
                   <TextField
                     required
@@ -89,17 +127,19 @@ export default function SignUp() {
                     label="Email"
                     name="email"
                     autoComplete="email"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
                     required
                     fullWidth
-                    name="password"
+                    name="contrasenia"
                     label="Contraseña"
-                    type="password"
-                    id="password"
-                    autoComplete="new-password"
+                    type="contrasenia"
+                    id="contrasenia"
+                    autoComplete="contrasenia"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -111,6 +151,7 @@ export default function SignUp() {
                     type="titulo"
                     id="titulo"
                     autoComplete="titulo"
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -122,6 +163,7 @@ export default function SignUp() {
                     name="experiencia"
                     autoComplete="experiencia"
                     autoFocus
+                    onChange={handleChange}
                   />
                 </Grid>
               </Grid>
@@ -130,9 +172,6 @@ export default function SignUp() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={() => {
-                  window.location.href = "/login";
-                }}
               >
                 Crear Cuenta
               </Button>

@@ -14,6 +14,11 @@ const urlWebServices = {
     hacerComentarioEnServicio:urlApi + "api/comentarios/crearComentario",
     crearContratacion:urlApi + "api/contrataciones/crearContratacion",
     mostrarComentariosPendientes:urlApi + "api/comentarios/mostrarComentariosPendientes",
+    aceptarComentario:urlApi + "api/comentarios/aceptarComentario",
+    eliminarComentario:urlApi + "api/comentarios/borrarComentario",
+    mostrarContrataciones:urlApi + "api/contrataciones/mostrarContrataciones",
+    cambiarEstadoContratacion:urlApi + "api/contrataciones/cambiarEstadoContratacion",
+    registrarUsuario:urlApi + "api/users/registration",
 }
 
 export default urlWebServices;

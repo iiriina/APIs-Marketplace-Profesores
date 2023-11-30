@@ -16,8 +16,14 @@ const ServicioProveedoresComponent = () => {
         setServicios([]); // En caso de error, establece servicios en una matriz vacía
       }
     };
-
+    // Llama a la función al montar el componente
     fetchServicios();
+
+    // Establece un intervalo para llamar a la función cada 10 segundos
+    const intervalId = setInterval(fetchServicios, 10000);
+
+    // Limpia el intervalo al desmontar el componente
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
