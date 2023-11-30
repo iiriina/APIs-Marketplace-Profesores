@@ -205,3 +205,30 @@
   font-size: 16px !important;
   padding-top: 20px !important;
 }
+
+
+
+/* Estilo por defecto aparece DESPUBLICAR (el servicio se crea publicado)*/
+.boton_publicar {
+  align-items: flex-start;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  padding: 5px 14px;
+  position: relative;
+}
+
+/* Clase para el botón cuando está publicado (dice DESPUBLICAR) */
+.boton_publicar.publicado {
+  background-color: #df6b5e; /* o el color que desees */
+  color: white;
+}
+
+/* Clase para el botón cuando no está publicado (dice PUBLICAR)*/
+.boton_publicar.no-publicado {
+  background-color: #4a86c2; /* o el color que desees */
+  color: white;
+}
+

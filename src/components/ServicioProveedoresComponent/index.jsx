@@ -50,6 +50,7 @@ const ServicioProveedoresComponent = () => {
             duracion={servicio.duracion}
             precio={servicio.precio}
             biografia={servicio.descripcion}
+            visibilidad={servicio.visibilidad}
           />
         ))
       )}

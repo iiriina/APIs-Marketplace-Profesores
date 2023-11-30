@@ -9,8 +9,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { modificarServicio } from "../controller/modificarServicioController";
 import { guardarCambiosServicio } from "../controller/guardarCambiosServicioController";
 import { eliminarServicio } from "../controller/eliminarServicioController";
+import { cambiarVisibilidadServicio } from "../controller/cambiarVisibilidadServicioController";
 
-const TarjetaServicio = ({ id_servicio, nombre_servicio, tipo_clase, duracion, precio, biografia }) => {
+const TarjetaServicio = ({ id_servicio, nombre_servicio, tipo_clase, duracion, precio, biografia, visibilidad }) => {
   const [open3, setOpen3] = React.useState(false);
   const [showSnackbar3, setShowSnackbar3] = useState(false); // Estado para mostrar el Snackbar
   const [selectedImage, setSelectedImage] = useState(null);
@@ -21,6 +22,7 @@ const TarjetaServicio = ({ id_servicio, nombre_servicio, tipo_clase, duracion, p
   const [costoServicio, setCostoServicio] = useState('');
   const [categoriaServicio, setCategoriaServicio] = useState('');
   const [tipoDeClaseServicio, setTipoDeClaseServicio] = useState('');
+  const [publicado, setPublicado] = useState(visibilidad === 'publico');
 
   const handleClickOpen3 = async () => {
     try {
@@ -101,6 +103,27 @@ const TarjetaServicio = ({ id_servicio, nombre_servicio, tipo_clase, duracion, p
     }
   };
   
+  const handleVisibilidad = async () => {
+    try {
+      // Llama a la función que cambia la visibilidad del servicio
+      const exito = await cambiarVisibilidadServicio({
+        _id: id_servicio,
+        visibilidad: publicado ? 'privado' : 'publico', // Cambiar el estado "publicado", si es true pasa a privado si 
+        //es false pasa a publico
+      });
+  
+      if (exito.rdo === 0) {
+        console.log('Visibilidad del servicio cambiada exitosamente');
+        // Actualiza el estado para reflejar el cambio
+        setPublicado(!publicado);
+      } else {
+        console.error('Error al cambiar la visibilidad del servicio:', exito.mensaje);
+      }
+    } catch (error) {
+      console.error('Error al cambiar la visibilidad del servicio:', error);
+    }
+  };
+  
 
   return (
     <div className="tagservicios">
@@ -118,7 +141,13 @@ const TarjetaServicio = ({ id_servicio, nombre_servicio, tipo_clase, duracion, p
           </div>
           <div className="div-wrapperboton">
             <div className="text-wrapper-3servicios">
-              <Button>PUBLICAR</Button>
+            <button
+              className={`boton_publicar ${publicado ? 'publicado' : 'no-publicado'}`}
+              onClick={handleVisibilidad}
+            >
+              {publicado ? 'DESPUBLICAR' : 'PUBLICAR'}
+            </button>
+            
             </div>
           </div>
         </div>

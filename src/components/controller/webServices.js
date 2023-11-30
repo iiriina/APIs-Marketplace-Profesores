@@ -19,6 +19,7 @@ const urlWebServices = {
     mostrarContrataciones:urlApi + "api/contrataciones/mostrarContrataciones",
     cambiarEstadoContratacion:urlApi + "api/contrataciones/cambiarEstadoContratacion",
     registrarUsuario:urlApi + "api/users/registration",
+    cambiarVisibilidadServicio:urlApi + "api/servicios/cambiarVisibilidad",
 }
 
 export default urlWebServices;
