@@ -487,6 +487,31 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
 
 }
 
+.div-general_perfil_servicio {
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 100px) and (max-width: 500px) {
+  .titulo_perfil_servicioooo {
+    right: 10%;
+  }
+
+  .frameperfilservicio {
+    right: 20%;
+  }
+
+  .text-wrapper-3perfilservicio {
+    left: 20%;
+  }
+
+  .div-6perfilservicio {
+    left: 20%;
+  }
+  
+}
+
+
+/*
 @media screen and (min-width: 370px) and (max-width: 380px) {
     .titulo_perfil_servicioooo {
         right: 15%;
@@ -541,7 +566,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .css-1x51dt5-MuiInputBase-inp
   padding-bottom: 50px;
 }
 
-/*
 @media screen and (min-width: 705px) and (max-width: 850px) {
   .frameperfilservicio {
     right: 5% !important;
