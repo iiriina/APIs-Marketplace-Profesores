@@ -109,7 +109,7 @@ export const BuscarServicioComponent = () => {
                   <option value="programacion">Clases de Programación</option>
                   <option value="cocina">Clases de Cocina</option>
                   <option value="baile">Clases de Baile</option>
-                  <option value="piano">Clases de Música</option>
+                  <option value="musica">Clases de Música</option>
 
                 </select>
               </div>
@@ -133,12 +133,9 @@ export const BuscarServicioComponent = () => {
                   onChange={handleFiltroFrecuenciaChange}
                 >
                   <option value="">Frecuencia</option>
-                  <option value="unica">Unica clase</option>
-                  <option value="semanal">1 clase por semana</option>
-                  <option value="dosclasessemana">2 clases por semana</option>
-                  <option value="tresclasessemana">3 clases por semana</option>
-                  <option value="cuatroclasessemana">4 clases por semana</option>
-                  <option value="cincoclasessemana">5 clases por semana</option>
+                  <option value="unica">Unica</option>
+                  <option value="semanal">Semanal</option>
+                  <option value="mensual">Mensual</option>
                 </select>
               </div>
 
@@ -168,23 +165,25 @@ export const BuscarServicioComponent = () => {
           </div>
 
           <div className="tag-profesor-wrapperservicioprofesores">
-          {resultados.map((servicio) => {
-              return (
-                <ProfessionalCard
-                  key={servicio._id}
-                  id_servicio={servicio._id}
-                  imagen={servicio.imagenUrl}
-                  nombre={servicio.nombre_usuario}
-                  calificacion={servicio.calificacion}
-                  tipo_clase={servicio.tipo_de_clase}
-                  clase={servicio.nombre_servicio}
-                  biografia={servicio.descripcion}
-                  precio={servicio.precio}
-                />
-              );
-            })}
+          {resultados.length === 0 ? (
+            <p className='no_hay' style={{ textAlign: 'center' }}>No hay servicios con estas características <br/> Intenta con otras 😊! </p>
+          ) : (
+            resultados.map((servicio) => (
+              <ProfessionalCard
+                key={servicio._id}
+                id_servicio={servicio._id}
+                imagen={servicio.imagenUrl}
+                nombre={servicio.nombre_usuario}
+                calificacion={servicio.calificacion}
+                tipo_clase={servicio.tipo_de_clase}
+                clase={servicio.nombre_servicio}
+                biografia={servicio.descripcion}
+                precio={servicio.precio}
+              />
+            ))
+          )}
+        </div>
 
-          </div>
         </div>
       </div>
     );

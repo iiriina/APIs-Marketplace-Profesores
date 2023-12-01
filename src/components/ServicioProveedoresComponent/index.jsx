@@ -11,6 +11,7 @@ const ServicioProveedoresComponent = () => {
       try {
         const response = await mostrarServiciosDeProfe();
         setServicios(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error al obtener servicios desde la base de datos:", error);
         setServicios([]); // En caso de error, establece servicios en una matriz vacía
