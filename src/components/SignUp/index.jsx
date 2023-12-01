@@ -47,7 +47,8 @@ export default function SignUp() {
         dispatch(loginSuccess());
         navigate('/login');
       } else {
-        window.alert('Error al registrar usuario:', response.mensaje);
+        console.log(response.mensaje);
+        window.alert(response.mensaje);
       }
     } catch (error) {
       window.alert('Error inesperado al registrar usuario.');
