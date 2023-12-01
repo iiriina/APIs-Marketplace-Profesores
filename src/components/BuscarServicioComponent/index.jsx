@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; 
-import data from './data.json';
 import ProfessionalCard from '../ProfessionalCard'
 import { getServiciosFiltrados } from '../controller/getServiciosFiltrados';
 import { useEffect, useRef } from 'react';
