@@ -32,23 +32,23 @@ export const registrarUsuario = async function (datosUsuario) {
     // Manejo de respuestas
     switch (rdo) {
       case 201:
-        return { rdo: 0, mensaje: "Se ha creado correctamente el usuario." }; // correcto
+        return { rdo: 0, mensaje: data.message }; // correcto
 
     case 400:
-        return { rdo: 1, mensaje: "Error creando el usuario." };
+        return { rdo: 1, mensaje: data.message };
     
     case 401:
-        return { rdo: 1, mensaje: "El telefono debe ser un numero." };
+        return { rdo: 1, mensaje: data.message };
         
     case 402:
-        return { rdo: 1, mensaje: "El correo electrónico ya está en uso." };
+        return { rdo: 1, mensaje: data.message };
 
       default:
-        return { rdo: 1, mensaje: "Ha ocurrido un error" };
+        return { rdo: 1, mensaje: data.message };
     }
   } catch (error) {
     console.error('Error en la solicitud de crear usuario:', error);
     // Puedes lanzar una excepción o devolver un objeto de error
-    return { rdo: 1, mensaje: "Ha ocurrido un error" };
+    return { rdo: 1, mensaje: data.message };
   }
 };
