@@ -40,17 +40,17 @@ export const crearNuevoServicio = async function (cambio) {
     // Manejo de respuestas
     switch (rdo) {
       case 201:
-        return { rdo: 0, mensaje: "Se creó correctamente el servicio" }; // correcto
+        return { rdo: 0, mensaje: resultado.message }; // correcto
 
     case 400:
-        return { rdo: 1, mensaje: "Error al crear el servicio." };
+        return { rdo: 1, mensaje: resultado.message };
 
     default:
-        return { rdo: 1, mensaje: "Ha ocurrido un error" };
+        return { rdo: 1, mensaje: resultado.message };
     }
   } catch (error) {
     console.error('Error en la creación del servicio:', error);
     // Puedes lanzar una excepción o devolver un objeto de error
-    return { rdo: 1, mensaje: "Ha ocurrido un error" };
+    return { rdo: 1, mensaje: resultado.message };
   }
 };

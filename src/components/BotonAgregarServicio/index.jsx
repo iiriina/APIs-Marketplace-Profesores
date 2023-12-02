@@ -13,7 +13,6 @@ import { crearNuevoServicio } from '../controller/agregarServicioController';
 export default function BotonAgregarServicio() {
   const [open3, setOpen3] = useState(false);
   const [showSuccessSnackbar, setShowSuccessSnackbar] = useState(false);
-  const [showErrorSnackbar, setShowErrorSnackbar] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [nombreServicio, setNombreServicio] = useState('');
@@ -62,14 +61,14 @@ export default function BotonAgregarServicio() {
         }, 4000);
         setOpen3(false);
       } else {
-        setShowErrorSnackbar(true);
-        setOpen3(false);
+
+        window.alert(resultado.mensaje);
+
         console.error('Error al crear el servicio:', resultado.mensaje);
       }
     } catch (error) {
-      setShowErrorSnackbar(true);
-      setOpen3(false);
-      console.error('Error en el manejo de la solicitud:', error);
+
+      console.error('Error inesperado en el manejo de la solicitud.', error);
     }
   };
 
@@ -192,13 +191,6 @@ export default function BotonAgregarServicio() {
         message="El servicio ha sido agregado con éxito."
       />
 
-      <Snackbar
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        open={showErrorSnackbar}
-        autoHideDuration={4000}
-        onClose={() => setShowErrorSnackbar(false)}
-        message="No se pudo agregar el servicio."
-      />
     </div>
   );
 }

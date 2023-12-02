@@ -38,7 +38,7 @@ const TarjetaContratacion = ({ id_contratacion, nombre_estudiante, telefono, ema
       }
     } catch (error) {
       // Manejar errores de la llamada a la función
-      console.error('Error al llamar a cambiarEstadoContratacion:', error.message);
+      console.error('Error al llamar a cambiarEstadoContratacion.');
     }
   };
 

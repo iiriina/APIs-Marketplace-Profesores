@@ -31,7 +31,7 @@ export const registrarUsuario = async function (datosUsuario) {
 
     // Manejo de respuestas
     switch (rdo) {
-      case 201:
+    case 201:
         return { rdo: 0, mensaje: data.message }; // correcto
 
     case 400:
